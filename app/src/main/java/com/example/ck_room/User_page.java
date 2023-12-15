@@ -64,7 +64,7 @@ public class User_page extends AppCompatActivity {
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(User_page.this,Search.class);
+                Intent intent = new Intent(User_page.this,User_Search.class);
                 startActivityForResult(intent,REQUEST_CODE);
 
             }

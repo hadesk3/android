@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ck_room.R;
 import com.example.ck_room.Schedule;
-import com.example.ck_room.Search;
 import com.example.ck_room.User_choose_seat;
 
 import java.util.List;

@@ -79,9 +79,9 @@ public class Schedule extends AppCompatActivity {
         choose_seat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Schedule.this, User_choose_seat.class);
-                in.putExtra("id", id);
-                startActivityForResult(in,REQUEST_CODE);
+         //       Intent in = new Intent(Schedule.this, User_choose_seat.class);
+           //     in.putExtra("id", id);
+           //     startActivityForResult(in,REQUEST_CODE);
 
             }
         });

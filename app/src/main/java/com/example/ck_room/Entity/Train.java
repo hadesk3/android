@@ -121,11 +121,15 @@ public class Train {
 
     @Override
     public String toString() {
-        return
-              Train_name  +
-                "         " + Source_stn +
-                "         " + Destination_stn +"/" +train_id;
-
-
+        return "Train{" +
+                "train_id=" + train_id +
+                ", Train_name='" + Train_name + '\'' +
+                ", Source_stn='" + Source_stn + '\'' +
+                ", Destination_stn='" + Destination_stn + '\'' +
+                ", Source_ID=" + Source_ID +
+                ", Destination_ID=" + Destination_ID +
+                ", timeStart='" + timeStart + '\'' +
+                ", timeEnd='" + timeEnd + '\'' +
+                '}';
     }
 }

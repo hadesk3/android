@@ -50,7 +50,6 @@ public class ManageTrain_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_train_page);
-        btCreate = findViewById(R.id.btCreate);
 
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
 
@@ -58,7 +57,7 @@ public class ManageTrain_page extends AppCompatActivity {
         edtArrive = findViewById(R.id.edtArrive);
         edtDate = findViewById(R.id.edtDate);
         search = findViewById((R.id.btSearch));
-
+        btCreate = findViewById(R.id.create);
         List<Station> list = myDatabase.stationDao().getAllStations();
         List<String> nameStation = new ArrayList<>();
 
@@ -152,15 +151,21 @@ public class ManageTrain_page extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(ManageTrain_page.this, list.get(0).toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ManageTrain_page.this, "có "+ list.size() +" train", Toast.LENGTH_SHORT).show();
 
                 }
+
+                 List<String> itemListName = new ArrayList<>();
+                 List<String> itemListPlace= new ArrayList<>();
+                 List<String> itemListTime = new ArrayList<>();
                 for(int i = 0; i < list.size();i++)
                 {
-                    itemList.add(list.get(i).toString());
+                    itemListName.add(list.get(i).getTrain_name());
+                    itemListPlace.add(list.get(i).getSource_stn()+"-"+list.get(i).getDestination_stn());
+                    itemListTime.add(list.get(i).getTimeStart()+"-" + list.get(i).getTimeEnd());
                 }
 
-                adapter3 = new CustomAdapter(itemList, ManageTrain_page.this);
+                adapter3 = new CustomAdapter(itemListName, itemListPlace,itemListTime,ManageTrain_page.this);
                 recyclerView.setAdapter(adapter3);
 
             }
