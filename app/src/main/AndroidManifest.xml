@@ -44,6 +44,7 @@
         <activity android:name=".ManageTrain_page" />
         <activity android:name=".Edit_Train" />
         <activity android:name=".User_view_train" />
+        <activity android:name=".Admin_block_user" />
         <activity android:name=".Edit_station"/>
         <activity android:name=".User_choose_seat" />
         <activity android:name=".Admin_manage_station" />

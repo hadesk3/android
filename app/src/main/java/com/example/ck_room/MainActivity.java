@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                   if(user != null && pass.getText().toString().equals(user.getPass()))
+                   if(user != null && pass.getText().toString().equals(user.getPass()) && user.isBlock() == false)
                     {
                         Intent intent = new Intent(MainActivity.this,User_page.class);
 
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(MainActivity.this, "Error, user not found", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Error, user not found or blocked", Toast.LENGTH_SHORT).show();
                     }
                 }
 
