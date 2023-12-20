@@ -78,7 +78,7 @@ public final class MyDatabase_Impl extends MyDatabase {
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `user` (`EmailID` TEXT NOT NULL, `firstName` TEXT, `lastName` TEXT, `pass` TEXT, `phone` TEXT, `dob` TEXT, `gender` TEXT, PRIMARY KEY(`EmailID`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Train` (`train_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Train_name` TEXT, `Source_stn` TEXT, `Destination_stn` TEXT, `Source_ID` INTEGER NOT NULL, `Destination_ID` INTEGER NOT NULL, `timeStart` TEXT, `timeEnd` TEXT, FOREIGN KEY(`Source_ID`) REFERENCES `station`(`station_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`Destination_ID`) REFERENCES `station`(`station_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `station` (`station_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `station` (`station_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `address` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `passenger` (`pnr` TEXT NOT NULL, `seatNumber` INTEGER NOT NULL, `passengerName` TEXT, `age` INTEGER NOT NULL, `gender` TEXT, `train_id` INTEGER NOT NULL, `origin` TEXT, PRIMARY KEY(`pnr`), FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Train_class` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `Economy_Fare` REAL NOT NULL, `Economy_Passenger` INTEGER NOT NULL, `Business_Fare` REAL NOT NULL, `Business_Passenger` INTEGER NOT NULL, `First_Fare` REAL NOT NULL, `First_Passenger` INTEGER NOT NULL, `takenSeats_Economy` TEXT, `takenSeats_Business` TEXT, `takenSeats_First` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `train_status` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `available_date` TEXT, `blocked_seats` INTEGER NOT NULL, `waiting_seats` INTEGER NOT NULL, `available_seats` INTEGER NOT NULL, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
@@ -88,7 +88,7 @@ public final class MyDatabase_Impl extends MyDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `day_available` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `day_available` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Reservation` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PNR` TEXT, `Train_Id_class` INTEGER NOT NULL, `available_date` TEXT, `EmailID` TEXT, `Reservation_Date` TEXT, `Reservation_Status` TEXT, FOREIGN KEY(`Train_Id_class`) REFERENCES `train_status`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`EmailID`) REFERENCES `user`(`EmailID`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a680a1b7b53f1e8a9c9d552974fe6a64')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e5eb195a9aa820ad48dd4c1cc22e5ece')");
       }
 
       @Override
@@ -180,9 +180,10 @@ public final class MyDatabase_Impl extends MyDatabase {
                   + " Expected:\n" + _infoTrain + "\n"
                   + " Found:\n" + _existingTrain);
         }
-        final HashMap<String, TableInfo.Column> _columnsStation = new HashMap<String, TableInfo.Column>(2);
+        final HashMap<String, TableInfo.Column> _columnsStation = new HashMap<String, TableInfo.Column>(3);
         _columnsStation.put("station_id", new TableInfo.Column("station_id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsStation.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsStation.put("address", new TableInfo.Column("address", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysStation = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesStation = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoStation = new TableInfo("station", _columnsStation, _foreignKeysStation, _indicesStation);
@@ -336,7 +337,7 @@ public final class MyDatabase_Impl extends MyDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "a680a1b7b53f1e8a9c9d552974fe6a64", "46dc089095307ac5eeb08cb0f06a26f9");
+    }, "e5eb195a9aa820ad48dd4c1cc22e5ece", "d000c4e17bca592fc097819941174e86");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

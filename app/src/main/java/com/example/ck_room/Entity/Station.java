@@ -13,10 +13,11 @@ public class Station {
 
     @ColumnInfo(name = "name")
     private String name;
-
-    public Station(int stationId, String name) {
+    private String address;
+    public Station(int stationId, String name, String address) {
         this.stationId = stationId;
         this.name = name;
+        this.address = address;
     }
     public Station()
     {
@@ -38,6 +39,14 @@ public class Station {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override

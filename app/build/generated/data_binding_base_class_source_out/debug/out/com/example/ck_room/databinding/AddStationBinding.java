@@ -25,6 +25,9 @@ public final class AddStationBinding implements ViewBinding {
   public final Button cancel;
 
   @NonNull
+  public final TextView detail;
+
+  @NonNull
   public final EditText id;
 
   @NonNull
@@ -43,19 +46,25 @@ public final class AddStationBinding implements ViewBinding {
   public final TextView textView6;
 
   @NonNull
+  public final EditText textdetail;
+
+  @NonNull
   public final Button update;
 
   private AddStationBinding(@NonNull LinearLayout rootView, @NonNull Button cancel,
-      @NonNull EditText id, @NonNull EditText name, @NonNull Button ok, @NonNull TextView textView3,
-      @NonNull TextView textView5, @NonNull TextView textView6, @NonNull Button update) {
+      @NonNull TextView detail, @NonNull EditText id, @NonNull EditText name, @NonNull Button ok,
+      @NonNull TextView textView3, @NonNull TextView textView5, @NonNull TextView textView6,
+      @NonNull EditText textdetail, @NonNull Button update) {
     this.rootView = rootView;
     this.cancel = cancel;
+    this.detail = detail;
     this.id = id;
     this.name = name;
     this.ok = ok;
     this.textView3 = textView3;
     this.textView5 = textView5;
     this.textView6 = textView6;
+    this.textdetail = textdetail;
     this.update = update;
   }
 
@@ -89,6 +98,12 @@ public final class AddStationBinding implements ViewBinding {
       id = R.id.cancel;
       Button cancel = ViewBindings.findChildViewById(rootView, id);
       if (cancel == null) {
+        break missingId;
+      }
+
+      id = R.id.detail;
+      TextView detail = ViewBindings.findChildViewById(rootView, id);
+      if (detail == null) {
         break missingId;
       }
 
@@ -128,14 +143,20 @@ public final class AddStationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textdetail;
+      EditText textdetail = ViewBindings.findChildViewById(rootView, id);
+      if (textdetail == null) {
+        break missingId;
+      }
+
       id = R.id.update;
       Button update = ViewBindings.findChildViewById(rootView, id);
       if (update == null) {
         break missingId;
       }
 
-      return new AddStationBinding((LinearLayout) rootView, cancel, id_, name, ok, textView3,
-          textView5, textView6, update);
+      return new AddStationBinding((LinearLayout) rootView, cancel, detail, id_, name, ok,
+          textView3, textView5, textView6, textdetail, update);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

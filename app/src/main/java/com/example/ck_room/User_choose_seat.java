@@ -34,12 +34,12 @@
 
     public class User_choose_seat extends AppCompatActivity {
         int REQUEST_CODE = 8;
-        TextView name,date,time, price;
+        TextView name,date,time, price ,seat;
         MyDatabase myDatabase;
         RadioGroup radioGroup;
         RadioButton radioEco,radioFirst,radioBus;
         List<Integer> list;
-
+        Button next;
         int id;
         private List<String> itemList;
 
@@ -58,6 +58,8 @@
             radioBus = findViewById(R.id.radBus);
             radioFirst = findViewById(R.id.radFirst);
             price = findViewById(R.id.textView10);
+            seat = findViewById(R.id.textView11);
+            next = findViewById(R.id.btNext);
             myDatabase = DatabaseManager.getDatabase(getApplicationContext());
 
             Intent intent = getIntent();
@@ -102,7 +104,7 @@
                         recyclerView = findViewById(R.id.recyclerViewmanage);
                         recyclerView.setLayoutManager(new GridLayoutManager(User_choose_seat.this, 4)); // 4 columns for 4 rows
 
-                        adapter3 = new CustomAdapter_user_seat(itemList,check,User_choose_seat.this, price,finalT_c.getEconomy_Fare());
+                        adapter3 = new CustomAdapter_user_seat(itemList,check,User_choose_seat.this, price,seat,finalT_c.getEconomy_Fare());
                         recyclerView.setAdapter(adapter3);
 
                         Toast.makeText(getApplicationContext(), "Bạn đã chọn radioEco", Toast.LENGTH_SHORT).show();
@@ -124,7 +126,19 @@
 
 
 
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    List<String> a = adapter3.getUserChoose();
 
+                    Intent intent = new Intent(User_choose_seat.this, User_buy_ticket.class);
+                    ArrayList<String> arrayList = new ArrayList<>(a);
+                    intent.putStringArrayListExtra("list", arrayList);
+                    intent.putExtra("totalSeat",seat.getText().toString())  ;
+                    intent.putExtra("totalPrice",price.getText().toString())  ;
+                    startActivity(intent);
+                }
+            });
 
 
 

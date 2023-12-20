@@ -44,16 +44,16 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.ck_room.app-merged_res-73:/layout_user_choose_seat.xml.flat",
-        "source": "com.example.ck_room.app-main-75:/layout/user_choose_seat.xml"
-    },
-    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_item_view.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\layout\\item_view.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\drawable_baseline_candlestick_chart_24.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\drawable\\baseline_candlestick_chart_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_user_select_payment.xml.flat",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\layout\\user_select_payment.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\drawable_baseline_qr_code_24.xml.flat",
@@ -138,6 +138,10 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_sign_in.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\layout\\sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\drawable_paypal.xml.flat",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\drawable\\paypal.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_activity_manage_train_page.xml.flat",
@@ -312,6 +316,10 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_a.xml.flat",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\layout\\a.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\drawable\\ic_launcher_background.xml"
     },
@@ -338,6 +346,10 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\layout_seat_item.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-75:\\layout\\seat_item.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-merged_res-73:/layout_add_station.xml.flat",
+        "source": "com.example.ck_room.app-main-75:/layout/add_station.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-73:\\drawable_baseline_square_2.xml.flat",

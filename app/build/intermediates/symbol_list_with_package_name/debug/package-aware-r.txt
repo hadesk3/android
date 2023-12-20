@@ -3404,6 +3404,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable paypal
 drawable sign_in_body
 drawable sign_in_button
 drawable sign_in_edittext
@@ -3677,13 +3678,18 @@ id bsb_text_input_layout
 id bt
 id bt1
 id btBack
+id btBack2
 id btBook
 id btBooking
 id btCreate
+id btDebit
 id btGr
 id btHistory
+id btJCB
 id btLogout
+id btMomo
 id btNext
+id btPaypal
 id btSave
 id btSearch
 id btSignUp
@@ -3691,6 +3697,8 @@ id btStation
 id btTrain
 id btUpdateTrain
 id btUser
+id btVNPAY
+id btVisa
 id button
 id button2
 id button3
@@ -3807,6 +3815,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id destination
+id detail
 id details
 id dialog_button
 id dimensions
@@ -4328,6 +4337,7 @@ id textView41
 id textView43
 id textView46
 id textView5
+id textView51
 id textView6
 id textView7
 id textView8
@@ -4340,6 +4350,7 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_expiry_date
 id text_input_start_icon
+id textdetail
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -4350,6 +4361,7 @@ id ticket
 id time
 id timeGr
 id title
+id title2
 id titleDividerNoCustom
 id title_template
 id tittle
@@ -4392,6 +4404,7 @@ id txtLast
 id txtLocation
 id txtName
 id txtNumber
+id txtPay
 id txtPhone
 id txtPlace
 id txtSignIn
@@ -4415,10 +4428,19 @@ id user4
 id vertical_only
 id view
 id view1
+id view10
+id view11
+id view12
+id view13
+id view14
 id view2
+id view3
+id view4
 id view5
 id view6
+id view7
 id view8
+id view9
 id view_offset_helper
 id view_stub
 id view_transition
@@ -4720,6 +4742,7 @@ layout user_choose_seat
 layout user_edit_profile
 layout user_item_view
 layout user_page1
+layout user_select_payment
 layout wallet_test_layout
 menu add_payment_method
 menu menu_main

@@ -21,27 +21,31 @@ import com.example.ck_room.R;
 
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_user_seat.ViewHolder> {
 
     private List<String> itemListName;
     private List<String> check;
-    private TextView price;
+    private TextView price,seat;
     private double fare;
     private Context context;
+    private List<String> user_choose_seat;
 
 
     private boolean[] isSelected; // Mảng lưu trữ trạng thái của các phần tử
     private double totalPrice = 0; // Tổng giá trị của các phần tử được chọn
-
-    public CustomAdapter_user_seat(List<String> itemList,List<String> check, Context context, TextView price, double fare) {
+    private int totalSeat = 0;
+    public CustomAdapter_user_seat(List<String> itemList,List<String> check, Context context, TextView price,TextView seat, double fare) {
         this.itemListName = itemList;
         this.check =check;
         this.price = price;
+        this.seat = seat;
         this.context = context;
         this.fare = fare;
         this.isSelected = new boolean[itemList.size()];
+        this.user_choose_seat = new ArrayList<>();
     }
 
     @NonNull
@@ -70,9 +74,13 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
                         if (isImage1) {
                             holder.image.setImageResource(R.drawable.baseline_chair_24);
                             totalPrice += fare; // Add fare to the total price
+                            totalSeat += 1;
+                            user_choose_seat.add(number);
                         } else {
                             holder.image.setImageResource(R.drawable.baseline_chair_1);
                             totalPrice -= fare; // Subtract fare from the total price
+                            totalSeat -= 1;
+                            user_choose_seat.remove(number);
                         }
 
                         DecimalFormat decimalFormat = new DecimalFormat("#.##");
@@ -80,6 +88,7 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
 
                         isSelected[adapterPosition] = isImage1; // Save the selected state in the isSelected array
                         price.setText(String.valueOf(roundedNumber)); // Update the total price in the TextView price
+                        seat.setText(totalSeat+"");
                     }
                 }
             }
@@ -106,6 +115,10 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
         Toast.makeText(context, id + "", Toast.LENGTH_SHORT).show();
         context.startActivity(intent);
     }
+
+    public List<String> getUserChoose() {
+        return this.user_choose_seat;
+    }
     @Override
     public int getItemCount() {
         return itemListName.size();
@@ -123,4 +136,6 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
             image = itemView.findViewById(R.id.textViewSeatNumber);
         }
     }
+
+
 }

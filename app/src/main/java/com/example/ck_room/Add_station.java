@@ -18,7 +18,7 @@ import java.util.List;
 
 public class Add_station extends AppCompatActivity {
     private static final int REQUEST_CODE = 2;
-    EditText edit_id,edit_name;
+    EditText edit_id,edit_name,detail;
     Button but_oke, but_update,but_cancel;
     private MyDatabase myDatabase;
 
@@ -28,6 +28,8 @@ public class Add_station extends AppCompatActivity {
         setContentView(R.layout.add_station);
         edit_id = findViewById(R.id.id);
         edit_name = findViewById(R.id.name);
+        detail = findViewById(R.id.textdetail);
+
         but_oke = findViewById(R.id.ok);
         but_update = findViewById(R.id.update);
         but_cancel = findViewById(R.id.cancel);
@@ -44,10 +46,10 @@ public class Add_station extends AppCompatActivity {
         but_oke.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edit_name.getText().toString() != null && edit_id.getText().toString() != null)
+                if(edit_name.getText().toString() != null && edit_id.getText().toString() != null && detail.getText().toString() != null)
                 {
                     int id = Integer.parseInt(edit_id.getText().toString());
-                    Station station = new Station(id,edit_name.getText().toString());
+                    Station station = new Station(id,edit_name.getText().toString(),detail.getText().toString());
                     if(station != null)
                     {
                         myDatabase = DatabaseManager.getDatabase(getApplicationContext());

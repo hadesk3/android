@@ -32,7 +32,7 @@ public final class StationDao_Impl implements StationDao {
     this.__insertionAdapterOfStation = new EntityInsertionAdapter<Station>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `station` (`station_id`,`name`) VALUES (nullif(?, 0),?)";
+        return "INSERT OR ABORT INTO `station` (`station_id`,`name`,`address`) VALUES (nullif(?, 0),?,?)";
       }
 
       @Override
@@ -42,6 +42,11 @@ public final class StationDao_Impl implements StationDao {
           stmt.bindNull(2);
         } else {
           stmt.bindString(2, value.getName());
+        }
+        if (value.getAddress() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getAddress());
         }
       }
     };
@@ -59,7 +64,7 @@ public final class StationDao_Impl implements StationDao {
     this.__updateAdapterOfStation = new EntityDeletionOrUpdateAdapter<Station>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `station` SET `station_id` = ?,`name` = ? WHERE `station_id` = ?";
+        return "UPDATE OR ABORT `station` SET `station_id` = ?,`name` = ?,`address` = ? WHERE `station_id` = ?";
       }
 
       @Override
@@ -70,7 +75,12 @@ public final class StationDao_Impl implements StationDao {
         } else {
           stmt.bindString(2, value.getName());
         }
-        stmt.bindLong(3, value.getStationId());
+        if (value.getAddress() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getAddress());
+        }
+        stmt.bindLong(4, value.getStationId());
       }
     };
   }
@@ -120,6 +130,7 @@ public final class StationDao_Impl implements StationDao {
     try {
       final int _cursorIndexOfStationId = CursorUtil.getColumnIndexOrThrow(_cursor, "station_id");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfAddress = CursorUtil.getColumnIndexOrThrow(_cursor, "address");
       final List<Station> _result = new ArrayList<Station>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Station _item;
@@ -134,6 +145,13 @@ public final class StationDao_Impl implements StationDao {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
         _item.setName(_tmpName);
+        final String _tmpAddress;
+        if (_cursor.isNull(_cursorIndexOfAddress)) {
+          _tmpAddress = null;
+        } else {
+          _tmpAddress = _cursor.getString(_cursorIndexOfAddress);
+        }
+        _item.setAddress(_tmpAddress);
         _result.add(_item);
       }
       return _result;
@@ -154,6 +172,7 @@ public final class StationDao_Impl implements StationDao {
     try {
       final int _cursorIndexOfStationId = CursorUtil.getColumnIndexOrThrow(_cursor, "station_id");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfAddress = CursorUtil.getColumnIndexOrThrow(_cursor, "address");
       final Station _result;
       if(_cursor.moveToFirst()) {
         _result = new Station();
@@ -167,6 +186,13 @@ public final class StationDao_Impl implements StationDao {
           _tmpName = _cursor.getString(_cursorIndexOfName);
         }
         _result.setName(_tmpName);
+        final String _tmpAddress;
+        if (_cursor.isNull(_cursorIndexOfAddress)) {
+          _tmpAddress = null;
+        } else {
+          _tmpAddress = _cursor.getString(_cursorIndexOfAddress);
+        }
+        _result.setAddress(_tmpAddress);
       } else {
         _result = null;
       }
