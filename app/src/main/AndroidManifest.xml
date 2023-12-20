@@ -47,6 +47,9 @@
         <activity android:name=".Admin_block_user" />
         <activity android:name=".Edit_station"/>
         <activity android:name=".User_choose_seat" />
+        <activity android:name=".Paypal" />
+        <activity android:name=".test" />
+
         <activity android:name=".Admin_manage_station" />
 
 

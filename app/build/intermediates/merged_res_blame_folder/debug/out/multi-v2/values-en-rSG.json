@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.ck_room.app-mergeDebugResources-71:/values-en-rSG/values-en-rSG.xml",
+            "outputFile": "com.example.ck_room.app-mergeDebugResources-72:/values-en-rSG/values-en-rSG.xml",
             "map": [
                 {
                     "source": "C:\\Users\\phamm\\.gradle\\caches\\transforms-3\\776419dcd00ec90528c1c8b836b13e57\\transformed\\play-services-wallet-19.1.0\\res\\values-en-rSG\\values.xml",

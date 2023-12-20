@@ -52,5 +52,7 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation("com.sun.mail:android-mail:1.6.2")
     implementation("com.sun.mail:android-activation:1.6.2")
+    implementation ("com.paypal.sdk:paypal-android-sdk:2.16.0")
+
 
 }

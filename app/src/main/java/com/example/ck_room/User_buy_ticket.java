@@ -2,9 +2,11 @@ package com.example.ck_room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +26,7 @@ public class User_buy_ticket extends AppCompatActivity
     int id_sent_to_book = 0;
     int id = 0;
 
-    TextView nameTrain, date,time, total, seat, pay;
+    TextView nameTrain, date,time, total, seat, pay, paypal;
     Switch sw;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -39,6 +41,7 @@ public class User_buy_ticket extends AppCompatActivity
         seat = findViewById(R.id.txtSeat);
         pay = findViewById(R.id.txtPay);
         sw = findViewById(R.id.swtCoin);
+        paypal = findViewById(R.id.btPaypal);
         Intent intent = getIntent();
 
             ArrayList<String> list = intent.getStringArrayListExtra("list");
@@ -89,5 +92,15 @@ public class User_buy_ticket extends AppCompatActivity
         });
 
 
+        paypal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(User_buy_ticket.this, "click", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
+                intent.putExtra("money",pay.getText().toString());
+                startActivity(intent);
+
+            }
+        });
     }
 }

@@ -31,6 +31,15 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.ck_room.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -75,6 +84,8 @@
         <activity android:name="com.example.ck_room.Admin_block_user" />
         <activity android:name="com.example.ck_room.Edit_station" />
         <activity android:name="com.example.ck_room.User_choose_seat" />
+        <activity android:name="com.example.ck_room.Paypal" />
+        <activity android:name="com.example.ck_room.test" />
         <activity android:name="com.example.ck_room.Admin_manage_station" />
         <activity
             android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
@@ -169,6 +180,20 @@
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="com.example.ck_room.com.squareup.picasso"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
             android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"
@@ -224,6 +249,11 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
 
         <meta-data
             android:name="aia-compat-api-min-version"

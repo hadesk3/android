@@ -255,6 +255,7 @@ id textView4
 id textView41
 id textView43
 id textView46
+id textView5
 id textView51
 id textView6
 id textView7
@@ -348,6 +349,7 @@ layout seat_item
 layout sign_in
 layout sign_up
 layout station_item
+layout test
 layout train_item
 layout user_buy_ticket
 layout user_choose_seat

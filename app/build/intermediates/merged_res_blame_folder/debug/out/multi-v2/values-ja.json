@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.ck_room.app-mergeDebugResources-71:/values-ja/values-ja.xml",
+            "outputFile": "com.example.ck_room.app-mergeDebugResources-72:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "C:\\Users\\phamm\\.gradle\\caches\\transforms-3\\a833730eae5fc50d0d340e0c5bd9d9c2\\transformed\\play-services-base-18.0.1\\res\\values-ja\\values.xml",

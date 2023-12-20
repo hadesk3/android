@@ -3291,6 +3291,14 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cio_card_io_logo
+drawable cio_ic_amex
+drawable cio_ic_discover
+drawable cio_ic_jcb
+drawable cio_ic_mastercard
+drawable cio_ic_paypal_monogram
+drawable cio_ic_visa
+drawable cio_paypal_logo
 drawable code
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -4358,6 +4366,7 @@ id textView4
 id textView41
 id textView43
 id textView46
+id textView5
 id textView51
 id textView6
 id textView7
@@ -4773,6 +4782,7 @@ layout stripe_information_zone_view
 layout stripe_progress_view_layout
 layout stripe_vertical_divider
 layout support_simple_spinner_dropdown_item
+layout test
 layout train_item
 layout user_buy_ticket
 layout user_choose_seat
