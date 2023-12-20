@@ -41,6 +41,8 @@
         List<Integer> list;
         Button next;
         int id;
+        int id_sent_to_book = 0;
+
         private List<String> itemList;
 
 
@@ -63,9 +65,10 @@
             myDatabase = DatabaseManager.getDatabase(getApplicationContext());
 
             Intent intent = getIntent();
+            id_sent_to_book = intent.getIntExtra("id",0);
+
             id = intent.getIntExtra("id",0)  -1;
             Train t = myDatabase.trainDao().getAllTrains().get(id);
-            Toast.makeText(this, t.toString(), Toast.LENGTH_SHORT).show();
             name.setText(t.getTrain_name());
             time.setText(t.getTimeStart()+":"+t.getTimeEnd());
 
@@ -130,12 +133,17 @@
                 @Override
                 public void onClick(View v) {
                     List<String> a = adapter3.getUserChoose();
+                    Intent intentGet = getIntent();
+                    String username = intentGet.getStringExtra("username");
 
                     Intent intent = new Intent(User_choose_seat.this, User_buy_ticket.class);
+                    intent.putExtra("id",id_sent_to_book);
                     ArrayList<String> arrayList = new ArrayList<>(a);
                     intent.putStringArrayListExtra("list", arrayList);
                     intent.putExtra("totalSeat",seat.getText().toString())  ;
                     intent.putExtra("totalPrice",price.getText().toString())  ;
+                    intent.putExtra("username",username);
+
                     startActivity(intent);
                 }
             });

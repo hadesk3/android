@@ -49,9 +49,6 @@ public final class SignUpBinding implements ViewBinding {
   public final EditText edtLast;
 
   @NonNull
-  public final EditText edtPassword;
-
-  @NonNull
   public final EditText edtPhone;
 
   @NonNull
@@ -79,9 +76,6 @@ public final class SignUpBinding implements ViewBinding {
   public final TextView textView39;
 
   @NonNull
-  public final TextView textView40;
-
-  @NonNull
   public final TextView textView41;
 
   @NonNull
@@ -96,12 +90,11 @@ public final class SignUpBinding implements ViewBinding {
   private SignUpBinding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout Constraint,
       @NonNull TextView SignUp, @NonNull View body, @NonNull Button btSignUp,
       @NonNull TextView edtDob, @NonNull EditText edtEmail, @NonNull EditText edtFirst,
-      @NonNull EditText edtLast, @NonNull EditText edtPassword, @NonNull EditText edtPhone,
-      @NonNull ImageView imageView, @NonNull RadioButton radioF, @NonNull RadioGroup radioGr,
-      @NonNull RadioButton radioM, @NonNull TextView textView35, @NonNull TextView textView36,
-      @NonNull TextView textView37, @NonNull TextView textView39, @NonNull TextView textView40,
-      @NonNull TextView textView41, @NonNull TextView textView43, @NonNull TextView textView46,
-      @NonNull TextView txtSignIn) {
+      @NonNull EditText edtLast, @NonNull EditText edtPhone, @NonNull ImageView imageView,
+      @NonNull RadioButton radioF, @NonNull RadioGroup radioGr, @NonNull RadioButton radioM,
+      @NonNull TextView textView35, @NonNull TextView textView36, @NonNull TextView textView37,
+      @NonNull TextView textView39, @NonNull TextView textView41, @NonNull TextView textView43,
+      @NonNull TextView textView46, @NonNull TextView txtSignIn) {
     this.rootView = rootView;
     this.Constraint = Constraint;
     this.SignUp = SignUp;
@@ -111,7 +104,6 @@ public final class SignUpBinding implements ViewBinding {
     this.edtEmail = edtEmail;
     this.edtFirst = edtFirst;
     this.edtLast = edtLast;
-    this.edtPassword = edtPassword;
     this.edtPhone = edtPhone;
     this.imageView = imageView;
     this.radioF = radioF;
@@ -121,7 +113,6 @@ public final class SignUpBinding implements ViewBinding {
     this.textView36 = textView36;
     this.textView37 = textView37;
     this.textView39 = textView39;
-    this.textView40 = textView40;
     this.textView41 = textView41;
     this.textView43 = textView43;
     this.textView46 = textView46;
@@ -199,12 +190,6 @@ public final class SignUpBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtPassword;
-      EditText edtPassword = ViewBindings.findChildViewById(rootView, id);
-      if (edtPassword == null) {
-        break missingId;
-      }
-
       id = R.id.edtPhone;
       EditText edtPhone = ViewBindings.findChildViewById(rootView, id);
       if (edtPhone == null) {
@@ -259,12 +244,6 @@ public final class SignUpBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView40;
-      TextView textView40 = ViewBindings.findChildViewById(rootView, id);
-      if (textView40 == null) {
-        break missingId;
-      }
-
       id = R.id.textView41;
       TextView textView41 = ViewBindings.findChildViewById(rootView, id);
       if (textView41 == null) {
@@ -290,9 +269,9 @@ public final class SignUpBinding implements ViewBinding {
       }
 
       return new SignUpBinding((ConstraintLayout) rootView, Constraint, SignUp, body, btSignUp,
-          edtDob, edtEmail, edtFirst, edtLast, edtPassword, edtPhone, imageView, radioF, radioGr,
-          radioM, textView35, textView36, textView37, textView39, textView40, textView41,
-          textView43, textView46, txtSignIn);
+          edtDob, edtEmail, edtFirst, edtLast, edtPhone, imageView, radioF, radioGr, radioM,
+          textView35, textView36, textView37, textView39, textView41, textView43, textView46,
+          txtSignIn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

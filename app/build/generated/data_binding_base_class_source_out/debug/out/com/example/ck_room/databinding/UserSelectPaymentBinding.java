@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,13 +44,43 @@ public final class UserSelectPaymentBinding implements ViewBinding {
   public final TextView btVisa;
 
   @NonNull
+  public final View form5;
+
+  @NonNull
+  public final LinearLayout linearLayout4;
+
+  @NonNull
+  public final Switch swtCoin;
+
+  @NonNull
+  public final TextView textView3;
+
+  @NonNull
   public final TextView textView51;
 
   @NonNull
   public final TextView title2;
 
   @NonNull
+  public final TextView txtCoin;
+
+  @NonNull
+  public final TextView txtDate;
+
+  @NonNull
   public final TextView txtPay;
+
+  @NonNull
+  public final TextView txtSeat;
+
+  @NonNull
+  public final TextView txtTime;
+
+  @NonNull
+  public final TextView txtTotal;
+
+  @NonNull
+  public final TextView txtTrip;
 
   @NonNull
   public final View view10;
@@ -66,6 +98,9 @@ public final class UserSelectPaymentBinding implements ViewBinding {
   public final View view14;
 
   @NonNull
+  public final View view15;
+
+  @NonNull
   public final View view3;
 
   @NonNull
@@ -80,10 +115,13 @@ public final class UserSelectPaymentBinding implements ViewBinding {
   private UserSelectPaymentBinding(@NonNull ConstraintLayout rootView, @NonNull Button btBack2,
       @NonNull TextView btDebit, @NonNull TextView btJCB, @NonNull TextView btMomo,
       @NonNull TextView btPaypal, @NonNull TextView btVNPAY, @NonNull TextView btVisa,
-      @NonNull TextView textView51, @NonNull TextView title2, @NonNull TextView txtPay,
-      @NonNull View view10, @NonNull View view11, @NonNull View view12, @NonNull View view13,
-      @NonNull View view14, @NonNull View view3, @NonNull View view4, @NonNull View view7,
-      @NonNull View view9) {
+      @NonNull View form5, @NonNull LinearLayout linearLayout4, @NonNull Switch swtCoin,
+      @NonNull TextView textView3, @NonNull TextView textView51, @NonNull TextView title2,
+      @NonNull TextView txtCoin, @NonNull TextView txtDate, @NonNull TextView txtPay,
+      @NonNull TextView txtSeat, @NonNull TextView txtTime, @NonNull TextView txtTotal,
+      @NonNull TextView txtTrip, @NonNull View view10, @NonNull View view11, @NonNull View view12,
+      @NonNull View view13, @NonNull View view14, @NonNull View view15, @NonNull View view3,
+      @NonNull View view4, @NonNull View view7, @NonNull View view9) {
     this.rootView = rootView;
     this.btBack2 = btBack2;
     this.btDebit = btDebit;
@@ -92,14 +130,25 @@ public final class UserSelectPaymentBinding implements ViewBinding {
     this.btPaypal = btPaypal;
     this.btVNPAY = btVNPAY;
     this.btVisa = btVisa;
+    this.form5 = form5;
+    this.linearLayout4 = linearLayout4;
+    this.swtCoin = swtCoin;
+    this.textView3 = textView3;
     this.textView51 = textView51;
     this.title2 = title2;
+    this.txtCoin = txtCoin;
+    this.txtDate = txtDate;
     this.txtPay = txtPay;
+    this.txtSeat = txtSeat;
+    this.txtTime = txtTime;
+    this.txtTotal = txtTotal;
+    this.txtTrip = txtTrip;
     this.view10 = view10;
     this.view11 = view11;
     this.view12 = view12;
     this.view13 = view13;
     this.view14 = view14;
+    this.view15 = view15;
     this.view3 = view3;
     this.view4 = view4;
     this.view7 = view7;
@@ -175,6 +224,30 @@ public final class UserSelectPaymentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.form5;
+      View form5 = ViewBindings.findChildViewById(rootView, id);
+      if (form5 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout4;
+      LinearLayout linearLayout4 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout4 == null) {
+        break missingId;
+      }
+
+      id = R.id.swtCoin;
+      Switch swtCoin = ViewBindings.findChildViewById(rootView, id);
+      if (swtCoin == null) {
+        break missingId;
+      }
+
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
       id = R.id.textView51;
       TextView textView51 = ViewBindings.findChildViewById(rootView, id);
       if (textView51 == null) {
@@ -187,9 +260,45 @@ public final class UserSelectPaymentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtCoin;
+      TextView txtCoin = ViewBindings.findChildViewById(rootView, id);
+      if (txtCoin == null) {
+        break missingId;
+      }
+
+      id = R.id.txtDate;
+      TextView txtDate = ViewBindings.findChildViewById(rootView, id);
+      if (txtDate == null) {
+        break missingId;
+      }
+
       id = R.id.txtPay;
       TextView txtPay = ViewBindings.findChildViewById(rootView, id);
       if (txtPay == null) {
+        break missingId;
+      }
+
+      id = R.id.txtSeat;
+      TextView txtSeat = ViewBindings.findChildViewById(rootView, id);
+      if (txtSeat == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTime;
+      TextView txtTime = ViewBindings.findChildViewById(rootView, id);
+      if (txtTime == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTotal;
+      TextView txtTotal = ViewBindings.findChildViewById(rootView, id);
+      if (txtTotal == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTrip;
+      TextView txtTrip = ViewBindings.findChildViewById(rootView, id);
+      if (txtTrip == null) {
         break missingId;
       }
 
@@ -223,6 +332,12 @@ public final class UserSelectPaymentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.view15;
+      View view15 = ViewBindings.findChildViewById(rootView, id);
+      if (view15 == null) {
+        break missingId;
+      }
+
       id = R.id.view3;
       View view3 = ViewBindings.findChildViewById(rootView, id);
       if (view3 == null) {
@@ -248,8 +363,9 @@ public final class UserSelectPaymentBinding implements ViewBinding {
       }
 
       return new UserSelectPaymentBinding((ConstraintLayout) rootView, btBack2, btDebit, btJCB,
-          btMomo, btPaypal, btVNPAY, btVisa, textView51, title2, txtPay, view10, view11, view12,
-          view13, view14, view3, view4, view7, view9);
+          btMomo, btPaypal, btVNPAY, btVisa, form5, linearLayout4, swtCoin, textView3, textView51,
+          title2, txtCoin, txtDate, txtPay, txtSeat, txtTime, txtTotal, txtTrip, view10, view11,
+          view12, view13, view14, view15, view3, view4, view7, view9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

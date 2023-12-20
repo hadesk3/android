@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="@+id/user4"
         app:layout_constraintTop_toTopOf="@+id/user4"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_money_24" />
+        app:srcCompat="@drawable/icons8_revenue_50" />
 
     <TextView
         android:id="@+id/textView12"
@@ -160,7 +160,7 @@
         app:layout_constraintStart_toStartOf="@+id/user"
         app:layout_constraintTop_toTopOf="@+id/user"
         app:layout_constraintVertical_bias="0.0"
-       />
+        app:srcCompat="@drawable/icons8_user_groups_50" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -173,7 +173,7 @@
         app:layout_constraintStart_toStartOf="@+id/ticket"
         app:layout_constraintTop_toTopOf="@+id/ticket"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_candlestick_chart_24" />
+        tools:srcCompat="@drawable/icons8_ticket_50" />
 
     <TextView
         android:id="@+id/txtUser"

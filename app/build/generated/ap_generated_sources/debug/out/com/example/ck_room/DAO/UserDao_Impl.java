@@ -31,7 +31,7 @@ public final class UserDao_Impl implements UserDao {
     this.__insertionAdapterOfUser = new EntityInsertionAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `user` (`EmailID`,`firstName`,`lastName`,`pass`,`phone`,`dob`,`gender`) VALUES (?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `user` (`EmailID`,`firstName`,`lastName`,`pass`,`phone`,`dob`,`gender`,`block`,`coin`) VALUES (?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -71,6 +71,10 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(7, value.getGender());
         }
+        final int _tmp;
+        _tmp = value.isBlock() ? 1 : 0;
+        stmt.bindLong(8, _tmp);
+        stmt.bindDouble(9, value.getCoin());
       }
     };
     this.__deletionAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
@@ -91,7 +95,7 @@ public final class UserDao_Impl implements UserDao {
     this.__updateAdapterOfUser = new EntityDeletionOrUpdateAdapter<User>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `user` SET `EmailID` = ?,`firstName` = ?,`lastName` = ?,`pass` = ?,`phone` = ?,`dob` = ?,`gender` = ? WHERE `EmailID` = ?";
+        return "UPDATE OR ABORT `user` SET `EmailID` = ?,`firstName` = ?,`lastName` = ?,`pass` = ?,`phone` = ?,`dob` = ?,`gender` = ?,`block` = ?,`coin` = ? WHERE `EmailID` = ?";
       }
 
       @Override
@@ -131,10 +135,14 @@ public final class UserDao_Impl implements UserDao {
         } else {
           stmt.bindString(7, value.getGender());
         }
+        final int _tmp;
+        _tmp = value.isBlock() ? 1 : 0;
+        stmt.bindLong(8, _tmp);
+        stmt.bindDouble(9, value.getCoin());
         if (value.getUserName() == null) {
-          stmt.bindNull(8);
+          stmt.bindNull(10);
         } else {
-          stmt.bindString(8, value.getUserName());
+          stmt.bindString(10, value.getUserName());
         }
       }
     };
@@ -196,6 +204,8 @@ public final class UserDao_Impl implements UserDao {
       final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
       final int _cursorIndexOfDob = CursorUtil.getColumnIndexOrThrow(_cursor, "dob");
       final int _cursorIndexOfGender = CursorUtil.getColumnIndexOrThrow(_cursor, "gender");
+      final int _cursorIndexOfBlock = CursorUtil.getColumnIndexOrThrow(_cursor, "block");
+      final int _cursorIndexOfCoin = CursorUtil.getColumnIndexOrThrow(_cursor, "coin");
       final User _result;
       if(_cursor.moveToFirst()) {
         _result = new User();
@@ -248,6 +258,106 @@ public final class UserDao_Impl implements UserDao {
           _tmpGender = _cursor.getString(_cursorIndexOfGender);
         }
         _result.setGender(_tmpGender);
+        final boolean _tmpBlock;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfBlock);
+        _tmpBlock = _tmp != 0;
+        _result.setBlock(_tmpBlock);
+        final double _tmpCoin;
+        _tmpCoin = _cursor.getDouble(_cursorIndexOfCoin);
+        _result.setCoin(_tmpCoin);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public User getUserByPhone(final String phone) {
+    final String _sql = "SELECT * FROM user WHERE phone= ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (phone == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, phone);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfUserName = CursorUtil.getColumnIndexOrThrow(_cursor, "EmailID");
+      final int _cursorIndexOfFirstName = CursorUtil.getColumnIndexOrThrow(_cursor, "firstName");
+      final int _cursorIndexOfLastName = CursorUtil.getColumnIndexOrThrow(_cursor, "lastName");
+      final int _cursorIndexOfPass = CursorUtil.getColumnIndexOrThrow(_cursor, "pass");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfDob = CursorUtil.getColumnIndexOrThrow(_cursor, "dob");
+      final int _cursorIndexOfGender = CursorUtil.getColumnIndexOrThrow(_cursor, "gender");
+      final int _cursorIndexOfBlock = CursorUtil.getColumnIndexOrThrow(_cursor, "block");
+      final int _cursorIndexOfCoin = CursorUtil.getColumnIndexOrThrow(_cursor, "coin");
+      final User _result;
+      if(_cursor.moveToFirst()) {
+        _result = new User();
+        final String _tmpUserName;
+        if (_cursor.isNull(_cursorIndexOfUserName)) {
+          _tmpUserName = null;
+        } else {
+          _tmpUserName = _cursor.getString(_cursorIndexOfUserName);
+        }
+        _result.setUserName(_tmpUserName);
+        final String _tmpFirstName;
+        if (_cursor.isNull(_cursorIndexOfFirstName)) {
+          _tmpFirstName = null;
+        } else {
+          _tmpFirstName = _cursor.getString(_cursorIndexOfFirstName);
+        }
+        _result.setFirstName(_tmpFirstName);
+        final String _tmpLastName;
+        if (_cursor.isNull(_cursorIndexOfLastName)) {
+          _tmpLastName = null;
+        } else {
+          _tmpLastName = _cursor.getString(_cursorIndexOfLastName);
+        }
+        _result.setLastName(_tmpLastName);
+        final String _tmpPass;
+        if (_cursor.isNull(_cursorIndexOfPass)) {
+          _tmpPass = null;
+        } else {
+          _tmpPass = _cursor.getString(_cursorIndexOfPass);
+        }
+        _result.setPass(_tmpPass);
+        final String _tmpPhone;
+        if (_cursor.isNull(_cursorIndexOfPhone)) {
+          _tmpPhone = null;
+        } else {
+          _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        }
+        _result.setPhone(_tmpPhone);
+        final String _tmpDob;
+        if (_cursor.isNull(_cursorIndexOfDob)) {
+          _tmpDob = null;
+        } else {
+          _tmpDob = _cursor.getString(_cursorIndexOfDob);
+        }
+        _result.setDob(_tmpDob);
+        final String _tmpGender;
+        if (_cursor.isNull(_cursorIndexOfGender)) {
+          _tmpGender = null;
+        } else {
+          _tmpGender = _cursor.getString(_cursorIndexOfGender);
+        }
+        _result.setGender(_tmpGender);
+        final boolean _tmpBlock;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfBlock);
+        _tmpBlock = _tmp != 0;
+        _result.setBlock(_tmpBlock);
+        final double _tmpCoin;
+        _tmpCoin = _cursor.getDouble(_cursorIndexOfCoin);
+        _result.setCoin(_tmpCoin);
       } else {
         _result = null;
       }

@@ -5,8 +5,11 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -46,15 +49,15 @@ public class User_view_train extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_view_train);
+        setContentView(R.layout.user_view_train);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
-        book = findViewById(R.id.btBook);
+        book = findViewById(R.id.btCreate);
         edtDate = findViewById(R.id.edtDate);
         edtName = findViewById(R.id.edtName);
         edtEnd = findViewById(R.id.edtEnd);
         edtStart = findViewById(R.id.edtStart);
 
-        source = findViewById(R.id.edtDepart);
+        source = findViewById(R.id.edtEmail);
         des = findViewById(R.id.edtArrive);
         edtEcoPass = findViewById(R.id.edtEcoPass);
         edtBusPass = findViewById(R.id.edtBusPass);
@@ -67,7 +70,6 @@ public class User_view_train extends AppCompatActivity {
         id_sent_to_book = intent.getIntExtra("id",0);
         id = intent.getIntExtra("id",0)  -1;
         Train t = myDatabase.trainDao().getAllTrains().get(id);
-        Toast.makeText(this, t.toString(), Toast.LENGTH_SHORT).show();
 
         edtName.setText(t.getTrain_name());
         source.setText(t.getSource_stn());
@@ -75,15 +77,10 @@ public class User_view_train extends AppCompatActivity {
 
         List<Day_available> a =  new ArrayList<>();
         a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id + 1);
-
+        edtDate.setText(a.get(0).getDay_available());
         Train_class t_c = new Train_class();
         t_c = myDatabase.trainClassDao().getTrainClassById(id +1);
-        if(a.size() == 0)
-        {
-            Log.d("a","kooo");
 
-
-        }
         //  edtDate.setText(a.get(0).getDay_available());
         edtStart.setText(t.getTimeStart());
         edtEnd.setText(t.getTimeEnd());
@@ -185,12 +182,62 @@ public class User_view_train extends AppCompatActivity {
                 timePickerDialog.show();
             }
         });
+        source.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String get_address = source.getText().toString();
+                Toast.makeText(User_view_train.this,  get_address, Toast.LENGTH_SHORT).show();
+
+                String detail = myDatabase.stationDao().getStationByName(get_address).getAddress();
+                Toast.makeText(User_view_train.this, detail, Toast.LENGTH_SHORT).show();
+                if (!TextUtils.isEmpty(detail)) {
+                    Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(detail));
+
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+
+                    if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(mapIntent);
+                    } else {
+                        //if dont have gg map
+                    }
+            }}
+        });
+
+
+        des.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String get_address = des.getText().toString();
+                Toast.makeText(User_view_train.this,  get_address, Toast.LENGTH_SHORT).show();
+
+                String detail = myDatabase.stationDao().getStationByName(get_address).getAddress();
+                Toast.makeText(User_view_train.this, detail, Toast.LENGTH_SHORT).show();
+                if (!TextUtils.isEmpty(detail)) {
+                    Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(detail));
+
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+
+                    if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(mapIntent);
+                    } else {
+                    }
+                }}
+        });
+
+
+
 
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             Intent intent = new Intent(User_view_train.this, User_choose_seat.class);
-             intent.putExtra("id", id_sent_to_book);
+                Intent intentGet = getIntent();
+                String username = intentGet.getStringExtra("username");
+
+                Intent intent = new Intent(User_view_train.this, User_choose_seat.class);
+                intent.putExtra("id", id_sent_to_book);
+                intent.putExtra("username",username);
              startActivity(intent);
             }
         });

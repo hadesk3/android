@@ -1,0 +1,5 @@
+<!-- rounded_corner.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp" /> <!-- Điều chỉnh giá trị để bo góc -->
+    <solid android:color="#D0EBFF" /> <!-- Màu nền của hình ảnh -->
+</shape>

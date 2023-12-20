@@ -30,10 +30,10 @@ public final class UserEditProfileBinding implements ViewBinding {
   public final Button btBack;
 
   @NonNull
-  public final Button btLogout;
+  public final Button btBlock;
 
   @NonNull
-  public final Button btSave;
+  public final Button btLogout;
 
   @NonNull
   public final CardView cardView;
@@ -75,7 +75,13 @@ public final class UserEditProfileBinding implements ViewBinding {
   public final View line4;
 
   @NonNull
+  public final TextView textView6;
+
+  @NonNull
   public final TextView tittle;
+
+  @NonNull
+  public final TextView txtCoin;
 
   @NonNull
   public final TextView txtDob;
@@ -99,23 +105,26 @@ public final class UserEditProfileBinding implements ViewBinding {
   public final View view;
 
   @NonNull
+  public final View view16;
+
+  @NonNull
   public final View view2;
 
   private UserEditProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout Constraint, @NonNull Button btBack, @NonNull Button btLogout,
-      @NonNull Button btSave, @NonNull CardView cardView, @NonNull CardView cardView3,
+      @NonNull ConstraintLayout Constraint, @NonNull Button btBack, @NonNull Button btBlock,
+      @NonNull Button btLogout, @NonNull CardView cardView, @NonNull CardView cardView3,
       @NonNull TextView edtDob, @NonNull EditText edtFirst, @NonNull TextView edtGe,
       @NonNull EditText edtLast, @NonNull EditText edtPhone, @NonNull ImageView imageView2,
       @NonNull View line, @NonNull View line1, @NonNull View line2, @NonNull View line3,
-      @NonNull View line4, @NonNull TextView tittle, @NonNull TextView txtDob,
-      @NonNull TextView txtFirst, @NonNull TextView txtGen, @NonNull TextView txtLast,
-      @NonNull TextView txtName, @NonNull TextView txtPhone, @NonNull View view,
-      @NonNull View view2) {
+      @NonNull View line4, @NonNull TextView textView6, @NonNull TextView tittle,
+      @NonNull TextView txtCoin, @NonNull TextView txtDob, @NonNull TextView txtFirst,
+      @NonNull TextView txtGen, @NonNull TextView txtLast, @NonNull TextView txtName,
+      @NonNull TextView txtPhone, @NonNull View view, @NonNull View view16, @NonNull View view2) {
     this.rootView = rootView;
     this.Constraint = Constraint;
     this.btBack = btBack;
+    this.btBlock = btBlock;
     this.btLogout = btLogout;
-    this.btSave = btSave;
     this.cardView = cardView;
     this.cardView3 = cardView3;
     this.edtDob = edtDob;
@@ -129,7 +138,9 @@ public final class UserEditProfileBinding implements ViewBinding {
     this.line2 = line2;
     this.line3 = line3;
     this.line4 = line4;
+    this.textView6 = textView6;
     this.tittle = tittle;
+    this.txtCoin = txtCoin;
     this.txtDob = txtDob;
     this.txtFirst = txtFirst;
     this.txtGen = txtGen;
@@ -137,6 +148,7 @@ public final class UserEditProfileBinding implements ViewBinding {
     this.txtName = txtName;
     this.txtPhone = txtPhone;
     this.view = view;
+    this.view16 = view16;
     this.view2 = view2;
   }
 
@@ -175,15 +187,15 @@ public final class UserEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btLogout;
-      Button btLogout = ViewBindings.findChildViewById(rootView, id);
-      if (btLogout == null) {
+      id = R.id.btBlock;
+      Button btBlock = ViewBindings.findChildViewById(rootView, id);
+      if (btBlock == null) {
         break missingId;
       }
 
-      id = R.id.btSave;
-      Button btSave = ViewBindings.findChildViewById(rootView, id);
-      if (btSave == null) {
+      id = R.id.btLogout;
+      Button btLogout = ViewBindings.findChildViewById(rootView, id);
+      if (btLogout == null) {
         break missingId;
       }
 
@@ -265,9 +277,21 @@ public final class UserEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView6;
+      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
+      if (textView6 == null) {
+        break missingId;
+      }
+
       id = R.id.tittle;
       TextView tittle = ViewBindings.findChildViewById(rootView, id);
       if (tittle == null) {
+        break missingId;
+      }
+
+      id = R.id.txtCoin;
+      TextView txtCoin = ViewBindings.findChildViewById(rootView, id);
+      if (txtCoin == null) {
         break missingId;
       }
 
@@ -313,16 +337,22 @@ public final class UserEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.view16;
+      View view16 = ViewBindings.findChildViewById(rootView, id);
+      if (view16 == null) {
+        break missingId;
+      }
+
       id = R.id.view2;
       View view2 = ViewBindings.findChildViewById(rootView, id);
       if (view2 == null) {
         break missingId;
       }
 
-      return new UserEditProfileBinding((ConstraintLayout) rootView, Constraint, btBack, btLogout,
-          btSave, cardView, cardView3, edtDob, edtFirst, edtGe, edtLast, edtPhone, imageView2, line,
-          line1, line2, line3, line4, tittle, txtDob, txtFirst, txtGen, txtLast, txtName, txtPhone,
-          view, view2);
+      return new UserEditProfileBinding((ConstraintLayout) rootView, Constraint, btBack, btBlock,
+          btLogout, cardView, cardView3, edtDob, edtFirst, edtGe, edtLast, edtPhone, imageView2,
+          line, line1, line2, line3, line4, textView6, tittle, txtCoin, txtDob, txtFirst, txtGen,
+          txtLast, txtName, txtPhone, view, view16, view2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

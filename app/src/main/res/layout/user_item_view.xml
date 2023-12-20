@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:padding="5dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/imgAvatar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/baseline_train_new" />
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/icons8_person_50" />
+
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@id/imgAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Metro1"
+            android:text="Nguyen Anh"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/txtPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ha Noi - Ha Noi"
+            android:text="27-10-2003"
             android:textColor="#676767"
             android:textSize="15dp" />
 
@@ -41,9 +41,8 @@
             android:id="@+id/txtTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/baseline_access_time_24"
             android:drawablePadding="2dp"
-            android:text="10 - 10" />
+            android:text="Female" />
     </LinearLayout>
 
     <ImageButton
@@ -57,10 +56,11 @@
         android:src="@drawable/baseline_touch_app_24" />
 
     <View
-        android:layout_marginTop="5dp"
-        android:background="#E6E6E6"
-        android:layout_below="@id/imgAvatar"
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_height="1dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:background="#E6E6E6" />
 
 </RelativeLayout>

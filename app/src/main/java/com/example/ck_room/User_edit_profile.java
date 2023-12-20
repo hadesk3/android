@@ -27,11 +27,11 @@ import java.util.Locale;
 public class User_edit_profile extends AppCompatActivity {
     int REQUEST_CODE = 20;
 
-    EditText phone, first, last;
+    EditText phone, first, last ;
     Button back,save, logout;
     String[] genderOptions = {"Female", "Male"};
 
-    TextView name, gender, dob;
+    TextView name, gender, dob, coin;
     private Calendar selectedDate = Calendar.getInstance();
 
     MyDatabase myDatabase;
@@ -75,11 +75,12 @@ public class User_edit_profile extends AppCompatActivity {
         last = findViewById(R.id.edtLast);
         phone = findViewById(R.id.edtPhone);
         back = findViewById(R.id.btBack);
-        save = findViewById(R.id.btSave);
+       save = findViewById(R.id.btBlock);
         dob = findViewById(R.id.edtDob);
         gender = findViewById(R.id.edtGe);
         name = findViewById(R.id.txtName);
         logout = findViewById(R.id.btLogout);
+        coin = findViewById(R.id.txtCoin);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,7 +111,7 @@ public class User_edit_profile extends AppCompatActivity {
         dob.setText(user.getDob());
         last.setText(user.getLastName());
         first.setText(user.getFirstName());
-
+        coin.setText(user.getCoin() + "");
         if(user.getGender().equals("Female"))
         {
             gender.setText("Female");

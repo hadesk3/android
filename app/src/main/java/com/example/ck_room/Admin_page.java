@@ -14,19 +14,27 @@ public class Admin_page extends AppCompatActivity {
  /*   Button butAddTrain,getButAddTrainStatus, butAddRoute,butAddStation, butProfile,butManageTrain;
     Button back;*/
 
-    ImageButton butManageTrain;
+    ImageButton butManageTrain, btStation;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       setContentView(R.layout.admin_page);
       butManageTrain = findViewById(R.id.btTrain);
-
+        btStation = findViewById(R.id.btStation);
       butManageTrain.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               Intent intent = new Intent(Admin_page.this,ManageTrain_page.class);
               startActivityForResult(intent,REQUEST_CODE);
           }
+      });
+      btStation.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              Intent intent = new Intent(Admin_page.this,Admin_manage_station.class);
+              startActivityForResult(intent,REQUEST_CODE);
+          }
+
       });
        /*
         butAddTrain = findViewById(R.id.add_train);

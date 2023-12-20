@@ -30,33 +30,21 @@ public class User_page extends AppCompatActivity {
 
 
 
-        setContentView(R.layout.user_page1);
+        setContentView(R.layout.user_page);
         edit = findViewById(R.id.btUser);
         check = findViewById(R.id.btHistory);
         buy = findViewById(R.id.btBooking);
         //back = findViewById(R.id.back);
 
         Intent intent = getIntent();
-        String firstName = intent.getStringExtra("firstName");
-        String lastName = intent.getStringExtra("lastName");
-        String dob = intent.getStringExtra("dob");
-        String phone = intent.getStringExtra("phone");
-        String gender = intent.getStringExtra("gender");
         String username = intent.getStringExtra("username");
-        String pass = intent.getStringExtra("pass");
-        Log.d("=====",username);
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(User_page.this,User_edit_profile.class);
-                intent.putExtra("lastName", lastName);
-                intent.putExtra("firstName", firstName);
-                intent.putExtra("dob",dob);
-                intent.putExtra("phone",phone);
-                intent.putExtra("gender",gender);
                 intent.putExtra("username",username);
-                intent.putExtra("pass",pass);
+
 
                 startActivityForResult(intent,REQUEST_CODE);
             }
@@ -65,6 +53,7 @@ public class User_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(User_page.this,User_Search.class);
+                intent.putExtra("username",username);
                 startActivityForResult(intent,REQUEST_CODE);
 
             }

@@ -125,13 +125,8 @@ public class MainActivity extends AppCompatActivity {
                    if(user != null && pass.getText().toString().equals(user.getPass()))
                     {
                         Intent intent = new Intent(MainActivity.this,User_page.class);
-                        intent.putExtra("lastName",user.getLastName());
-                        intent.putExtra("firstName",user.getFirstName());
-                        intent.putExtra("dob",user.getDob() +"");
-                        intent.putExtra("phone",user.getPhone());
-                        intent.putExtra("gender",user.getGender());
+
                         intent.putExtra("username",user.getUserName());
-                        intent.putExtra("pass",user.getPass());
 
                         startActivityForResult(intent,REQUEST_CODE);
                         finish();

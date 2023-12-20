@@ -35,7 +35,7 @@ import java.util.Locale;
 public class User_Search extends AppCompatActivity {
     int REQUEST_CODE = 5;
     Button  search;
-
+    String username = "";
     private Spinner edtDepart, edtArrive;
     private ArrayAdapter<String> adapter;
     MyDatabase myDatabase;
@@ -51,6 +51,9 @@ public class User_Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_search_page);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+
+        Intent intent = getIntent();
+         username = intent.getStringExtra("username");
 
         edtDepart = findViewById(R.id.edtDepart);
         edtArrive = findViewById(R.id.edtArrive);
@@ -132,15 +135,7 @@ public class User_Search extends AppCompatActivity {
                 recyclerView = findViewById(R.id.recyclerViewmanage);
                 recyclerView.setLayoutManager(new LinearLayoutManager(User_Search.this));
                 List<Train> list = myDatabase.trainDao().findTrainsByStationsAndDay(select1,select2,edtDate.getText().toString());
-                if(list.size() == 0)
-                {
-                    Toast.makeText(User_Search.this, "ko cos", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(User_Search.this, "có "+ list.size() +" train", Toast.LENGTH_SHORT).show();
 
-                }
 
                 List<String> itemListName = new ArrayList<>();
                 List<String> itemListPlace= new ArrayList<>();
@@ -159,4 +154,8 @@ public class User_Search extends AppCompatActivity {
 
         });
     }
+    public String getUsername() {
+        return this.username;
+    }
+
 }

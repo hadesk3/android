@@ -6,10 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.ck_room.R;
@@ -19,58 +22,76 @@ import java.lang.String;
 
 public final class AddStationBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button cancel;
+  public final LinearLayout addGr;
 
   @NonNull
-  public final TextView detail;
+  public final CardView bt;
 
   @NonNull
-  public final EditText id;
+  public final Button btBack;
 
   @NonNull
-  public final EditText name;
+  public final Button btCreate;
 
   @NonNull
-  public final Button ok;
+  public final CardView cardView5;
 
   @NonNull
-  public final TextView textView3;
+  public final EditText edtAddress;
 
   @NonNull
-  public final TextView textView5;
+  public final EditText edtName;
 
   @NonNull
-  public final TextView textView6;
+  public final View form;
 
   @NonNull
-  public final EditText textdetail;
+  public final ImageView imageView4;
 
   @NonNull
-  public final Button update;
+  public final LinearLayout nameGr;
 
-  private AddStationBinding(@NonNull LinearLayout rootView, @NonNull Button cancel,
-      @NonNull TextView detail, @NonNull EditText id, @NonNull EditText name, @NonNull Button ok,
-      @NonNull TextView textView3, @NonNull TextView textView5, @NonNull TextView textView6,
-      @NonNull EditText textdetail, @NonNull Button update) {
+  @NonNull
+  public final TextView title;
+
+  @NonNull
+  public final TextView txtAdd;
+
+  @NonNull
+  public final TextView txtName;
+
+  @NonNull
+  public final View view;
+
+  private AddStationBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout addGr,
+      @NonNull CardView bt, @NonNull Button btBack, @NonNull Button btCreate,
+      @NonNull CardView cardView5, @NonNull EditText edtAddress, @NonNull EditText edtName,
+      @NonNull View form, @NonNull ImageView imageView4, @NonNull LinearLayout nameGr,
+      @NonNull TextView title, @NonNull TextView txtAdd, @NonNull TextView txtName,
+      @NonNull View view) {
     this.rootView = rootView;
-    this.cancel = cancel;
-    this.detail = detail;
-    this.id = id;
-    this.name = name;
-    this.ok = ok;
-    this.textView3 = textView3;
-    this.textView5 = textView5;
-    this.textView6 = textView6;
-    this.textdetail = textdetail;
-    this.update = update;
+    this.addGr = addGr;
+    this.bt = bt;
+    this.btBack = btBack;
+    this.btCreate = btCreate;
+    this.cardView5 = cardView5;
+    this.edtAddress = edtAddress;
+    this.edtName = edtName;
+    this.form = form;
+    this.imageView4 = imageView4;
+    this.nameGr = nameGr;
+    this.title = title;
+    this.txtAdd = txtAdd;
+    this.txtName = txtName;
+    this.view = view;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -95,68 +116,92 @@ public final class AddStationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cancel;
-      Button cancel = ViewBindings.findChildViewById(rootView, id);
-      if (cancel == null) {
+      id = R.id.addGr;
+      LinearLayout addGr = ViewBindings.findChildViewById(rootView, id);
+      if (addGr == null) {
         break missingId;
       }
 
-      id = R.id.detail;
-      TextView detail = ViewBindings.findChildViewById(rootView, id);
-      if (detail == null) {
+      id = R.id.bt;
+      CardView bt = ViewBindings.findChildViewById(rootView, id);
+      if (bt == null) {
         break missingId;
       }
 
-      id = R.id.id;
-      EditText id_ = ViewBindings.findChildViewById(rootView, id);
-      if (id_ == null) {
+      id = R.id.btBack;
+      Button btBack = ViewBindings.findChildViewById(rootView, id);
+      if (btBack == null) {
         break missingId;
       }
 
-      id = R.id.name;
-      EditText name = ViewBindings.findChildViewById(rootView, id);
-      if (name == null) {
+      id = R.id.btCreate;
+      Button btCreate = ViewBindings.findChildViewById(rootView, id);
+      if (btCreate == null) {
         break missingId;
       }
 
-      id = R.id.ok;
-      Button ok = ViewBindings.findChildViewById(rootView, id);
-      if (ok == null) {
+      id = R.id.cardView5;
+      CardView cardView5 = ViewBindings.findChildViewById(rootView, id);
+      if (cardView5 == null) {
         break missingId;
       }
 
-      id = R.id.textView3;
-      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
-      if (textView3 == null) {
+      id = R.id.edtAddress;
+      EditText edtAddress = ViewBindings.findChildViewById(rootView, id);
+      if (edtAddress == null) {
         break missingId;
       }
 
-      id = R.id.textView5;
-      TextView textView5 = ViewBindings.findChildViewById(rootView, id);
-      if (textView5 == null) {
+      id = R.id.edtName;
+      EditText edtName = ViewBindings.findChildViewById(rootView, id);
+      if (edtName == null) {
         break missingId;
       }
 
-      id = R.id.textView6;
-      TextView textView6 = ViewBindings.findChildViewById(rootView, id);
-      if (textView6 == null) {
+      id = R.id.form;
+      View form = ViewBindings.findChildViewById(rootView, id);
+      if (form == null) {
         break missingId;
       }
 
-      id = R.id.textdetail;
-      EditText textdetail = ViewBindings.findChildViewById(rootView, id);
-      if (textdetail == null) {
+      id = R.id.imageView4;
+      ImageView imageView4 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView4 == null) {
         break missingId;
       }
 
-      id = R.id.update;
-      Button update = ViewBindings.findChildViewById(rootView, id);
-      if (update == null) {
+      id = R.id.nameGr;
+      LinearLayout nameGr = ViewBindings.findChildViewById(rootView, id);
+      if (nameGr == null) {
         break missingId;
       }
 
-      return new AddStationBinding((LinearLayout) rootView, cancel, detail, id_, name, ok,
-          textView3, textView5, textView6, textdetail, update);
+      id = R.id.title;
+      TextView title = ViewBindings.findChildViewById(rootView, id);
+      if (title == null) {
+        break missingId;
+      }
+
+      id = R.id.txtAdd;
+      TextView txtAdd = ViewBindings.findChildViewById(rootView, id);
+      if (txtAdd == null) {
+        break missingId;
+      }
+
+      id = R.id.txtName;
+      TextView txtName = ViewBindings.findChildViewById(rootView, id);
+      if (txtName == null) {
+        break missingId;
+      }
+
+      id = R.id.view;
+      View view = ViewBindings.findChildViewById(rootView, id);
+      if (view == null) {
+        break missingId;
+      }
+
+      return new AddStationBinding((ConstraintLayout) rootView, addGr, bt, btBack, btCreate,
+          cardView5, edtAddress, edtName, form, imageView4, nameGr, title, txtAdd, txtName, view);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

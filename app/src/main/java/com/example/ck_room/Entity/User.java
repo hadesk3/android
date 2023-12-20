@@ -29,7 +29,8 @@ public class User {
 
     @ColumnInfo(name = "gender")
     private String gender;
-
+    private boolean block;
+    private double coin;
     public User()
     {
 
@@ -42,6 +43,8 @@ public class User {
         this.dob = dob;
         this.gender = gender;
         this.pass = pass;
+        this.coin = 0;
+        this.block = false;
     }
 
     public String getFirstName() {
@@ -98,6 +101,22 @@ public class User {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public boolean isBlock() {
+        return block;
+    }
+
+    public void setBlock(boolean block) {
+        this.block = block;
+    }
+
+    public double getCoin() {
+        return coin;
+    }
+
+    public void setCoin(double coin) {
+        this.coin = coin;
     }
 
     @Override

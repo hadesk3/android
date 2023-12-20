@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ck_room.Edit_Train;
 import com.example.ck_room.R;
+import com.example.ck_room.User_Search;
 import com.example.ck_room.User_view_train;
 
 import java.util.List;
@@ -64,7 +65,7 @@ public class CustomAdapter_user extends RecyclerView.Adapter<CustomAdapter_user.
         id = id + 1;
         Intent intent = new Intent(context, User_view_train.class);
         intent.putExtra("id", id);
-        Toast.makeText(context, id + "", Toast.LENGTH_SHORT).show();
+        intent.putExtra("username", ((User_Search) context).getUsername());
         context.startActivity(intent);
     }
     @Override

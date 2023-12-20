@@ -14,8 +14,7 @@ public class Station {
     @ColumnInfo(name = "name")
     private String name;
     private String address;
-    public Station(int stationId, String name, String address) {
-        this.stationId = stationId;
+    public Station( String name, String address) {
         this.name = name;
         this.address = address;
     }

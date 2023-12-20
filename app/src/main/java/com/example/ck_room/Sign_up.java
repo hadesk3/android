@@ -15,12 +15,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ck_room.DataConfig.DatabaseManager;
 import com.example.ck_room.DataConfig.MyDatabase;
+import com.example.ck_room.Entity.Mail;
 import com.example.ck_room.Entity.User;
 
 import java.text.SimpleDateFormat;
@@ -29,7 +31,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class Sign_up extends AppCompatActivity {
-    EditText first,last,phone,username,pass;
+    EditText first,last,phone,edtEmail;
     RadioGroup radio;
     RadioButton radioMale, radioFemale;
     Button signUp;
@@ -68,13 +70,14 @@ public class Sign_up extends AppCompatActivity {
         last = findViewById(R.id.edtLast);
         dob = findViewById(R.id.edtDob);
         phone = findViewById(R.id.edtPhone);
-        username = findViewById(R.id.edtEmail);
-        pass = findViewById(R.id.edtPassword);
+        edtEmail = findViewById(R.id.edtEmail);
         radio = findViewById(R.id.radioGr);
         radioMale = findViewById(R.id.radioM);
         radioFemale = findViewById(R.id.radioF);
         signIn = findViewById(R.id.txtSignIn);
         signUp = findViewById(R.id.btSignUp);
+
+        myDatabase = DatabaseManager.getDatabase(getApplicationContext());
 
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,43 +113,7 @@ public class Sign_up extends AppCompatActivity {
             }
         });
 
-        pass.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
 
-                final int Right = 2;
-
-                if (event.getAction() == MotionEvent.ACTION_UP){
-
-                    if (event.getRawX() >= pass.getRight() - pass.getCompoundDrawables()[Right].getBounds().width()){
-
-                        int selection = pass.getSelectionEnd();
-
-                        if (passwordVisible){
-
-                            pass.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_visibility_off_24, 0);
-
-                            pass.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
-                            passwordVisible = false;
-                        }
-                        else{
-
-                            pass.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_visibility_24, 0);
-
-                            pass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-
-
-                            passwordVisible = true;
-                        }
-                        pass.setSelection(selection);
-
-                        return true;
-                    }
-                }
-                return  false;
-            }
-        });
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,8 +123,8 @@ public class Sign_up extends AppCompatActivity {
                         first.getText().toString().isEmpty()||
                         dob.getText().toString().isEmpty() ||
                         phone.getText().toString().isEmpty() ||
-                        username.getText().toString().isEmpty() ||
-                        pass.getText().toString().isEmpty() ||
+                        edtEmail.getText().toString().isEmpty() ||
+
                         radio.getCheckedRadioButtonId() == -1
 
                 )
@@ -174,6 +141,17 @@ public class Sign_up extends AppCompatActivity {
 //                }
                 String gender = "";
                 //if ()
+                if(myDatabase.userDao().getUserByMail(edtEmail.getText().toString()) != null)
+                {
+                    Toast.makeText(Sign_up.this, "gmail is exist", Toast.LENGTH_SHORT).show();
+                    flag = false;
+                }
+
+                if(myDatabase.userDao().getUserByPhone(phone.getText().toString()) != null)
+                {
+                    Toast.makeText(Sign_up.this, "phone is exist", Toast.LENGTH_SHORT).show();
+                    flag = false;
+                }
 
 
                 if(flag)
@@ -189,15 +167,23 @@ public class Sign_up extends AppCompatActivity {
                     }
                     Intent resultIntent = new Intent();
                     myDatabase = DatabaseManager.getDatabase(getApplicationContext());
-
-                    User user = new User(username.getText().toString(),pass.getText().toString(),
+                    String pass = phone.getText().toString();
+                    User user = new User(edtEmail.getText().toString(),pass,
                                                     phone.getText().toString(), dob.getText().toString(), gender, first.getText().toString(), last.getText().toString());
 
                     myDatabase.userDao().insert(user);
+                    sendEmail(edtEmail.getText().toString(), pass);
                     setResult(RESULT_OK, resultIntent);
                     finish();
                 }
             }
         });
+    }
+    private void sendEmail(String email, String message) {
+        String subject = "Sign up";
+         message =  "Your pass is "+  message;
+
+        Mail sendMailTask = new Mail(email, subject, message);
+        sendMailTask.execute();
     }
 }
