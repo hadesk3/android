@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +39,8 @@
         <activity android:name=".User_Search" />
         <activity android:name=".User_page" />
         <activity android:name=".Admin_page" />
+        <activity android:name=".Call" />
+        <activity android:name=".SendSms" />
 
         <activity android:name=".Manage_train" />
         <activity android:name=".Admin_manage_profile" />

@@ -1,7 +1,9 @@
 package com.example.ck_room;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -18,16 +20,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.Manifest;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.ck_room.DataConfig.DatabaseManager;
 import com.example.ck_room.DataConfig.MyDatabase;
 import com.example.ck_room.Entity.User;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 
 
 public class MainActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 0;
+    private static final int REQUEST_CALL_PHONE_PERMISSION = 1;
+
     EditText username, pass;
     Button login;
     TextView register;
@@ -110,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -155,6 +166,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
 
 }
