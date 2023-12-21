@@ -128,6 +128,7 @@ public class User_buy_ticket extends AppCompatActivity
         ticket.setDestination(t.getDestination_stn());
         ticket.setPassenger_Name(userName);
         ticket.setTrain_id(t.getTrain_id());
+        ticket.setTrain_No(1);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -6,10 +6,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
-@Entity(tableName = "Ticket", foreignKeys = {
-        @ForeignKey(entity = Passenger.class, parentColumns = "pnr", childColumns = "Passenger_Name", onUpdate = ForeignKey.CASCADE, onDelete = ForeignKey.CASCADE),
-        @ForeignKey(entity = Train.class, parentColumns = "train_id", childColumns = "train_id", onUpdate = ForeignKey.CASCADE, onDelete = ForeignKey.CASCADE)
-})
+@Entity(tableName = "Ticket")
 public class Ticket {
     @PrimaryKey
     @NonNull

@@ -86,14 +86,14 @@ public final class MyDatabase_Impl extends MyDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `passenger` (`pnr` TEXT NOT NULL, `seatNumber` INTEGER NOT NULL, `passengerName` TEXT, `age` INTEGER NOT NULL, `gender` TEXT, `train_id` INTEGER NOT NULL, `origin` TEXT, PRIMARY KEY(`pnr`), FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Train_class` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `Economy_Fare` REAL NOT NULL, `Economy_Passenger` INTEGER NOT NULL, `Business_Fare` REAL NOT NULL, `Business_Passenger` INTEGER NOT NULL, `First_Fare` REAL NOT NULL, `First_Passenger` INTEGER NOT NULL, `takenSeats_Economy` TEXT, `takenSeats_Business` TEXT, `takenSeats_First` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `train_status` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `available_date` TEXT, `blocked_seats` INTEGER NOT NULL, `waiting_seats` INTEGER NOT NULL, `available_seats` INTEGER NOT NULL, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Ticket` (`Ticket_No` TEXT NOT NULL, `Passenger_Name` TEXT, `source` TEXT, `destination` TEXT, `classType` TEXT, `train_id` INTEGER NOT NULL, PRIMARY KEY(`Ticket_No`), FOREIGN KEY(`Passenger_Name`) REFERENCES `passenger`(`pnr`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Ticket` (`Ticket_No` TEXT NOT NULL, `Passenger_Name` TEXT, `source` TEXT, `destination` TEXT, `classType` TEXT, `train_id` INTEGER NOT NULL, PRIMARY KEY(`Ticket_No`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `route` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `stop_number` TEXT, `station` TEXT, `arrival_time` TEXT, `departure_time` TEXT, `source` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `route_has_station` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `station_id` INTEGER NOT NULL, `stop_number` TEXT, FOREIGN KEY(`station_id`) REFERENCES `station`(`station_id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `day_available` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `day_available` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Reservation` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PNR` TEXT, `Train_Id_class` INTEGER NOT NULL, `available_date` TEXT, `EmailID` TEXT, `Reservation_Date` TEXT, `Reservation_Status` TEXT, FOREIGN KEY(`Train_Id_class`) REFERENCES `train_status`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`EmailID`) REFERENCES `user`(`EmailID`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Food` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `type` TEXT, `price` TEXT, `drawable` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7dcdd34adcc25fe07995e2529bb1fe1a')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '258101a8668c409a5811ed8425885883')");
       }
 
       @Override
@@ -265,9 +265,7 @@ public final class MyDatabase_Impl extends MyDatabase {
         _columnsTicket.put("destination", new TableInfo.Column("destination", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTicket.put("classType", new TableInfo.Column("classType", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTicket.put("train_id", new TableInfo.Column("train_id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysTicket = new HashSet<TableInfo.ForeignKey>(2);
-        _foreignKeysTicket.add(new TableInfo.ForeignKey("passenger", "CASCADE", "CASCADE",Arrays.asList("Passenger_Name"), Arrays.asList("pnr")));
-        _foreignKeysTicket.add(new TableInfo.ForeignKey("Train", "CASCADE", "CASCADE",Arrays.asList("train_id"), Arrays.asList("train_id")));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysTicket = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesTicket = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoTicket = new TableInfo("Ticket", _columnsTicket, _foreignKeysTicket, _indicesTicket);
         final TableInfo _existingTicket = TableInfo.read(_db, "Ticket");
@@ -360,7 +358,7 @@ public final class MyDatabase_Impl extends MyDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7dcdd34adcc25fe07995e2529bb1fe1a", "2a787915ca0fa03e16a1dedb69bc0dbb");
+    }, "258101a8668c409a5811ed8425885883", "6185976ba91d22824c712bb177b37826");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

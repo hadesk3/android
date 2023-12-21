@@ -31,6 +31,6 @@ public interface TicketDao {
 
     @Query("SELECT * FROM Ticket WHERE Passenger_Name = :passengerName")
     List<Ticket> getTicketsByPassengerName(String passengerName);
-    @Query("SELECT * FROM Train WHERE train_id = :trainId")
-    Train getTrainClassById(int trainId);
+    @Query("SELECT * FROM Ticket WHERE train_id = :trainId")
+    Ticket getTicketClassById(int trainId);
 }

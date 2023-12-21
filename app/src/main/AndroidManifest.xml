@@ -44,7 +44,6 @@
         <activity android:name=".User_see_menu" />
         <activity android:name=".Admin_manage_profile" />
         <activity android:name=".User_edit_profile" />
-        <activity android:name=".Schedule" />
         <activity android:name=".User_buy_ticket" />
         <activity android:name=".Admin_manageTrain_page" />
         <activity android:name=".Admin_edit_Train" />
