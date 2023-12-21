@@ -25,21 +25,21 @@ public final class StationItemBinding implements ViewBinding {
   public final ImageView imgAvatar;
 
   @NonNull
-  public final ImageButton itemButton;
-
-  @NonNull
   public final TextView txtName;
 
   @NonNull
   public final TextView txtPlace;
 
+  @NonNull
+  public final ImageButton txtPrice;
+
   private StationItemBinding(@NonNull RelativeLayout rootView, @NonNull ImageView imgAvatar,
-      @NonNull ImageButton itemButton, @NonNull TextView txtName, @NonNull TextView txtPlace) {
+      @NonNull TextView txtName, @NonNull TextView txtPlace, @NonNull ImageButton txtPrice) {
     this.rootView = rootView;
     this.imgAvatar = imgAvatar;
-    this.itemButton = itemButton;
     this.txtName = txtName;
     this.txtPlace = txtPlace;
+    this.txtPrice = txtPrice;
   }
 
   @Override
@@ -75,12 +75,6 @@ public final class StationItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.itemButton;
-      ImageButton itemButton = ViewBindings.findChildViewById(rootView, id);
-      if (itemButton == null) {
-        break missingId;
-      }
-
       id = R.id.txtName;
       TextView txtName = ViewBindings.findChildViewById(rootView, id);
       if (txtName == null) {
@@ -93,8 +87,14 @@ public final class StationItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new StationItemBinding((RelativeLayout) rootView, imgAvatar, itemButton, txtName,
-          txtPlace);
+      id = R.id.txtPrice;
+      ImageButton txtPrice = ViewBindings.findChildViewById(rootView, id);
+      if (txtPrice == null) {
+        break missingId;
+      }
+
+      return new StationItemBinding((RelativeLayout) rootView, imgAvatar, txtName, txtPlace,
+          txtPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

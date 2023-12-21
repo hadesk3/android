@@ -1,30 +1,22 @@
 package com.example.ck_room.custom_view;
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ck_room.Admin_block_user;
 import com.example.ck_room.Admin_manage_profile;
-import com.example.ck_room.Edit_Train;
+import com.example.ck_room.MainActivity;
 import com.example.ck_room.R;
-import com.example.ck_room.User_Search;
 
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapter_user_profile.ViewHolder> {
@@ -75,7 +67,8 @@ public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapt
         id = id + 1;
         Intent intent = new Intent(context, Admin_block_user.class);
         intent.putExtra("username", ((Admin_manage_profile) context).getUsernameToEdit());
-        context.startActivity(intent);
+        ((Activity) context).startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_MANAGE_USER_BLOCK);
+
     }
 
     @Override
@@ -94,7 +87,7 @@ public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapt
             name = itemView.findViewById(R.id.txtName);
             dob = itemView.findViewById(R.id.txtPlace);
             gender = itemView.findViewById(R.id.txtTime);
-            itemButton = itemView.findViewById(R.id.itemButton);
+            itemButton = itemView.findViewById(R.id.txtPrice);
 
         }
     }

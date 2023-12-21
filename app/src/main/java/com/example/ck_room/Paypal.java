@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,7 +72,8 @@ public class Paypal extends AppCompatActivity {
                         Log.i(TAG, "onActivityResult: " + confirmation.toJSONObject().toString(4));
 
                         // Handle successful payment here
-                        Intent payIntent = new Intent(this, test.class);
+                        Intent payIntent = new Intent(this, User_page.class);
+                        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
                         startActivity(payIntent);
                     } catch (JSONException e) {
                         Log.e(TAG, "onActivityResult: Error: " + e.getMessage());

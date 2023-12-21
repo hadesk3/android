@@ -23,7 +23,9 @@ public interface TrainDao {
 
     @Query("SELECT * FROM train")
     List<Train> getAllTrains();
+    @Query("SELECT * FROM train where train_id = :id")
 
+    List<Train> getTrainById(int id);
     @Query("SELECT * FROM Train " +
             "JOIN Day_available ON Train.train_id = Day_available.train_id " +
             "WHERE Train.Source_stn = :sourceStn " +

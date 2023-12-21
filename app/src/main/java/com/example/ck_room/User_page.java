@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,12 +19,14 @@ import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.example.ck_room.Entity.User;
+import com.paypal.android.sdk.ch;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 public class User_page extends AppCompatActivity {
     int REQUEST_CODE = 4;
-    ImageButton edit,check,buy,back;
+    ImageButton edit,check,buy,back,changePass;
+    TextView menu;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,18 @@ public class User_page extends AppCompatActivity {
         edit = findViewById(R.id.btUser);
         check = findViewById(R.id.btHistory);
         buy = findViewById(R.id.btBooking);
-        //back = findViewById(R.id.back);
+        changePass = findViewById(R.id.btPassword);
+        menu = findViewById(R.id.txtMenu);
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(User_page.this,User_see_menu.class);
+
+
+                startActivityForResult(intent,MainActivity.REQUEST_CODE_EDIT_PROFILE);
+            }
+        });
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
@@ -46,7 +60,7 @@ public class User_page extends AppCompatActivity {
                 intent.putExtra("username",username);
 
 
-                startActivityForResult(intent,REQUEST_CODE);
+                startActivityForResult(intent,MainActivity.REQUEST_CODE_EDIT_PROFILE);
             }
         });
         buy.setOnClickListener(new View.OnClickListener() {
@@ -54,12 +68,40 @@ public class User_page extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(User_page.this,User_Search.class);
                 intent.putExtra("username",username);
-                startActivityForResult(intent,REQUEST_CODE);
+                startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_BUY);
 
             }
         });
+
+        changePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(User_page.this, User_change_pass.class);
+                intent.putExtra("username",username);
+                startActivityForResult(intent,REQUEST_CODE);
+            }
+        });
+
+
+
     }
 
+
+
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == MainActivity.REQUEST_CODE_EDIT_PROFILE) {
+            if (resultCode == MainActivity.RESULT_LOGOUT) {
+                setResult(MainActivity.RESULT_LOGOUT); // Đặt kết quả là RESULT_LOGOUT để xử lý trong MainActivity
+                finish();
+            }
+        }
+    }
 
 
 }

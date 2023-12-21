@@ -1,6 +1,8 @@
 package com.example.ck_room.custom_view;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ck_room.Edit_Train;
+import com.example.ck_room.Admin_edit_Train;
+import com.example.ck_room.DataConfig.DatabaseManager;
+import com.example.ck_room.DataConfig.MyDatabase;
+import com.example.ck_room.MainActivity;
 import com.example.ck_room.R;
 
 
@@ -22,16 +27,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private List<String> itemListName;
     private List<String> itemListPlace;
     private List<String> itemListTime;
+    private List<String> itemListSource;
+    private List<String> itemListDes;
+    private List<String> itemListDay;
+
+    MyDatabase myDatabase;
+
 
 
     private Context context;
 
-    public CustomAdapter(List<String> itemListName,List<String> itemListPlace,List<String> itemListTime, Context context) {
+    public CustomAdapter(List<String> itemListName,List<String> itemListPlace,List<String> itemListTime, Context context,List<String> itemListSource,List<String> itemListDes, List<String> itemListDay) {
         this.itemListName = itemListName;
         this.itemListPlace = itemListPlace;
         this.itemListTime = itemListTime;
-
+        this.itemListSource = itemListSource;
+        this.itemListDes = itemListDes;
+        this.itemListDay = itemListDay;
         this.context = context;
+        myDatabase = DatabaseManager.getDatabase(context.getApplicationContext());
+
 
     }
 
@@ -47,6 +62,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         String name = itemListName.get(position);
         String place = itemListPlace.get(position);
         String time = itemListTime.get(position);
+        String source = itemListSource.get(position);
+        String des = itemListDes.get(position);
+        String date = itemListDay.get(position);
+
 
         holder.name.setText(name);
         holder.place.setText(place);
@@ -54,17 +73,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         holder.itemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int clickedPosition = holder.getAdapterPosition();
-                startUserChooseSeatActivity(clickedPosition);
+                int id =  myDatabase.trainDao().findTrainsByStationsAndDay(source,des,date).get(0).getTrain_id();
+                startUserChooseSeatActivity(id);
             }
         });
     }
     private void startUserChooseSeatActivity(int id) {
-        id = id + 1;
-        Intent intent = new Intent(context, Edit_Train.class);
+
+
+        Intent intent = new Intent(context, Admin_edit_Train.class);
         intent.putExtra("id", id);
-        Toast.makeText(context, id + "", Toast.LENGTH_SHORT).show();
-        context.startActivity(intent);
+        ((Activity) context).startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_EDIT_TRAIN);
     }
     @Override
     public int getItemCount() {
@@ -83,7 +102,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             name = itemView.findViewById(R.id.txtName);
             place = itemView.findViewById(R.id.txtPlace);
             time = itemView.findViewById(R.id.txtTime);
-            itemButton = itemView.findViewById(R.id.itemButton);
+            itemButton = itemView.findViewById(R.id.txtPrice);
         }
     }
 }

@@ -18,7 +18,7 @@ import com.example.ck_room.Entity.User;
 public class Admin_block_user extends AppCompatActivity {
     TextView name, gender, dob;
     TextView phone, first, last ;
-    Button block;
+    Button block, back;
     MyDatabase myDatabase;
 
     @Override
@@ -26,13 +26,14 @@ public class Admin_block_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_view_user);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
-        first = findViewById(R.id.edtFirst);
-        last = findViewById(R.id.edtLast);
+        first = findViewById(R.id.txtFirst);
+        last = findViewById(R.id.txtLast);
         phone = findViewById(R.id.edtPhone);
         block = findViewById(R.id.btBlock);
         dob = findViewById(R.id.edtDob);
-        gender = findViewById(R.id.edtGe);
+        gender = findViewById(R.id.txtGen);
         name = findViewById(R.id.txtName);
+        back = findViewById(R.id.btBack);
 
 
         Intent intent = getIntent();
@@ -64,18 +65,29 @@ public class Admin_block_user extends AppCompatActivity {
                     user.setBlock(true);
                     myDatabase.userDao().update(user);
                     Toast.makeText(Admin_block_user.this, "blocked user", Toast.LENGTH_SHORT).show();
+                    setResult(RESULT_OK);
+                    finish();
                 }
                 else
                 {
 
                     user.setBlock(false);
                     myDatabase.userDao().update(user);
-
                     Toast.makeText(Admin_block_user.this, "Unblock user", Toast.LENGTH_SHORT).show();
+                    setResult(RESULT_OK);
+                    finish();
                 }
 
             }
 
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                finish();
+            }
         });
 
     }

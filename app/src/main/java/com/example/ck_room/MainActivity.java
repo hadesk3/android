@@ -35,6 +35,27 @@ import com.example.ck_room.Entity.User;
 public class MainActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 0;
     private static final int REQUEST_CALL_PHONE_PERMISSION = 1;
+    public static final int REQUEST_CODE_USER_PAGE = 4 ;
+    public static final int REQUEST_CODE_EDIT_PROFILE = 20;
+    public static final int RESULT_LOGOUT = 100;
+
+    public static final int REQUEST_CODE_ADMIN_PAGE = 5 ;
+    public static final int REQUEST_CODE_ADMIN_MANAGE_STATION = 6 ;
+    public static final int REQUEST_CODE_ADMIN_EDIT_STATION = 7 ;
+    public static final int REQUEST_CODE_ADMIN_CREATE_STATION = 8 ;
+    public static final int REQUEST_CODE_ADMIN_MANAGE_USER = 9 ;
+    public static final int REQUEST_CODE_ADMIN_MANAGE_USER_BLOCK = 10 ;
+    public static final int REQUEST_CODE_ADMIN_MANAGE_TRAIN = 11 ;
+    public static final int REQUEST_CODE_ADMIN_CREATE_TRAIN = 12 ;
+    public static final int REQUEST_CODE_ADMIN_EDIT_TRAIN = 13 ;
+    public static final int REQUEST_CODE_USER_BUY = 14 ;
+    public static final int REQUEST_CODE_USER_VIEW_TRAIN = 15 ;
+    public static final int REQUEST_CODE_USER_CHOOSE_SEAT = 16 ;
+    public static final int REQUEST_CODE_USER_PAY = 17 ;
+    public static final int REQUEST_CODE_USER_CHOOSE_PAY = 18 ;
+
+    public static final int REQUEST_CODE_USER_SEE_MENU = 19 ;
+
 
     EditText username, pass;
     Button login;
@@ -47,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.sign_in);
-        username = findViewById(R.id.edtFirst);
+        username = findViewById(R.id.edtCurrent);
         pass = findViewById(R.id.edtPassword);
         login = findViewById(R.id.btSignUp);
         register = findViewById(R.id.txtSignIn);
@@ -127,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 if(username.getText().toString().equals("admin") && pass.getText().toString().equals("admin"))
                 {
                     Intent intent = new Intent(MainActivity.this,Admin_page.class);
-                    startActivityForResult(intent,REQUEST_CODE);
+                    startActivityForResult(intent,REQUEST_CODE_ADMIN_PAGE);
 
                 }
                 else
@@ -138,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
                         intent.putExtra("username",user.getUserName());
 
-                        startActivityForResult(intent,REQUEST_CODE);
+                        startActivityForResult(intent,REQUEST_CODE_USER_PAGE);
                         finish();
                     }
                     else
@@ -157,12 +178,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == REQUEST_CODE_USER_PAGE) {
             if (resultCode == RESULT_OK) {
-                // Xử lý kết quả từ Activity đích
-                // Dữ liệu kết quả được truyền trong Intent data
-            } else if (resultCode == RESULT_CANCELED) {
-                // Xử lý trường hợp người dùng hủy bỏ hoặc lỗi
+                // Xử lý khi quay lại từ User_page thành công
+            } else if (resultCode == RESULT_LOGOUT) {
+                // Xử lý khi quay về từ User_page sau khi logout
             }
         }
     }

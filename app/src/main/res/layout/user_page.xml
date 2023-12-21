@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8E6E6">
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:id="@+id/btGr"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="#F4E2E2"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,33 +20,43 @@
 
         <ImageButton
             android:id="@+id/btUser"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="#00FFFFFF"
             app:srcCompat="@drawable/baseline_manage_accounts_24" />
 
         <ImageButton
             android:id="@+id/btBooking"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="#00FFFFFF"
             app:srcCompat="@drawable/baseline_train_24" />
 
         <ImageButton
             android:id="@+id/btHistory"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="#00FFFFFF"
             app:srcCompat="@drawable/baseline_qr_code_24" />
+
+        <ImageButton
+            android:id="@+id/btPassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/baseline_lock_24" />
     </LinearLayout>
 
     <View
         android:id="@+id/body"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#F3EFEF"
+        android:elevation="-2dp"
         app:layout_constraintBottom_toTopOf="@+id/btGr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,6 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:elevation="6dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +81,7 @@
             android:id="@+id/imgBuss1"
             android:layout_width="350dp"
             android:layout_height="180dp"
+            android:elevation="6dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/toa2" />
     </androidx.cardview.widget.CardView>
@@ -77,7 +90,8 @@
         android:id="@+id/cardView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:elevation="6dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btGr"
         app:layout_constraintEnd_toEndOf="@+id/body"
@@ -89,6 +103,7 @@
             android:id="@+id/imgBuss2"
             android:layout_width="350dp"
             android:layout_height="180dp"
+            android:elevation="6dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/toa3" />
     </androidx.cardview.widget.CardView>
@@ -135,7 +150,7 @@
         android:elevation="2dp"
         android:text="Bussiness Class"
         android:textColor="#111111"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view1"
         app:layout_constraintEnd_toEndOf="@+id/view1"
@@ -152,7 +167,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text="Luxurious travel, Premium amenities"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view1"
         app:layout_constraintEnd_toEndOf="@+id/view1"
         app:layout_constraintHorizontal_bias="0.0"
@@ -167,14 +182,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:elevation="2dp"
-        android:tint="#F3DB0C"
         app:layout_constraintBottom_toBottomOf="@+id/view1"
         app:layout_constraintEnd_toEndOf="@+id/view1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/new1"
         app:layout_constraintTop_toTopOf="@+id/view1"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_star_rate_24" />
+        app:srcCompat="@drawable/baseline_star_rate_24"
+        app:tint="#F3DB0C" />
 
     <TextView
         android:id="@+id/rateNum1"
@@ -195,13 +210,14 @@
         android:id="@+id/view6"
         android:layout_width="310dp"
         android:layout_height="120dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/view_rounded"
         android:elevation="2dp"
         app:layout_constraintBottom_toTopOf="@+id/btGr"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
         app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+        app:layout_constraintTop_toTopOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/rate2"
@@ -210,14 +226,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:elevation="2dp"
-        android:tint="#F3DB0C"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="@+id/view6"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/new2"
         app:layout_constraintTop_toTopOf="@+id/view6"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_star_rate_24" />
+        app:srcCompat="@drawable/baseline_star_rate_24"
+        app:tint="#F3DB0C" />
 
     <TextView
         android:id="@+id/rateNum"
@@ -242,7 +258,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text="Ultimate luxury, Exclusive amenities "
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="@+id/view6"
         app:layout_constraintHorizontal_bias="0.0"
@@ -259,7 +275,7 @@
         android:elevation="2dp"
         android:text="First Class"
         android:textColor="#111111"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="@+id/view6"
@@ -319,5 +335,28 @@
         app:layout_constraintStart_toStartOf="@+id/view8"
         app:layout_constraintTop_toTopOf="@+id/view8"
         app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btGr"
+        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/view6">
+
+        <TextView
+            android:id="@+id/txtMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/icons8_food_service_45"
+            android:drawablePadding="10dp"
+            android:text="Have a Delicious journey\nwith special menu. Here"
+            android:textColor="#00AAF6"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.ck_room.custom_view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -7,13 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ck_room.Edit_Train;
-import com.example.ck_room.Edit_station;
+import com.example.ck_room.Admin_edit_station;
+import com.example.ck_room.MainActivity;
 import com.example.ck_room.R;
 
 import java.util.List;
@@ -58,10 +58,9 @@ public class CustomAdapter_station extends RecyclerView.Adapter<CustomAdapter_st
     }
     private void startUserChooseSeatActivity(int id) {
         id = id + 1;
-        Intent intent = new Intent(context, Edit_station.class);
+        Intent intent = new Intent(context, Admin_edit_station.class);
         intent.putExtra("id", id);
-        Toast.makeText(context, id + "", Toast.LENGTH_SHORT).show();
-        context.startActivity(intent);
+        ((Activity) context).startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_EDIT_STATION);
     }
     @Override
     public int getItemCount() {
@@ -78,7 +77,7 @@ public class CustomAdapter_station extends RecyclerView.Adapter<CustomAdapter_st
             super(itemView);
             name = itemView.findViewById(R.id.txtName);
             address = itemView.findViewById(R.id.txtPlace);
-            itemButton = itemView.findViewById(R.id.itemButton);
+            itemButton = itemView.findViewById(R.id.txtPrice);
         }
     }
 }

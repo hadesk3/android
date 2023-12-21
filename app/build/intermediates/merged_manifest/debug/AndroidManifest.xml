@@ -61,7 +61,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.CK_room" >
         <activity
-            android:name="com.example.ck_room.SendSms"
+            android:name="com.example.ck_room.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CK_room" >
@@ -72,24 +72,24 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.ck_room.Sign_up" />
-        <activity android:name="com.example.ck_room.Add_Train" />
-        <activity android:name="com.example.ck_room.Add_Train_Status" />
-        <activity android:name="com.example.ck_room.Add_route" />
-        <activity android:name="com.example.ck_room.Add_station" />
+        <activity android:name="com.example.ck_room.Admin_add_Train" />
+        <activity android:name="com.example.ck_room.Admin_add_station" />
         <activity android:name="com.example.ck_room.User_Search" />
         <activity android:name="com.example.ck_room.User_page" />
         <activity android:name="com.example.ck_room.Admin_page" />
         <activity android:name="com.example.ck_room.Call" />
-        <activity android:name="com.example.ck_room.Manage_train" />
+        <activity android:name="com.example.ck_room.SendSms" />
+        <activity android:name="com.example.ck_room.User_change_pass" />
+        <activity android:name="com.example.ck_room.User_see_menu" />
         <activity android:name="com.example.ck_room.Admin_manage_profile" />
         <activity android:name="com.example.ck_room.User_edit_profile" />
         <activity android:name="com.example.ck_room.Schedule" />
         <activity android:name="com.example.ck_room.User_buy_ticket" />
-        <activity android:name="com.example.ck_room.ManageTrain_page" />
-        <activity android:name="com.example.ck_room.Edit_Train" />
+        <activity android:name="com.example.ck_room.Admin_manageTrain_page" />
+        <activity android:name="com.example.ck_room.Admin_edit_Train" />
         <activity android:name="com.example.ck_room.User_view_train" />
         <activity android:name="com.example.ck_room.Admin_block_user" />
-        <activity android:name="com.example.ck_room.Edit_station" />
+        <activity android:name="com.example.ck_room.Admin_edit_station" />
         <activity android:name="com.example.ck_room.User_choose_seat" />
         <activity android:name="com.example.ck_room.Paypal" />
         <activity android:name="com.example.ck_room.test" />

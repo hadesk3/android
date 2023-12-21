@@ -119,7 +119,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edtFirst"
+        android:id="@+id/edtCurrent"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
@@ -140,7 +140,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edtLast"
+        android:id="@+id/edtNew"
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
@@ -155,7 +155,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/edtFirst"
+        app:layout_constraintStart_toEndOf="@+id/edtCurrent"
         app:layout_constraintTop_toBottomOf="@+id/textView36"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -263,7 +263,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtLast"
+        app:layout_constraintStart_toStartOf="@+id/edtNew"
         app:layout_constraintTop_toBottomOf="@+id/SignUp"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -279,7 +279,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtFirst"
+        app:layout_constraintTop_toBottomOf="@+id/edtCurrent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

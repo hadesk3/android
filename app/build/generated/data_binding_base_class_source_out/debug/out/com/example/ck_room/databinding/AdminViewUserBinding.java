@@ -39,16 +39,16 @@ public final class AdminViewUserBinding implements ViewBinding {
   public final CardView cardView3;
 
   @NonNull
+  public final TextView edtConfirm;
+
+  @NonNull
+  public final TextView edtCurrent;
+
+  @NonNull
   public final TextView edtDob;
 
   @NonNull
-  public final TextView edtFirst;
-
-  @NonNull
-  public final TextView edtGe;
-
-  @NonNull
-  public final EditText edtLast;
+  public final EditText edtNew;
 
   @NonNull
   public final EditText edtPhone;
@@ -100,8 +100,8 @@ public final class AdminViewUserBinding implements ViewBinding {
 
   private AdminViewUserBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout Constraint, @NonNull Button btBack, @NonNull Button btBlock,
-      @NonNull CardView cardView, @NonNull CardView cardView3, @NonNull TextView edtDob,
-      @NonNull TextView edtFirst, @NonNull TextView edtGe, @NonNull EditText edtLast,
+      @NonNull CardView cardView, @NonNull CardView cardView3, @NonNull TextView edtConfirm,
+      @NonNull TextView edtCurrent, @NonNull TextView edtDob, @NonNull EditText edtNew,
       @NonNull EditText edtPhone, @NonNull ImageView imageView2, @NonNull View line,
       @NonNull View line1, @NonNull View line2, @NonNull View line3, @NonNull View line4,
       @NonNull TextView tittle, @NonNull TextView txtDob, @NonNull TextView txtFirst,
@@ -113,10 +113,10 @@ public final class AdminViewUserBinding implements ViewBinding {
     this.btBlock = btBlock;
     this.cardView = cardView;
     this.cardView3 = cardView3;
+    this.edtConfirm = edtConfirm;
+    this.edtCurrent = edtCurrent;
     this.edtDob = edtDob;
-    this.edtFirst = edtFirst;
-    this.edtGe = edtGe;
-    this.edtLast = edtLast;
+    this.edtNew = edtNew;
     this.edtPhone = edtPhone;
     this.imageView2 = imageView2;
     this.line = line;
@@ -188,27 +188,27 @@ public final class AdminViewUserBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edtConfirm;
+      TextView edtConfirm = ViewBindings.findChildViewById(rootView, id);
+      if (edtConfirm == null) {
+        break missingId;
+      }
+
+      id = R.id.edtCurrent;
+      TextView edtCurrent = ViewBindings.findChildViewById(rootView, id);
+      if (edtCurrent == null) {
+        break missingId;
+      }
+
       id = R.id.edtDob;
       TextView edtDob = ViewBindings.findChildViewById(rootView, id);
       if (edtDob == null) {
         break missingId;
       }
 
-      id = R.id.edtFirst;
-      TextView edtFirst = ViewBindings.findChildViewById(rootView, id);
-      if (edtFirst == null) {
-        break missingId;
-      }
-
-      id = R.id.edtGe;
-      TextView edtGe = ViewBindings.findChildViewById(rootView, id);
-      if (edtGe == null) {
-        break missingId;
-      }
-
-      id = R.id.edtLast;
-      EditText edtLast = ViewBindings.findChildViewById(rootView, id);
-      if (edtLast == null) {
+      id = R.id.edtNew;
+      EditText edtNew = ViewBindings.findChildViewById(rootView, id);
+      if (edtNew == null) {
         break missingId;
       }
 
@@ -309,9 +309,9 @@ public final class AdminViewUserBinding implements ViewBinding {
       }
 
       return new AdminViewUserBinding((ConstraintLayout) rootView, Constraint, btBack, btBlock,
-          cardView, cardView3, edtDob, edtFirst, edtGe, edtLast, edtPhone, imageView2, line, line1,
-          line2, line3, line4, tittle, txtDob, txtFirst, txtGen, txtLast, txtName, txtPhone, view,
-          view2);
+          cardView, cardView3, edtConfirm, edtCurrent, edtDob, edtNew, edtPhone, imageView2, line,
+          line1, line2, line3, line4, tittle, txtDob, txtFirst, txtGen, txtLast, txtName, txtPhone,
+          view, view2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

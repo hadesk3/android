@@ -74,6 +74,7 @@
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:text="Total Number Of Stations"
+        android:textColor="#130E0E"
         app:layout_constraintBottom_toBottomOf="@+id/user3"
         app:layout_constraintEnd_toEndOf="@+id/user3"
         app:layout_constraintStart_toStartOf="@+id/user3"
@@ -86,6 +87,7 @@
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:text="Total Revenue"
+        android:textColor="#130E0E"
         app:layout_constraintBottom_toBottomOf="@+id/user4"
         app:layout_constraintEnd_toEndOf="@+id/user4"
         app:layout_constraintStart_toStartOf="@+id/user4"
@@ -214,6 +216,7 @@
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:text="Total Number Of Tickets"
+        android:textColor="#130E0E"
         app:layout_constraintBottom_toBottomOf="@+id/ticket"
         app:layout_constraintEnd_toEndOf="@+id/ticket"
         app:layout_constraintStart_toStartOf="@+id/ticket"
@@ -227,45 +230,29 @@
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:text="Total Number Of Users"
+        android:textColor="#130E0E"
         app:layout_constraintBottom_toBottomOf="@+id/user"
         app:layout_constraintEnd_toEndOf="@+id/user"
         app:layout_constraintStart_toStartOf="@+id/user"
         app:layout_constraintTop_toBottomOf="@+id/txtUser"
         app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:id="@+id/view5"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/view_rounded"
-        android:elevation="2dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#F4E2E2"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/station"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="20dp"
-        android:background="#CDDC39"
-        android:elevation="10dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/user1"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/user1">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageButton
@@ -274,7 +261,7 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_weight="2"
-                android:background="#9FD1E8"
+                android:background="#00FFFFFF"
                 android:elevation="2dp"
                 android:scaleType="fitCenter"
                 android:textAlignment="center"
@@ -283,33 +270,20 @@
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="10dp"
                 android:layout_weight="1"
-                android:background="#ECEAEA"
-                android:text="Manage Station"
+                android:background="#00FFFFFF"
+                android:text="Station"
                 android:textAlignment="center"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/user1"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:background="#CDDC39"
-        android:elevation="10dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/train"
-        app:layout_constraintEnd_toStartOf="@+id/station"
-        app:layout_constraintStart_toEndOf="@+id/train"
-        app:layout_constraintTop_toTopOf="@+id/train">
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageButton
@@ -318,7 +292,7 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_weight="2"
-                android:background="#9FD1E8"
+                android:background="#00FFFFFF"
                 android:elevation="2dp"
                 android:scaleType="fitCenter"
                 android:textAlignment="center"
@@ -327,37 +301,20 @@
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="10dp"
                 android:layout_weight="1"
-                android:background="#ECEAEA"
-                android:text="Manage Users"
+                android:background="#00FFFFFF"
+                android:text="User"
                 android:textAlignment="center"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/train"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="#CDDC39"
-        android:elevation="10dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.0">
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageButton
@@ -366,7 +323,7 @@
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_weight="2"
-                android:background="#9FD1E8"
+                android:background="#00FFFFFF"
                 android:elevation="2dp"
                 android:scaleType="fitCenter"
                 android:textAlignment="center"
@@ -375,15 +332,16 @@
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="10dp"
                 android:layout_weight="1"
-                android:background="#ECEAEA"
-                android:text="Manage Trains"
+                android:background="#00FFFFFF"
+                android:text="Train"
                 android:textAlignment="center"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

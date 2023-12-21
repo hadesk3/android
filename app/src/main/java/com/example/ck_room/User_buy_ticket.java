@@ -2,7 +2,9 @@ package com.example.ck_room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import com.example.ck_room.DataConfig.DatabaseManager;
 import com.example.ck_room.DataConfig.MyDatabase;
 import com.example.ck_room.Entity.Day_available;
 import com.example.ck_room.Entity.Train;
+import com.example.ck_room.Entity.Train_class;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -25,7 +28,7 @@ public class User_buy_ticket extends AppCompatActivity
     MyDatabase myDatabase;
     int id_sent_to_book = 0;
     int id = 0;
-
+    Button back;
     TextView nameTrain, date,time, total, seat, pay, paypal;
     Switch sw;
     @Override
@@ -36,6 +39,7 @@ public class User_buy_ticket extends AppCompatActivity
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
         nameTrain = findViewById(R.id.txtTrip);
         date = findViewById(R.id.txtDate);
+        back = findViewById(R.id.btBack2);
         time = findViewById(R.id.txtTime);
         total = findViewById(R.id.txtTotal);
         seat = findViewById(R.id.txtSeat);
@@ -48,21 +52,44 @@ public class User_buy_ticket extends AppCompatActivity
             String totalSeat = intent.getStringExtra("totalSeat");
             String totalPrice = intent.getStringExtra("totalPrice");
             String userName = intent.getStringExtra("username");
-
+            String type = intent.getStringExtra("type");
         id_sent_to_book = intent.getIntExtra("id",0);
 
-        id = intent.getIntExtra("id",0)  -1;
+        id = intent.getIntExtra("id",0) ;
         Train t = myDatabase.trainDao().getAllTrains().get(id);
         nameTrain.setText(t.getTrain_name());
 
 
         List<Day_available> a =  new ArrayList<>();
-        a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id + 1);
+        a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id);
         date.setText(a.get(0).getDay_available());
         total.setText(totalPrice);
         seat.setText(totalSeat);
         pay.setText(totalPrice);
+        Train_class tc = myDatabase.trainClassDao().getTrainClassById(id);
+        if(type.equals("Eco"))
+        {
+            for(int i = 0; i < list.size(); i++)
+            {
+                tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
+            }
+        }
+        else if (type.equals("Bus"))
+        {
+            for(int i = 0; i < list.size(); i++)
+            {
+                tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
 
+            }
+        }
+        else
+        {
+            for(int i = 0; i < list.size(); i++)
+            {
+                tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
+
+            }
+        }
 
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -91,14 +118,21 @@ public class User_buy_ticket extends AppCompatActivity
             }
         });
 
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
         paypal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(User_buy_ticket.this, "click", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
                 intent.putExtra("money",pay.getText().toString());
-                startActivity(intent);
+                myDatabase.trainClassDao().update(tc);
+
+                startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_PAY);
 
             }
         });

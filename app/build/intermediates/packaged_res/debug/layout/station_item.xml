@@ -13,18 +13,23 @@
         android:layout_height="50dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/baseline_home_24" />
+
     <LinearLayout
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@id/imgAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:text="Metro1"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -33,6 +38,8 @@
             android:id="@+id/txtPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:text="Quan 1, Ho Chi Minh"
             android:textColor="#676767"
             android:textSize="15dp" />
@@ -40,7 +47,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/itemButton"
+        android:id="@+id/txtPrice"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentRight="true"

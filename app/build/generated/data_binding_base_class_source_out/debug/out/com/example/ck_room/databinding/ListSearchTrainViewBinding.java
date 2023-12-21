@@ -21,16 +21,16 @@ public final class ListSearchTrainViewBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button itemButton;
-
-  @NonNull
   public final TextView itemTextView;
 
-  private ListSearchTrainViewBinding(@NonNull LinearLayout rootView, @NonNull Button itemButton,
-      @NonNull TextView itemTextView) {
+  @NonNull
+  public final Button txtPrice;
+
+  private ListSearchTrainViewBinding(@NonNull LinearLayout rootView, @NonNull TextView itemTextView,
+      @NonNull Button txtPrice) {
     this.rootView = rootView;
-    this.itemButton = itemButton;
     this.itemTextView = itemTextView;
+    this.txtPrice = txtPrice;
   }
 
   @Override
@@ -60,19 +60,19 @@ public final class ListSearchTrainViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.itemButton;
-      Button itemButton = ViewBindings.findChildViewById(rootView, id);
-      if (itemButton == null) {
-        break missingId;
-      }
-
       id = R.id.itemTextView;
       TextView itemTextView = ViewBindings.findChildViewById(rootView, id);
       if (itemTextView == null) {
         break missingId;
       }
 
-      return new ListSearchTrainViewBinding((LinearLayout) rootView, itemButton, itemTextView);
+      id = R.id.txtPrice;
+      Button txtPrice = ViewBindings.findChildViewById(rootView, id);
+      if (txtPrice == null) {
+        break missingId;
+      }
+
+      return new ListSearchTrainViewBinding((LinearLayout) rootView, itemTextView, txtPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

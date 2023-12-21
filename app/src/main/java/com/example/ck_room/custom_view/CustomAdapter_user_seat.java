@@ -1,9 +1,6 @@
 package com.example.ck_room.custom_view;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ck_room.Edit_Train;
+import com.example.ck_room.Admin_edit_Train;
 import com.example.ck_room.R;
 
 
@@ -68,7 +64,7 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
                 int adapterPosition = holder.getAdapterPosition(); // Retrieve the current adapter position
 
                 if (adapterPosition != RecyclerView.NO_POSITION) {
-                    if (!number.equals("1")) {
+                    if ( check_seat.equals("0")) {
                         boolean isImage1 = !isSelected[adapterPosition]; // Toggle the selected state
 
                         if (isImage1) {
@@ -110,7 +106,7 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
     }
     private void startUserChooseSeatActivity(int id) {
         id = id + 1;
-        Intent intent = new Intent(context, Edit_Train.class);
+        Intent intent = new Intent(context, Admin_edit_Train.class);
         intent.putExtra("id", id);
         Toast.makeText(context, id + "", Toast.LENGTH_SHORT).show();
         context.startActivity(intent);

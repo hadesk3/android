@@ -20,7 +20,7 @@
             android:text="Item Text" />
 
         <Button
-            android:id="@+id/itemButton"
+            android:id="@+id/txtPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

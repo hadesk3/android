@@ -122,7 +122,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/edtGe"
+        app:layout_constraintTop_toBottomOf="@+id/edtConfirm"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -146,7 +146,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/edtGe"
+        android:id="@+id/edtConfirm"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginTop="7dp"
@@ -199,7 +199,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/edtGe"
+        app:layout_constraintTop_toBottomOf="@+id/edtConfirm"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
@@ -279,7 +279,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edtLast"
+        android:id="@+id/edtNew"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginTop="7dp"
@@ -313,7 +313,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/edtLast"
+        app:layout_constraintTop_toBottomOf="@+id/edtNew"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -335,7 +335,7 @@
         android:textColor="#000000" />
 
     <EditText
-        android:id="@+id/edtFirst"
+        android:id="@+id/edtCurrent"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginTop="15dp"
@@ -370,7 +370,7 @@
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/edtFirst"
+        app:layout_constraintTop_toBottomOf="@+id/edtCurrent"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.cardview.widget.CardView

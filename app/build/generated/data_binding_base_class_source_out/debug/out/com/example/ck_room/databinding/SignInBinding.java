@@ -35,7 +35,7 @@ public final class SignInBinding implements ViewBinding {
   public final Button btSignUp;
 
   @NonNull
-  public final EditText edtFirst;
+  public final EditText edtCurrent;
 
   @NonNull
   public final EditText edtPassword;
@@ -54,14 +54,14 @@ public final class SignInBinding implements ViewBinding {
 
   private SignInBinding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout Constraint,
       @NonNull TextView SignUp, @NonNull View body, @NonNull Button btSignUp,
-      @NonNull EditText edtFirst, @NonNull EditText edtPassword, @NonNull ImageView logo,
+      @NonNull EditText edtCurrent, @NonNull EditText edtPassword, @NonNull ImageView logo,
       @NonNull TextView txtForgot, @NonNull TextView txtSignIn, @NonNull TextView txtTitle) {
     this.rootView = rootView;
     this.Constraint = Constraint;
     this.SignUp = SignUp;
     this.body = body;
     this.btSignUp = btSignUp;
-    this.edtFirst = edtFirst;
+    this.edtCurrent = edtCurrent;
     this.edtPassword = edtPassword;
     this.logo = logo;
     this.txtForgot = txtForgot;
@@ -116,9 +116,9 @@ public final class SignInBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtFirst;
-      EditText edtFirst = ViewBindings.findChildViewById(rootView, id);
-      if (edtFirst == null) {
+      id = R.id.edtCurrent;
+      EditText edtCurrent = ViewBindings.findChildViewById(rootView, id);
+      if (edtCurrent == null) {
         break missingId;
       }
 
@@ -153,7 +153,7 @@ public final class SignInBinding implements ViewBinding {
       }
 
       return new SignInBinding((ConstraintLayout) rootView, Constraint, SignUp, body, btSignUp,
-          edtFirst, edtPassword, logo, txtForgot, txtSignIn, txtTitle);
+          edtCurrent, edtPassword, logo, txtForgot, txtSignIn, txtTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

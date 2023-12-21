@@ -66,8 +66,8 @@ public class Sign_up extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
-        first = findViewById(R.id.edtFirst);
-        last = findViewById(R.id.edtLast);
+        first = findViewById(R.id.edtCurrent);
+        last = findViewById(R.id.edtNew);
         dob = findViewById(R.id.edtDob);
         phone = findViewById(R.id.edtPhone);
         edtEmail = findViewById(R.id.edtEmail);

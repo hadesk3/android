@@ -112,8 +112,8 @@
 62-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:21:9-45
 63        <activity
 63-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:23:9-33:20
-64            android:name="com.example.ck_room.SendSms"
-64-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:24:13-36
+64            android:name="com.example.ck_room.MainActivity"
+64-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:24:13-41
 65            android:exported="true"
 65-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:25:13-36
 66            android:label="@string/app_name"
@@ -134,33 +134,33 @@
 74        <activity android:name="com.example.ck_room.Sign_up" />
 74-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:34:9-45
 74-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:34:19-42
-75        <activity android:name="com.example.ck_room.Add_Train" />
-75-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:9-47
-75-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:19-44
-76        <activity android:name="com.example.ck_room.Add_Train_Status" />
-76-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:9-54
-76-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:19-51
-77        <activity android:name="com.example.ck_room.Add_route" />
-77-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:9-47
-77-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:19-44
-78        <activity android:name="com.example.ck_room.Add_station" />
-78-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:9-49
-78-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:19-46
-79        <activity android:name="com.example.ck_room.User_Search" />
-79-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:9-49
-79-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:19-46
-80        <activity android:name="com.example.ck_room.User_page" />
-80-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:9-47
-80-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:19-44
-81        <activity android:name="com.example.ck_room.Admin_page" />
-81-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:9-48
-81-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:19-45
-82        <activity android:name="com.example.ck_room.Call" />
-82-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:9-42
-82-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:19-39
-83        <activity android:name="com.example.ck_room.Manage_train" />
-83-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:9-50
-83-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:19-47
+75        <activity android:name="com.example.ck_room.Admin_add_Train" />
+75-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:9-53
+75-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:19-50
+76        <activity android:name="com.example.ck_room.Admin_add_station" />
+76-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:9-55
+76-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:19-52
+77        <activity android:name="com.example.ck_room.User_Search" />
+77-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:9-49
+77-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:19-46
+78        <activity android:name="com.example.ck_room.User_page" />
+78-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:9-47
+78-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:19-44
+79        <activity android:name="com.example.ck_room.Admin_page" />
+79-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:9-48
+79-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:19-45
+80        <activity android:name="com.example.ck_room.Call" />
+80-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:9-42
+80-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:19-39
+81        <activity android:name="com.example.ck_room.SendSms" />
+81-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:9-45
+81-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:19-42
+82        <activity android:name="com.example.ck_room.User_change_pass" />
+82-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:9-54
+82-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:19-51
+83        <activity android:name="com.example.ck_room.User_see_menu" />
+83-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:9-51
+83-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:19-48
 84        <activity android:name="com.example.ck_room.Admin_manage_profile" />
 84-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:9-58
 84-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:19-55
@@ -173,21 +173,21 @@
 87        <activity android:name="com.example.ck_room.User_buy_ticket" />
 87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-53
 87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-50
-88        <activity android:name="com.example.ck_room.ManageTrain_page" />
-88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-54
-88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-51
-89        <activity android:name="com.example.ck_room.Edit_Train" />
-89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-48
-89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-45
+88        <activity android:name="com.example.ck_room.Admin_manageTrain_page" />
+88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-60
+88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-57
+89        <activity android:name="com.example.ck_room.Admin_edit_Train" />
+89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-54
+89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-51
 90        <activity android:name="com.example.ck_room.User_view_train" />
 90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-53
 90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:19-50
 91        <activity android:name="com.example.ck_room.Admin_block_user" />
 91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-54
 91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-51
-92        <activity android:name="com.example.ck_room.Edit_station" />
-92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-49
-92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-47
+92        <activity android:name="com.example.ck_room.Admin_edit_station" />
+92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-55
+92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-53
 93        <activity android:name="com.example.ck_room.User_choose_seat" />
 93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-54
 93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:19-51

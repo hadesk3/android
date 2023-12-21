@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -47,9 +46,6 @@ public final class AdminPageBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
-  public final CardView station;
-
-  @NonNull
   public final TextView textView12;
 
   @NonNull
@@ -74,9 +70,6 @@ public final class AdminPageBinding implements ViewBinding {
   public final View ticket;
 
   @NonNull
-  public final CardView train;
-
-  @NonNull
   public final TextView txtTicket;
 
   @NonNull
@@ -92,27 +85,20 @@ public final class AdminPageBinding implements ViewBinding {
   public final View user;
 
   @NonNull
-  public final CardView user1;
-
-  @NonNull
   public final View user3;
 
   @NonNull
   public final View user4;
 
-  @NonNull
-  public final View view5;
-
   private AdminPageBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btStation,
       @NonNull ImageButton btTrain, @NonNull ImageButton btUser, @NonNull ImageView imageView3,
       @NonNull ImageView imageView4, @NonNull ImageView imageView7, @NonNull ImageView imageView8,
-      @NonNull ConstraintLayout linearLayout, @NonNull CardView station,
-      @NonNull TextView textView12, @NonNull TextView textView13, @NonNull TextView textView14,
-      @NonNull TextView textView19, @NonNull TextView textView4, @NonNull TextView textView8,
-      @NonNull TextView textView9, @NonNull View ticket, @NonNull CardView train,
-      @NonNull TextView txtTicket, @NonNull TextView txtTicket3, @NonNull TextView txtUser,
-      @NonNull TextView txtUser3, @NonNull View user, @NonNull CardView user1, @NonNull View user3,
-      @NonNull View user4, @NonNull View view5) {
+      @NonNull ConstraintLayout linearLayout, @NonNull TextView textView12,
+      @NonNull TextView textView13, @NonNull TextView textView14, @NonNull TextView textView19,
+      @NonNull TextView textView4, @NonNull TextView textView8, @NonNull TextView textView9,
+      @NonNull View ticket, @NonNull TextView txtTicket, @NonNull TextView txtTicket3,
+      @NonNull TextView txtUser, @NonNull TextView txtUser3, @NonNull View user,
+      @NonNull View user3, @NonNull View user4) {
     this.rootView = rootView;
     this.btStation = btStation;
     this.btTrain = btTrain;
@@ -122,7 +108,6 @@ public final class AdminPageBinding implements ViewBinding {
     this.imageView7 = imageView7;
     this.imageView8 = imageView8;
     this.linearLayout = linearLayout;
-    this.station = station;
     this.textView12 = textView12;
     this.textView13 = textView13;
     this.textView14 = textView14;
@@ -131,16 +116,13 @@ public final class AdminPageBinding implements ViewBinding {
     this.textView8 = textView8;
     this.textView9 = textView9;
     this.ticket = ticket;
-    this.train = train;
     this.txtTicket = txtTicket;
     this.txtTicket3 = txtTicket3;
     this.txtUser = txtUser;
     this.txtUser3 = txtUser3;
     this.user = user;
-    this.user1 = user1;
     this.user3 = user3;
     this.user4 = user4;
-    this.view5 = view5;
   }
 
   @Override
@@ -214,12 +196,6 @@ public final class AdminPageBinding implements ViewBinding {
 
       ConstraintLayout linearLayout = (ConstraintLayout) rootView;
 
-      id = R.id.station;
-      CardView station = ViewBindings.findChildViewById(rootView, id);
-      if (station == null) {
-        break missingId;
-      }
-
       id = R.id.textView12;
       TextView textView12 = ViewBindings.findChildViewById(rootView, id);
       if (textView12 == null) {
@@ -268,12 +244,6 @@ public final class AdminPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.train;
-      CardView train = ViewBindings.findChildViewById(rootView, id);
-      if (train == null) {
-        break missingId;
-      }
-
       id = R.id.txtTicket;
       TextView txtTicket = ViewBindings.findChildViewById(rootView, id);
       if (txtTicket == null) {
@@ -304,12 +274,6 @@ public final class AdminPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.user1;
-      CardView user1 = ViewBindings.findChildViewById(rootView, id);
-      if (user1 == null) {
-        break missingId;
-      }
-
       id = R.id.user3;
       View user3 = ViewBindings.findChildViewById(rootView, id);
       if (user3 == null) {
@@ -322,16 +286,10 @@ public final class AdminPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view5;
-      View view5 = ViewBindings.findChildViewById(rootView, id);
-      if (view5 == null) {
-        break missingId;
-      }
-
       return new AdminPageBinding((ConstraintLayout) rootView, btStation, btTrain, btUser,
-          imageView3, imageView4, imageView7, imageView8, linearLayout, station, textView12,
-          textView13, textView14, textView19, textView4, textView8, textView9, ticket, train,
-          txtTicket, txtTicket3, txtUser, txtUser3, user, user1, user3, user4, view5);
+          imageView3, imageView4, imageView7, imageView8, linearLayout, textView12, textView13,
+          textView14, textView19, textView4, textView8, textView9, ticket, txtTicket, txtTicket3,
+          txtUser, txtUser3, user, user3, user4);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

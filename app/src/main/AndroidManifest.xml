@@ -32,26 +32,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".Sign_up" />
-        <activity android:name=".Add_Train" />
-        <activity android:name=".Add_Train_Status" />
-        <activity android:name=".Add_route" />
-        <activity android:name=".Add_station" />
+        <activity android:name=".Admin_add_Train" />
+        <activity android:name=".Admin_add_station" />
         <activity android:name=".User_Search" />
         <activity android:name=".User_page" />
         <activity android:name=".Admin_page" />
         <activity android:name=".Call" />
         <activity android:name=".SendSms" />
+        <activity android:name=".User_change_pass" />
 
-        <activity android:name=".Manage_train" />
+        <activity android:name=".User_see_menu" />
         <activity android:name=".Admin_manage_profile" />
         <activity android:name=".User_edit_profile" />
         <activity android:name=".Schedule" />
         <activity android:name=".User_buy_ticket" />
-        <activity android:name=".ManageTrain_page" />
-        <activity android:name=".Edit_Train" />
+        <activity android:name=".Admin_manageTrain_page" />
+        <activity android:name=".Admin_edit_Train" />
         <activity android:name=".User_view_train" />
         <activity android:name=".Admin_block_user" />
-        <activity android:name=".Edit_station"/>
+        <activity android:name=".Admin_edit_station"/>
         <activity android:name=".User_choose_seat" />
         <activity android:name=".Paypal" />
         <activity android:name=".test" />

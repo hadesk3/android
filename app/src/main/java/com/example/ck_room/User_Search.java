@@ -34,7 +34,7 @@ import java.util.Locale;
 
 public class User_Search extends AppCompatActivity {
     int REQUEST_CODE = 5;
-    Button  search;
+    Button  search ,back;
     String username = "";
     private Spinner edtDepart, edtArrive;
     private ArrayAdapter<String> adapter;
@@ -51,6 +51,7 @@ public class User_Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_search_page);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+        back = findViewById(R.id.btBack);
 
         Intent intent = getIntent();
          username = intent.getStringExtra("username");
@@ -140,18 +141,34 @@ public class User_Search extends AppCompatActivity {
                 List<String> itemListName = new ArrayList<>();
                 List<String> itemListPlace= new ArrayList<>();
                 List<String> itemListTime = new ArrayList<>();
+
+                List<String> itemListSource = new ArrayList<>();
+                List<String> itemListDes = new ArrayList<>();
+                List<String> itemListDay = new ArrayList<>();
+
                 for(int i = 0; i < list.size();i++)
                 {
                     itemListName.add(list.get(i).getTrain_name());
                     itemListPlace.add(list.get(i).getSource_stn()+"-"+list.get(i).getDestination_stn());
                     itemListTime.add(list.get(i).getTimeStart()+"-" + list.get(i).getTimeEnd());
+                    itemListSource.add(list.get(i).getSource_stn());
+                    itemListDes.add(list.get(i).getDestination_stn());
+                    itemListDay.add(edtDate.getText().toString());
+
                 }
 
-                adapter3 = new CustomAdapter_user(itemListName, itemListPlace,itemListTime,User_Search.this);
+                adapter3 = new CustomAdapter_user(itemListName, itemListPlace,itemListTime,User_Search.this,itemListSource,itemListDes,itemListDay);
                 recyclerView.setAdapter(adapter3);
 
             }
 
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
         });
     }
     public String getUsername() {

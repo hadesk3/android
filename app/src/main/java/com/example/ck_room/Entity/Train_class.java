@@ -148,7 +148,7 @@ public class Train_class {
     }
 
 
-    private static String setSeatStatus(String seatString, int seatIndex, boolean isTaken) {
+    public static String setSeatStatus(String seatString, int seatIndex, boolean isTaken) {
         // Chuyển chuỗi ký tự thành mảng ký tự để thao tác dễ dàng
         char[] seats = seatString.toCharArray();
 

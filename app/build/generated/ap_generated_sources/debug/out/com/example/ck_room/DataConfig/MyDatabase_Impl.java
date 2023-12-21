@@ -16,6 +16,8 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
 import com.example.ck_room.DAO.Date_available_Dao;
 import com.example.ck_room.DAO.Date_available_Dao_Impl;
+import com.example.ck_room.DAO.FoodDao;
+import com.example.ck_room.DAO.FoodDao_Impl;
 import com.example.ck_room.DAO.PassengerDao;
 import com.example.ck_room.DAO.PassengerDao_Impl;
 import com.example.ck_room.DAO.ReservationDao;
@@ -71,6 +73,8 @@ public final class MyDatabase_Impl extends MyDatabase {
 
   private volatile ReservationDao _reservationDao;
 
+  private volatile FoodDao _foodDao;
+
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(4) {
@@ -87,8 +91,9 @@ public final class MyDatabase_Impl extends MyDatabase {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `route_has_station` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `station_id` INTEGER NOT NULL, `stop_number` TEXT, FOREIGN KEY(`station_id`) REFERENCES `station`(`station_id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE CASCADE ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `day_available` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `train_id` INTEGER NOT NULL, `day_available` TEXT, FOREIGN KEY(`train_id`) REFERENCES `Train`(`train_id`) ON UPDATE NO ACTION ON DELETE CASCADE )");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `Reservation` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PNR` TEXT, `Train_Id_class` INTEGER NOT NULL, `available_date` TEXT, `EmailID` TEXT, `Reservation_Date` TEXT, `Reservation_Status` TEXT, FOREIGN KEY(`Train_Id_class`) REFERENCES `train_status`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`EmailID`) REFERENCES `user`(`EmailID`) ON UPDATE NO ACTION ON DELETE CASCADE )");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Food` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `type` TEXT, `price` TEXT, `drawable` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'eebf2d5e4426fa39c9c668a07f525cdb')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd890194f4a13fb3a50ed0971a924ec70')");
       }
 
       @Override
@@ -104,6 +109,7 @@ public final class MyDatabase_Impl extends MyDatabase {
         _db.execSQL("DROP TABLE IF EXISTS `route_has_station`");
         _db.execSQL("DROP TABLE IF EXISTS `day_available`");
         _db.execSQL("DROP TABLE IF EXISTS `Reservation`");
+        _db.execSQL("DROP TABLE IF EXISTS `Food`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -337,9 +343,24 @@ public final class MyDatabase_Impl extends MyDatabase {
                   + " Expected:\n" + _infoReservation + "\n"
                   + " Found:\n" + _existingReservation);
         }
+        final HashMap<String, TableInfo.Column> _columnsFood = new HashMap<String, TableInfo.Column>(5);
+        _columnsFood.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFood.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFood.put("type", new TableInfo.Column("type", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFood.put("price", new TableInfo.Column("price", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsFood.put("drawable", new TableInfo.Column("drawable", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysFood = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesFood = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoFood = new TableInfo("Food", _columnsFood, _foreignKeysFood, _indicesFood);
+        final TableInfo _existingFood = TableInfo.read(_db, "Food");
+        if (! _infoFood.equals(_existingFood)) {
+          return new RoomOpenHelper.ValidationResult(false, "Food(com.example.ck_room.Entity.Food).\n"
+                  + " Expected:\n" + _infoFood + "\n"
+                  + " Found:\n" + _existingFood);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "eebf2d5e4426fa39c9c668a07f525cdb", "22676a509e805648f337683d5f7b2a68");
+    }, "d890194f4a13fb3a50ed0971a924ec70", "076b4bd306ee186d247ece4e9ad56f60");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -352,7 +373,7 @@ public final class MyDatabase_Impl extends MyDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user","Train","station","passenger","Train_class","train_status","Ticket","route","route_has_station","day_available","Reservation");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "user","Train","station","passenger","Train_class","train_status","Ticket","route","route_has_station","day_available","Reservation","Food");
   }
 
   @Override
@@ -379,6 +400,7 @@ public final class MyDatabase_Impl extends MyDatabase {
       _db.execSQL("DELETE FROM `route_has_station`");
       _db.execSQL("DELETE FROM `day_available`");
       _db.execSQL("DELETE FROM `Reservation`");
+      _db.execSQL("DELETE FROM `Food`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -406,6 +428,7 @@ public final class MyDatabase_Impl extends MyDatabase {
     _typeConvertersMap.put(Route_has_station_Dao.class, Route_has_station_Dao_Impl.getRequiredConverters());
     _typeConvertersMap.put(Date_available_Dao.class, Date_available_Dao_Impl.getRequiredConverters());
     _typeConvertersMap.put(ReservationDao.class, ReservationDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(FoodDao.class, FoodDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -559,6 +582,20 @@ public final class MyDatabase_Impl extends MyDatabase {
           _reservationDao = new ReservationDao_Impl(this);
         }
         return _reservationDao;
+      }
+    }
+  }
+
+  @Override
+  public FoodDao foodDao() {
+    if (_foodDao != null) {
+      return _foodDao;
+    } else {
+      synchronized(this) {
+        if(_foodDao == null) {
+          _foodDao = new FoodDao_Impl(this);
+        }
+        return _foodDao;
       }
     }
   }

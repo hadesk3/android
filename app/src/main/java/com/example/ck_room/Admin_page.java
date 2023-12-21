@@ -13,7 +13,7 @@ public class Admin_page extends AppCompatActivity {
     private static final int REQUEST_CODE = 1;
  /*   Button butAddTrain,getButAddTrainStatus, butAddRoute,butAddStation, butProfile,butManageTrain;
     Button back;*/
-
+    Button back;
     ImageButton butManageTrain, btStation,btManageUser;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,18 +22,19 @@ public class Admin_page extends AppCompatActivity {
       butManageTrain = findViewById(R.id.btTrain);
         btStation = findViewById(R.id.btStation);
         btManageUser = findViewById(R.id.btUser);
+
       butManageTrain.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-              Intent intent = new Intent(Admin_page.this,ManageTrain_page.class);
-              startActivityForResult(intent,REQUEST_CODE);
+              Intent intent = new Intent(Admin_page.this, Admin_manageTrain_page.class);
+              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_TRAIN);
           }
       });
       btStation.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               Intent intent = new Intent(Admin_page.this,Admin_manage_station.class);
-              startActivityForResult(intent,REQUEST_CODE);
+              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_STATION);
           }
 
       });
@@ -42,7 +43,7 @@ public class Admin_page extends AppCompatActivity {
           @Override
           public void onClick(View v) {
               Intent intent = new Intent(Admin_page.this,Admin_manage_profile.class);
-              startActivity(intent);
+              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_USER);
 
           }
       });

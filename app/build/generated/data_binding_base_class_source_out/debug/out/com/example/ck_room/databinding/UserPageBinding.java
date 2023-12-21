@@ -39,6 +39,9 @@ public final class UserPageBinding implements ViewBinding {
   public final ImageButton btHistory;
 
   @NonNull
+  public final ImageButton btPassword;
+
+  @NonNull
   public final ImageButton btUser;
 
   @NonNull
@@ -84,6 +87,9 @@ public final class UserPageBinding implements ViewBinding {
   public final TextView rateNum1;
 
   @NonNull
+  public final TextView txtMenu;
+
+  @NonNull
   public final View view1;
 
   @NonNull
@@ -94,18 +100,20 @@ public final class UserPageBinding implements ViewBinding {
 
   private UserPageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Tittle,
       @NonNull View body, @NonNull ImageButton btBooking, @NonNull LinearLayout btGr,
-      @NonNull ImageButton btHistory, @NonNull ImageButton btUser, @NonNull CardView cardView1,
-      @NonNull CardView cardView2, @NonNull TextView class1, @NonNull TextView class2,
-      @NonNull TextView des1, @NonNull TextView des2, @NonNull ImageView imgBuss1,
-      @NonNull ImageView imgBuss2, @NonNull TextView new1, @NonNull TextView new2,
-      @NonNull ImageView rate1, @NonNull ImageView rate2, @NonNull TextView rateNum,
-      @NonNull TextView rateNum1, @NonNull View view1, @NonNull View view6, @NonNull View view8) {
+      @NonNull ImageButton btHistory, @NonNull ImageButton btPassword, @NonNull ImageButton btUser,
+      @NonNull CardView cardView1, @NonNull CardView cardView2, @NonNull TextView class1,
+      @NonNull TextView class2, @NonNull TextView des1, @NonNull TextView des2,
+      @NonNull ImageView imgBuss1, @NonNull ImageView imgBuss2, @NonNull TextView new1,
+      @NonNull TextView new2, @NonNull ImageView rate1, @NonNull ImageView rate2,
+      @NonNull TextView rateNum, @NonNull TextView rateNum1, @NonNull TextView txtMenu,
+      @NonNull View view1, @NonNull View view6, @NonNull View view8) {
     this.rootView = rootView;
     this.Tittle = Tittle;
     this.body = body;
     this.btBooking = btBooking;
     this.btGr = btGr;
     this.btHistory = btHistory;
+    this.btPassword = btPassword;
     this.btUser = btUser;
     this.cardView1 = cardView1;
     this.cardView2 = cardView2;
@@ -121,6 +129,7 @@ public final class UserPageBinding implements ViewBinding {
     this.rate2 = rate2;
     this.rateNum = rateNum;
     this.rateNum1 = rateNum1;
+    this.txtMenu = txtMenu;
     this.view1 = view1;
     this.view6 = view6;
     this.view8 = view8;
@@ -180,6 +189,12 @@ public final class UserPageBinding implements ViewBinding {
       id = R.id.btHistory;
       ImageButton btHistory = ViewBindings.findChildViewById(rootView, id);
       if (btHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.btPassword;
+      ImageButton btPassword = ViewBindings.findChildViewById(rootView, id);
+      if (btPassword == null) {
         break missingId;
       }
 
@@ -273,6 +288,12 @@ public final class UserPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtMenu;
+      TextView txtMenu = ViewBindings.findChildViewById(rootView, id);
+      if (txtMenu == null) {
+        break missingId;
+      }
+
       id = R.id.view1;
       View view1 = ViewBindings.findChildViewById(rootView, id);
       if (view1 == null) {
@@ -292,8 +313,8 @@ public final class UserPageBinding implements ViewBinding {
       }
 
       return new UserPageBinding((ConstraintLayout) rootView, Tittle, body, btBooking, btGr,
-          btHistory, btUser, cardView1, cardView2, class1, class2, des1, des2, imgBuss1, imgBuss2,
-          new1, new2, rate1, rate2, rateNum, rateNum1, view1, view6, view8);
+          btHistory, btPassword, btUser, cardView1, cardView2, class1, class2, des1, des2, imgBuss1,
+          imgBuss2, new1, new2, rate1, rate2, rateNum, rateNum1, txtMenu, view1, view6, view8);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

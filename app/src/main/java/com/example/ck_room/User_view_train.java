@@ -43,7 +43,7 @@ public class User_view_train extends AppCompatActivity {
     TextView edtName,edtEcoFare,edtFirstFare,edtBusFare,
             edtEcoPass,edtBusPass,edtFirstPass;
     int id;
-    Button book;
+    Button book,back;
     int id_sent_to_book = 0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -51,6 +51,8 @@ public class User_view_train extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_view_train);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+        back = findViewById(R.id.btBack);
+
         book = findViewById(R.id.btCreate);
         edtDate = findViewById(R.id.edtDate);
         edtName = findViewById(R.id.edtName);
@@ -68,8 +70,8 @@ public class User_view_train extends AppCompatActivity {
         edtEcoFare = findViewById(R.id.edtEcoFare);
         Intent intent = getIntent();
         id_sent_to_book = intent.getIntExtra("id",0);
-        id = intent.getIntExtra("id",0)  -1;
-        Train t = myDatabase.trainDao().getAllTrains().get(id);
+        id = intent.getIntExtra("id",0);
+        Train t = myDatabase.trainDao().getTrainById(id).get(0);
 
         edtName.setText(t.getTrain_name());
         source.setText(t.getSource_stn());
@@ -238,7 +240,15 @@ public class User_view_train extends AppCompatActivity {
                 Intent intent = new Intent(User_view_train.this, User_choose_seat.class);
                 intent.putExtra("id", id_sent_to_book);
                 intent.putExtra("username",username);
-             startActivity(intent);
+             startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_SEAT);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
             }
         });
     }

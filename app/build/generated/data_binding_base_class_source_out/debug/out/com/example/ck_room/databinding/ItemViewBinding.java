@@ -25,9 +25,6 @@ public final class ItemViewBinding implements ViewBinding {
   public final ImageView imageView5;
 
   @NonNull
-  public final Button itemButton;
-
-  @NonNull
   public final ConstraintLayout relativeLayout;
 
   @NonNull
@@ -37,17 +34,20 @@ public final class ItemViewBinding implements ViewBinding {
   public final TextView txtPlace;
 
   @NonNull
+  public final Button txtPrice;
+
+  @NonNull
   public final TextView txtTime;
 
   private ItemViewBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageView5,
-      @NonNull Button itemButton, @NonNull ConstraintLayout relativeLayout,
-      @NonNull TextView txtName, @NonNull TextView txtPlace, @NonNull TextView txtTime) {
+      @NonNull ConstraintLayout relativeLayout, @NonNull TextView txtName,
+      @NonNull TextView txtPlace, @NonNull Button txtPrice, @NonNull TextView txtTime) {
     this.rootView = rootView;
     this.imageView5 = imageView5;
-    this.itemButton = itemButton;
     this.relativeLayout = relativeLayout;
     this.txtName = txtName;
     this.txtPlace = txtPlace;
+    this.txtPrice = txtPrice;
     this.txtTime = txtTime;
   }
 
@@ -84,12 +84,6 @@ public final class ItemViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.itemButton;
-      Button itemButton = ViewBindings.findChildViewById(rootView, id);
-      if (itemButton == null) {
-        break missingId;
-      }
-
       ConstraintLayout relativeLayout = (ConstraintLayout) rootView;
 
       id = R.id.txtName;
@@ -104,14 +98,20 @@ public final class ItemViewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtPrice;
+      Button txtPrice = ViewBindings.findChildViewById(rootView, id);
+      if (txtPrice == null) {
+        break missingId;
+      }
+
       id = R.id.txtTime;
       TextView txtTime = ViewBindings.findChildViewById(rootView, id);
       if (txtTime == null) {
         break missingId;
       }
 
-      return new ItemViewBinding((ConstraintLayout) rootView, imageView5, itemButton,
-          relativeLayout, txtName, txtPlace, txtTime);
+      return new ItemViewBinding((ConstraintLayout) rootView, imageView5, relativeLayout, txtName,
+          txtPlace, txtPrice, txtTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -37,16 +37,16 @@ public final class SignUpBinding implements ViewBinding {
   public final Button btSignUp;
 
   @NonNull
+  public final EditText edtCurrent;
+
+  @NonNull
   public final TextView edtDob;
 
   @NonNull
   public final EditText edtEmail;
 
   @NonNull
-  public final EditText edtFirst;
-
-  @NonNull
-  public final EditText edtLast;
+  public final EditText edtNew;
 
   @NonNull
   public final EditText edtPhone;
@@ -89,8 +89,8 @@ public final class SignUpBinding implements ViewBinding {
 
   private SignUpBinding(@NonNull ConstraintLayout rootView, @NonNull ConstraintLayout Constraint,
       @NonNull TextView SignUp, @NonNull View body, @NonNull Button btSignUp,
-      @NonNull TextView edtDob, @NonNull EditText edtEmail, @NonNull EditText edtFirst,
-      @NonNull EditText edtLast, @NonNull EditText edtPhone, @NonNull ImageView imageView,
+      @NonNull EditText edtCurrent, @NonNull TextView edtDob, @NonNull EditText edtEmail,
+      @NonNull EditText edtNew, @NonNull EditText edtPhone, @NonNull ImageView imageView,
       @NonNull RadioButton radioF, @NonNull RadioGroup radioGr, @NonNull RadioButton radioM,
       @NonNull TextView textView35, @NonNull TextView textView36, @NonNull TextView textView37,
       @NonNull TextView textView39, @NonNull TextView textView41, @NonNull TextView textView43,
@@ -100,10 +100,10 @@ public final class SignUpBinding implements ViewBinding {
     this.SignUp = SignUp;
     this.body = body;
     this.btSignUp = btSignUp;
+    this.edtCurrent = edtCurrent;
     this.edtDob = edtDob;
     this.edtEmail = edtEmail;
-    this.edtFirst = edtFirst;
-    this.edtLast = edtLast;
+    this.edtNew = edtNew;
     this.edtPhone = edtPhone;
     this.imageView = imageView;
     this.radioF = radioF;
@@ -166,6 +166,12 @@ public final class SignUpBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edtCurrent;
+      EditText edtCurrent = ViewBindings.findChildViewById(rootView, id);
+      if (edtCurrent == null) {
+        break missingId;
+      }
+
       id = R.id.edtDob;
       TextView edtDob = ViewBindings.findChildViewById(rootView, id);
       if (edtDob == null) {
@@ -178,15 +184,9 @@ public final class SignUpBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edtFirst;
-      EditText edtFirst = ViewBindings.findChildViewById(rootView, id);
-      if (edtFirst == null) {
-        break missingId;
-      }
-
-      id = R.id.edtLast;
-      EditText edtLast = ViewBindings.findChildViewById(rootView, id);
-      if (edtLast == null) {
+      id = R.id.edtNew;
+      EditText edtNew = ViewBindings.findChildViewById(rootView, id);
+      if (edtNew == null) {
         break missingId;
       }
 
@@ -269,7 +269,7 @@ public final class SignUpBinding implements ViewBinding {
       }
 
       return new SignUpBinding((ConstraintLayout) rootView, Constraint, SignUp, body, btSignUp,
-          edtDob, edtEmail, edtFirst, edtLast, edtPhone, imageView, radioF, radioGr, radioM,
+          edtCurrent, edtDob, edtEmail, edtNew, edtPhone, imageView, radioF, radioGr, radioM,
           textView35, textView36, textView37, textView39, textView41, textView43, textView46,
           txtSignIn);
     }

@@ -7,6 +7,7 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.ck_room.DAO.Date_available_Dao;
+import com.example.ck_room.DAO.FoodDao;
 import com.example.ck_room.DAO.PassengerDao;
 import com.example.ck_room.DAO.ReservationDao;
 import com.example.ck_room.DAO.RouteDao;
@@ -18,6 +19,7 @@ import com.example.ck_room.DAO.Train_class_Dao;
 import com.example.ck_room.DAO.Train_status_Dao;
 import com.example.ck_room.DAO.UserDao;
 import com.example.ck_room.Entity.Day_available;
+import com.example.ck_room.Entity.Food;
 import com.example.ck_room.Entity.Passenger;
 import com.example.ck_room.Entity.Reservation;
 import com.example.ck_room.Entity.Route;
@@ -31,7 +33,7 @@ import com.example.ck_room.Entity.User;
 
 @Database(entities = {User.class, Train.class, Station.class, Passenger.class, Train_class.class
                         , Train_status.class, Ticket.class, Route.class, Route_has_station.class
-                        , Day_available.class, Reservation.class}, version = 4)
+                        , Day_available.class, Reservation.class, Food.class}, version = 4)
 public abstract class MyDatabase extends RoomDatabase {
     public abstract UserDao userDao();
     public abstract TrainDao trainDao();
@@ -44,6 +46,7 @@ public abstract class MyDatabase extends RoomDatabase {
     public abstract Route_has_station_Dao routeHasStationDao();
     public abstract Date_available_Dao dateAvailableDao();
     public abstract ReservationDao reservationDao();
+    public abstract FoodDao foodDao();
 
 
 

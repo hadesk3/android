@@ -71,13 +71,13 @@ public class User_edit_profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_edit_profile);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
-        first = findViewById(R.id.edtFirst);
-        last = findViewById(R.id.edtLast);
+        first = findViewById(R.id.edtCurrent);
+        last = findViewById(R.id.edtNew);
         phone = findViewById(R.id.edtPhone);
         back = findViewById(R.id.btBack);
        save = findViewById(R.id.btBlock);
         dob = findViewById(R.id.edtDob);
-        gender = findViewById(R.id.edtGe);
+        gender = findViewById(R.id.edtConfirm);
         name = findViewById(R.id.txtName);
         logout = findViewById(R.id.btLogout);
         coin = findViewById(R.id.txtCoin);
@@ -168,15 +168,28 @@ public class User_edit_profile extends AppCompatActivity {
 
                 Toast.makeText(User_edit_profile.this,"Update Succesfully", Toast.LENGTH_SHORT).show();
 
-                Intent updatedIntent = new Intent(User_edit_profile.this, User_edit_profile.class);
+                Intent updatedIntent = new Intent(User_edit_profile.this, User_page.class);
                 updatedIntent.putExtra("username", userTemp);
 
-                // Finish the current activity
-                finish();
-
-                // Start the activity with the new intent
                 startActivity(updatedIntent);
           }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED );
+                finish();
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(MainActivity.RESULT_LOGOUT);
+
+                startActivity(new Intent(User_edit_profile.this, MainActivity.class));
+                finish();
+            }
         });
 
     }

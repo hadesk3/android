@@ -39,12 +39,12 @@
         RadioGroup radioGroup;
         RadioButton radioEco,radioFirst,radioBus;
         List<Integer> list;
-        Button next;
+        Button next,back;
         int id;
         int id_sent_to_book = 0;
 
         private List<String> itemList;
-
+        String ty;
 
         private CustomAdapter_user_seat adapter3;
         private RecyclerView recyclerView;
@@ -52,6 +52,8 @@
         protected void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.user_choose_seat);
+            back = findViewById(R.id.btBack);
+
             name = findViewById(R.id.textView15);
             date = findViewById(R.id.textView29);
             time = findViewById(R.id.textView31);
@@ -67,28 +69,32 @@
             Intent intent = getIntent();
             id_sent_to_book = intent.getIntExtra("id",0);
 
-            id = intent.getIntExtra("id",0)  -1;
-            Train t = myDatabase.trainDao().getAllTrains().get(id);
+            id = intent.getIntExtra("id",0) ;
+            Train t = myDatabase.trainDao().getTrainById(id).get(0);
             name.setText(t.getTrain_name());
             time.setText(t.getTimeStart()+":"+t.getTimeEnd());
 
             List<Day_available> a =  new ArrayList<>();
-            a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id + 1);
+            a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id);
 
             Train_class t_c = new Train_class();
-            t_c = myDatabase.trainClassDao().getTrainClassById(id +1);
+            t_c = myDatabase.trainClassDao().getTrainClassById(id);
 
             date.setText(a.get(0).getDay_available());
 
                 list = new ArrayList<>();
             Train_class finalT_c = t_c;
+
+             ty = "";
             radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     if (checkedId == radioEco.getId()) {
+                        ty = "Eco";
                         // Xử lý khi RadioButton "radioEco" được chọn
-
-                        String s = finalT_c.getTakenSeats_Business();
+                        price.setText("0");
+                        seat.setText("0");
+                        String s = finalT_c.getTakenSeats_Economy();
 
                         List<String> check = new ArrayList<>();
 
@@ -96,6 +102,7 @@
                             char c = s.charAt(i);
                             int number = Character.getNumericValue(c);
                             check.add(number + "");
+                            Log.d("=========","number" + number +"");
                         }
 
                         itemList = new ArrayList<>();
@@ -110,13 +117,60 @@
                         adapter3 = new CustomAdapter_user_seat(itemList,check,User_choose_seat.this, price,seat,finalT_c.getEconomy_Fare());
                         recyclerView.setAdapter(adapter3);
 
-                        Toast.makeText(getApplicationContext(), "Bạn đã chọn radioEco", Toast.LENGTH_SHORT).show();
                     } else if (checkedId == radioBus.getId()) {
-                        // Xử lý khi RadioButton "radioBus" được chọn
+                        ty = "Bus";
+                        price.setText("0");
+                        seat.setText("0");
+                        String s = finalT_c.getTakenSeats_Business();
 
+                        List<String> check = new ArrayList<>();
+
+                        for (int i = 0; i < s.length(); i++) {
+                            char c = s.charAt(i);
+                            int number = Character.getNumericValue(c);
+                            check.add(number + "");
+                            check.add(number + "");
+                            Log.d("=========","number" + number +"");
+                        }
+
+                        itemList = new ArrayList<>();
+                        for(int i = 0; i < check.size();i++)
+                        {
+                            itemList.add(i + "");
+                        }
+
+                        recyclerView = findViewById(R.id.recyclerViewmanage);
+                        recyclerView.setLayoutManager(new GridLayoutManager(User_choose_seat.this, 4)); // 4 columns for 4 rows
+
+                        adapter3 = new CustomAdapter_user_seat(itemList,check,User_choose_seat.this, price,seat,finalT_c.getEconomy_Fare());
+                        recyclerView.setAdapter(adapter3);
                     } else if (checkedId == radioFirst.getId())
                     {
+                        ty ="First";
 
+                        price.setText("0");
+                        seat.setText("0");
+                        String s = finalT_c.getTakenSeats_First();
+
+                        List<String> check = new ArrayList<>();
+
+                        for (int i = 0; i < s.length(); i++) {
+                            char c = s.charAt(i);
+                            int number = Character.getNumericValue(c);
+                            check.add(number + "");
+                        }
+
+                        itemList = new ArrayList<>();
+                        for(int i = 0; i < check.size();i++)
+                        {
+                            itemList.add(i + "");
+                        }
+
+                        recyclerView = findViewById(R.id.recyclerViewmanage);
+                        recyclerView.setLayoutManager(new GridLayoutManager(User_choose_seat.this, 4)); // 4 columns for 4 rows
+
+                        adapter3 = new CustomAdapter_user_seat(itemList,check,User_choose_seat.this, price,seat,finalT_c.getEconomy_Fare());
+                        recyclerView.setAdapter(adapter3);
                     }
 
 
@@ -144,12 +198,24 @@
                     intent.putExtra("totalPrice",price.getText().toString())  ;
                     intent.putExtra("username",username);
 
-                    startActivity(intent);
+                        intent.putExtra("type",ty);
+
+
+
+
+
+                    startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_PAY);
                 }
             });
 
 
-
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    setResult(RESULT_CANCELED);
+                    finish();
+                }
+            });
 
 
         }

@@ -59,9 +59,6 @@ public final class AddRouteBinding implements ViewBinding {
   public final TextView text;
 
   @NonNull
-  public final TextView textView16;
-
-  @NonNull
   public final TextView textView18;
 
   @NonNull
@@ -92,17 +89,20 @@ public final class AddRouteBinding implements ViewBinding {
   public final TextView trainName;
 
   @NonNull
+  public final TextView txtMenu;
+
+  @NonNull
   public final Button update;
 
   private AddRouteBinding(@NonNull LinearLayout rootView, @NonNull EditText arrivalTime,
       @NonNull Button cancel, @NonNull EditText departureTime, @NonNull Spinner desSpinner,
       @NonNull EditText destination, @NonNull Button ok, @NonNull EditText sourceDistance,
       @NonNull Spinner sourceSpinner, @NonNull EditText sourceStation, @NonNull EditText stationId,
-      @NonNull EditText stopNumber, @NonNull TextView text, @NonNull TextView textView16,
-      @NonNull TextView textView18, @NonNull TextView textView19, @NonNull TextView textView20,
-      @NonNull TextView textView22, @NonNull TextView textView23, @NonNull TextView textView24,
-      @NonNull TextView textView25, @NonNull TextView textView26, @NonNull EditText trainId,
-      @NonNull TextView trainName, @NonNull Button update) {
+      @NonNull EditText stopNumber, @NonNull TextView text, @NonNull TextView textView18,
+      @NonNull TextView textView19, @NonNull TextView textView20, @NonNull TextView textView22,
+      @NonNull TextView textView23, @NonNull TextView textView24, @NonNull TextView textView25,
+      @NonNull TextView textView26, @NonNull EditText trainId, @NonNull TextView trainName,
+      @NonNull TextView txtMenu, @NonNull Button update) {
     this.rootView = rootView;
     this.arrivalTime = arrivalTime;
     this.cancel = cancel;
@@ -116,7 +116,6 @@ public final class AddRouteBinding implements ViewBinding {
     this.stationId = stationId;
     this.stopNumber = stopNumber;
     this.text = text;
-    this.textView16 = textView16;
     this.textView18 = textView18;
     this.textView19 = textView19;
     this.textView20 = textView20;
@@ -127,6 +126,7 @@ public final class AddRouteBinding implements ViewBinding {
     this.textView26 = textView26;
     this.trainId = trainId;
     this.trainName = trainName;
+    this.txtMenu = txtMenu;
     this.update = update;
   }
 
@@ -229,12 +229,6 @@ public final class AddRouteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView16;
-      TextView textView16 = ViewBindings.findChildViewById(rootView, id);
-      if (textView16 == null) {
-        break missingId;
-      }
-
       id = R.id.textView18;
       TextView textView18 = ViewBindings.findChildViewById(rootView, id);
       if (textView18 == null) {
@@ -295,6 +289,12 @@ public final class AddRouteBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtMenu;
+      TextView txtMenu = ViewBindings.findChildViewById(rootView, id);
+      if (txtMenu == null) {
+        break missingId;
+      }
+
       id = R.id.update;
       Button update = ViewBindings.findChildViewById(rootView, id);
       if (update == null) {
@@ -303,8 +303,8 @@ public final class AddRouteBinding implements ViewBinding {
 
       return new AddRouteBinding((LinearLayout) rootView, arrivalTime, cancel, departureTime,
           desSpinner, destination, ok, sourceDistance, sourceSpinner, sourceStation, stationId,
-          stopNumber, text, textView16, textView18, textView19, textView20, textView22, textView23,
-          textView24, textView25, textView26, trainId, trainName, update);
+          stopNumber, text, textView18, textView19, textView20, textView22, textView23, textView24,
+          textView25, textView26, trainId, trainName, txtMenu, update);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

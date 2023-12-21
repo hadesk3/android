@@ -227,7 +227,7 @@ MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.g
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:21:9-45
 	android:dataExtractionRules
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:15:9-65
-activity#com.example.ck_room.SendSms
+activity#com.example.ck_room.MainActivity
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:23:9-33:20
 	android:label
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:26:13-45
@@ -236,7 +236,7 @@ ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidM
 	android:theme
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:27:13-49
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:24:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
@@ -251,42 +251,42 @@ activity#com.example.ck_room.Sign_up
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:34:9-45
 	android:name
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:34:19-42
-activity#com.example.ck_room.Add_Train
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:9-47
+activity#com.example.ck_room.Admin_add_Train
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:9-53
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:19-44
-activity#com.example.ck_room.Add_Train_Status
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:9-54
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:35:19-50
+activity#com.example.ck_room.Admin_add_station
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:9-55
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:19-51
-activity#com.example.ck_room.Add_route
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:9-47
-	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:19-44
-activity#com.example.ck_room.Add_station
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:9-49
-	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:19-46
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:36:19-52
 activity#com.example.ck_room.User_Search
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:9-49
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:9-49
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:19-46
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:37:19-46
 activity#com.example.ck_room.User_page
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:9-47
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:9-47
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:19-44
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:38:19-44
 activity#com.example.ck_room.Admin_page
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:9-48
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:9-48
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:19-45
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:39:19-45
 activity#com.example.ck_room.Call
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:9-42
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:9-42
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:19-39
-activity#com.example.ck_room.Manage_train
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:9-50
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:40:19-39
+activity#com.example.ck_room.SendSms
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:9-45
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:19-47
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:41:19-42
+activity#com.example.ck_room.User_change_pass
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:9-54
+	android:name
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:42:19-51
+activity#com.example.ck_room.User_see_menu
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:9-51
+	android:name
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:44:19-48
 activity#com.example.ck_room.Admin_manage_profile
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:9-58
 	android:name
@@ -303,14 +303,14 @@ activity#com.example.ck_room.User_buy_ticket
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-53
 	android:name
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-50
-activity#com.example.ck_room.ManageTrain_page
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-54
+activity#com.example.ck_room.Admin_manageTrain_page
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-60
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-51
-activity#com.example.ck_room.Edit_Train
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-48
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-57
+activity#com.example.ck_room.Admin_edit_Train
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-54
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-45
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-51
 activity#com.example.ck_room.User_view_train
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-53
 	android:name
@@ -319,10 +319,10 @@ activity#com.example.ck_room.Admin_block_user
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-54
 	android:name
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-51
-activity#com.example.ck_room.Edit_station
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-49
+activity#com.example.ck_room.Admin_edit_station
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-55
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-47
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-53
 activity#com.example.ck_room.User_choose_seat
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-54
 	android:name
