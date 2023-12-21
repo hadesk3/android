@@ -25,7 +25,7 @@ import com.squareup.picasso.Target;
 
 public class User_page extends AppCompatActivity {
     int REQUEST_CODE = 4;
-    ImageButton edit,check,buy,back,changePass;
+    ImageButton edit,check,buy,history,changePass;
     TextView menu;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +39,17 @@ public class User_page extends AppCompatActivity {
         buy = findViewById(R.id.btBooking);
         changePass = findViewById(R.id.btPassword);
         menu = findViewById(R.id.txtMenu);
+        history = findViewById(R.id.btHistory);
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(User_page.this,User_see_menu.class);
+
+
+                startActivityForResult(intent,MainActivity.REQUEST_CODE_EDIT_PROFILE);
+
+            }
+        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
