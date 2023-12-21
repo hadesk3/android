@@ -1,5 +1,6 @@
 package com.example.ck_room.Entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -11,7 +12,8 @@ import java.util.Date;
 })
 public class Ticket {
     @PrimaryKey
-    private int Ticket_No;
+    @NonNull
+    private String Ticket_No;
     private String Passenger_Name;
     private String source;
     private String destination;
@@ -23,7 +25,7 @@ public class Ticket {
     {
 
     }
-    public Ticket(int ticket_No, String passenger_Name, String source, String destination, String classType, int train_id) {
+    public Ticket(String ticket_No, String passenger_Name, String source, String destination, String classType, int train_id) {
         Ticket_No = ticket_No;
         Passenger_Name = passenger_Name;
         this.source = source;
@@ -65,11 +67,11 @@ public class Ticket {
     }
 
     // Getters and setters
-    public int getTicket_No() {
+    public String getTicket_No() {
         return Ticket_No;
     }
 
-    public void setTicket_No(int Ticket_No) {
+    public void setTicket_No(String Ticket_No) {
         this.Ticket_No = Ticket_No;
     }
 

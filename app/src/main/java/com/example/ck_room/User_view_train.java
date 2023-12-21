@@ -78,10 +78,10 @@ public class User_view_train extends AppCompatActivity {
         des.setText(t.getDestination_stn());
 
         List<Day_available> a =  new ArrayList<>();
-        a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id + 1);
+        a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id);
         edtDate.setText(a.get(0).getDay_available());
         Train_class t_c = new Train_class();
-        t_c = myDatabase.trainClassDao().getTrainClassById(id +1);
+        t_c = myDatabase.trainClassDao().getTrainClassById(id);
 
         //  edtDate.setText(a.get(0).getDay_available());
         edtStart.setText(t.getTimeStart());
@@ -238,6 +238,7 @@ public class User_view_train extends AppCompatActivity {
                 String username = intentGet.getStringExtra("username");
 
                 Intent intent = new Intent(User_view_train.this, User_choose_seat.class);
+                Log.d("==== id gửi 2",id +"");
                 intent.putExtra("id", id_sent_to_book);
                 intent.putExtra("username",username);
              startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_SEAT);

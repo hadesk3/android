@@ -102,7 +102,6 @@
                             char c = s.charAt(i);
                             int number = Character.getNumericValue(c);
                             check.add(number + "");
-                            Log.d("=========","number" + number +"");
                         }
 
                         itemList = new ArrayList<>();
@@ -130,7 +129,6 @@
                             int number = Character.getNumericValue(c);
                             check.add(number + "");
                             check.add(number + "");
-                            Log.d("=========","number" + number +"");
                         }
 
                         itemList = new ArrayList<>();
@@ -192,6 +190,7 @@
 
                     Intent intent = new Intent(User_choose_seat.this, User_buy_ticket.class);
                     intent.putExtra("id",id_sent_to_book);
+                    Log.d("===id gửi 3", id_sent_to_book +"");
                     ArrayList<String> arrayList = new ArrayList<>(a);
                     intent.putStringArrayListExtra("list", arrayList);
                     intent.putExtra("totalSeat",seat.getText().toString())  ;

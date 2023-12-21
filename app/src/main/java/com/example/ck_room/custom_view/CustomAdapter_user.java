@@ -3,6 +3,7 @@ package com.example.ck_room.custom_view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,6 +81,7 @@ public class CustomAdapter_user extends RecyclerView.Adapter<CustomAdapter_user.
     }
     private void startUserChooseSeatActivity(int id) {
         Intent intent = new Intent(context, User_view_train.class);
+        Log.d("=== gửi",id+"");
         intent.putExtra("id", id);
         intent.putExtra("username", ((User_Search) context).getUsername());
         ((Activity) context).startActivityForResult(intent, MainActivity.REQUEST_CODE_USER_VIEW_TRAIN);

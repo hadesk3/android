@@ -38,7 +38,11 @@ public final class TicketDao_Impl implements TicketDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Ticket value) {
-        stmt.bindLong(1, value.getTicket_No());
+        if (value.getTicket_No() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getTicket_No());
+        }
         if (value.getPassenger_Name() == null) {
           stmt.bindNull(2);
         } else {
@@ -70,7 +74,11 @@ public final class TicketDao_Impl implements TicketDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Ticket value) {
-        stmt.bindLong(1, value.getTicket_No());
+        if (value.getTicket_No() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getTicket_No());
+        }
       }
     };
     this.__updateAdapterOfTicket = new EntityDeletionOrUpdateAdapter<Ticket>(__db) {
@@ -81,7 +89,11 @@ public final class TicketDao_Impl implements TicketDao {
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Ticket value) {
-        stmt.bindLong(1, value.getTicket_No());
+        if (value.getTicket_No() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getTicket_No());
+        }
         if (value.getPassenger_Name() == null) {
           stmt.bindNull(2);
         } else {
@@ -103,7 +115,11 @@ public final class TicketDao_Impl implements TicketDao {
           stmt.bindString(5, value.getClassType());
         }
         stmt.bindLong(6, value.getTrain_id());
-        stmt.bindLong(7, value.getTicket_No());
+        if (value.getTicket_No() == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.getTicket_No());
+        }
       }
     };
   }
@@ -161,8 +177,12 @@ public final class TicketDao_Impl implements TicketDao {
       while(_cursor.moveToNext()) {
         final Ticket _item;
         _item = new Ticket();
-        final int _tmpTicket_No;
-        _tmpTicket_No = _cursor.getInt(_cursorIndexOfTicketNo);
+        final String _tmpTicket_No;
+        if (_cursor.isNull(_cursorIndexOfTicketNo)) {
+          _tmpTicket_No = null;
+        } else {
+          _tmpTicket_No = _cursor.getString(_cursorIndexOfTicketNo);
+        }
         _item.setTicket_No(_tmpTicket_No);
         final String _tmpPassenger_Name;
         if (_cursor.isNull(_cursorIndexOfPassengerName)) {
@@ -222,8 +242,12 @@ public final class TicketDao_Impl implements TicketDao {
       final Ticket _result;
       if(_cursor.moveToFirst()) {
         _result = new Ticket();
-        final int _tmpTicket_No;
-        _tmpTicket_No = _cursor.getInt(_cursorIndexOfTicketNo);
+        final String _tmpTicket_No;
+        if (_cursor.isNull(_cursorIndexOfTicketNo)) {
+          _tmpTicket_No = null;
+        } else {
+          _tmpTicket_No = _cursor.getString(_cursorIndexOfTicketNo);
+        }
         _result.setTicket_No(_tmpTicket_No);
         final String _tmpPassenger_Name;
         if (_cursor.isNull(_cursorIndexOfPassengerName)) {
@@ -289,8 +313,12 @@ public final class TicketDao_Impl implements TicketDao {
       while(_cursor.moveToNext()) {
         final Ticket _item;
         _item = new Ticket();
-        final int _tmpTicket_No;
-        _tmpTicket_No = _cursor.getInt(_cursorIndexOfTicketNo);
+        final String _tmpTicket_No;
+        if (_cursor.isNull(_cursorIndexOfTicketNo)) {
+          _tmpTicket_No = null;
+        } else {
+          _tmpTicket_No = _cursor.getString(_cursorIndexOfTicketNo);
+        }
         _item.setTicket_No(_tmpTicket_No);
         final String _tmpPassenger_Name;
         if (_cursor.isNull(_cursorIndexOfPassengerName)) {

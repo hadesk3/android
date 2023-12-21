@@ -16,10 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ck_room.DataConfig.DatabaseManager;
 import com.example.ck_room.DataConfig.MyDatabase;
 import com.example.ck_room.Entity.Day_available;
+import com.example.ck_room.Entity.Ticket;
 import com.example.ck_room.Entity.Train;
 import com.example.ck_room.Entity.Train_class;
 
 import java.text.DecimalFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,8 +57,9 @@ public class User_buy_ticket extends AppCompatActivity
             String type = intent.getStringExtra("type");
         id_sent_to_book = intent.getIntExtra("id",0);
 
+        Log.d("===id gửi 4",id_sent_to_book +"");
         id = intent.getIntExtra("id",0) ;
-        Train t = myDatabase.trainDao().getAllTrains().get(id);
+        Train t = myDatabase.trainDao().getTrainById(id).get(0);
         nameTrain.setText(t.getTrain_name());
 
 
@@ -118,6 +121,13 @@ public class User_buy_ticket extends AppCompatActivity
             }
         });
 
+        Ticket ticket = new Ticket();
+        LocalTime localTime = LocalTime.now();
+        ticket.setTicket_No((localTime+""));
+        ticket.setSource(t.getSource_stn());
+        ticket.setDestination(t.getDestination_stn());
+        ticket.setPassenger_Name(userName);
+        ticket.setTrain_id(t.getTrain_id());
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,8 +140,10 @@ public class User_buy_ticket extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
                 intent.putExtra("money",pay.getText().toString());
-                myDatabase.trainClassDao().update(tc);
 
+
+                myDatabase.trainClassDao().update(tc);
+                myDatabase.ticketDao().insert(ticket);
                 startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_PAY);
 
             }
