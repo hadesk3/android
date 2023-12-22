@@ -43,6 +43,7 @@
         <activity android:name=".Call" />
         <activity android:name=".SendSms" />
         <activity android:name=".User_change_pass" />
+        <activity android:name=".User_share" />
 
         <activity android:name=".User_see_menu" />
         <activity android:name=".Admin_manage_profile" />

@@ -136,7 +136,7 @@ public class User_buy_ticket extends AppCompatActivity
         ticket.setPassenger_Name(userName);
         ticket.setTrain_id(t.getTrain_id());
         ticket.setClassType(type);
-        ticket.setTrain_No(1);
+        ticket.setTrain_No(t.getTrain_id());
         ticket.setDate(a.get(0).getDay_available());
         ticket.setSeat(addSeatTicket);
         back.setOnClickListener(new View.OnClickListener() {
@@ -152,12 +152,26 @@ public class User_buy_ticket extends AppCompatActivity
                 Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
                 intent.putExtra("money",pay.getText().toString());
 
-
+                ticket.setStatusPay("PAYED");
+                ticket.setPrice(Double.parseDouble(pay.getText().toString()));
                 myDatabase.trainClassDao().update(tc);
                 myDatabase.ticketDao().insert(ticket);
                 startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_PAY);
 
+
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+                if(resultCode == RESULT_OK)
+                {
+                    setResult(RESULT_OK);
+                    finish();
+                }
+    }
+
+
 }

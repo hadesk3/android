@@ -88,7 +88,7 @@
 48-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:17:9-33
 49
 50    <application
-50-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:13:5-63:19
+50-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:13:5-64:19
 51        android:allowBackup="true"
 51-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:14:9-35
 52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -164,378 +164,381 @@
 84        <activity android:name="com.example.ck_room.User_change_pass" />
 84-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:9-54
 84-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:19-51
-85        <activity android:name="com.example.ck_room.User_see_menu" />
-85-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:47:9-51
-85-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:47:19-48
-86        <activity android:name="com.example.ck_room.Admin_manage_profile" />
-86-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-58
-86-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-55
-87        <activity android:name="com.example.ck_room.User_edit_profile" />
-87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-55
-87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-52
-88        <activity android:name="com.example.ck_room.User_buy_ticket" />
-88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-53
-88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-50
-89        <activity android:name="com.example.ck_room.Admin_manageTrain_page" />
-89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-60
-89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:19-57
-90        <activity android:name="com.example.ck_room.Admin_edit_Train" />
-90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-54
-90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-51
-91        <activity android:name="com.example.ck_room.User_view_train" />
-91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-53
-91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-50
-92        <activity android:name="com.example.ck_room.Admin_block_user" />
-92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-54
-92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:19-51
-93        <activity android:name="com.example.ck_room.Admin_edit_station" />
-93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:9-55
-93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:19-53
-94        <activity android:name="com.example.ck_room.User_choose_seat" />
-94-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:9-54
-94-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:19-51
-95        <activity android:name="com.example.ck_room.Paypal" />
-95-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:9-44
-95-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:19-41
-96        <activity android:name="com.example.ck_room.test" />
-96-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:9-42
-96-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:19-39
-97        <activity android:name="com.example.ck_room.Admin_manage_station" />
-97-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:60:9-58
-97-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:60:19-55
-98        <activity
-98-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:10:9-13:69
-99            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
-99-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:11:13-80
-100            android:exported="false"
-100-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:12:13-37
-101            android:theme="@style/StripePaymentSheetDefaultTheme" />
-101-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:13:13-66
-102        <activity
-102-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:14:9-17:69
-103            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
-103-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:15:13-82
-104            android:exported="false"
-104-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:16:13-37
-105            android:theme="@style/StripePaymentSheetDefaultTheme" />
-105-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:17:13-66
-106        <activity
-106-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:17:9-20:57
-107            android:name="com.stripe.android.view.AddPaymentMethodActivity"
-107-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:18:13-76
-108            android:exported="false"
-108-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:19:13-37
-109            android:theme="@style/StripeDefaultTheme" />
-109-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:20:13-54
-110        <activity
-110-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:21:9-24:57
-111            android:name="com.stripe.android.view.PaymentMethodsActivity"
-111-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:22:13-74
-112            android:exported="false"
-112-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:23:13-37
-113            android:theme="@style/StripeDefaultTheme" />
-113-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:24:13-54
-114        <activity
-114-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:25:9-28:57
-115            android:name="com.stripe.android.view.PaymentFlowActivity"
-115-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:26:13-71
-116            android:exported="false"
-116-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:27:13-37
-117            android:theme="@style/StripeDefaultTheme" />
-117-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:28:13-54
-118        <activity
-118-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:29:9-33:58
-119            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
-119-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:30:13-78
-120            android:exported="false"
-120-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:31:13-37
-121            android:theme="@style/StripeDefaultTheme"
-121-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:32:13-54
-122            android:windowSoftInputMode="adjustResize" />
-122-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:33:13-55
-123        <activity
-123-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:34:9-37:61
-124            android:name="com.stripe.android.view.PaymentRelayActivity"
-124-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:35:13-72
-125            android:exported="false"
-125-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:36:13-37
-126            android:theme="@style/StripeTransparentTheme" />
-126-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:37:13-58
-127        <!--
-128        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
-129        launched the browser Activity will also handle the return URL deep link.
-130        -->
-131        <activity
-131-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:43:9-47:61
-132            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
-132-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:44:13-85
-133            android:exported="false"
-133-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:45:13-37
-134            android:launchMode="singleTask"
-134-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:46:13-44
-135            android:theme="@style/StripeTransparentTheme" />
-135-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:47:13-58
-136        <activity
-136-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:48:9-65:20
-137            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
-137-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:49:13-88
-138            android:exported="true"
-138-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:50:13-36
-139            android:launchMode="singleTask"
-139-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:51:13-44
-140            android:theme="@style/StripeTransparentTheme" >
-140-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:52:13-58
-141            <intent-filter>
-141-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:53:13-64:29
-142                <action android:name="android.intent.action.VIEW" />
-142-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:54:17-69
-142-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:54:25-66
-143
-144                <category android:name="android.intent.category.DEFAULT" />
-144-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:56:17-76
-144-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:56:27-73
-145                <category android:name="android.intent.category.BROWSABLE" />
-145-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:57:17-78
-145-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:57:27-75
-146
-147                <!-- Must match `DefaultReturnUrl#value`. -->
-148                <data
-148-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:60:17-63:50
-149                    android:host="payment_return_url"
-149-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:61:21-54
-150                    android:path="/com.example.ck_room"
-150-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:62:21-53
-151                    android:scheme="stripesdk" />
-151-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:63:21-47
-152            </intent-filter>
-153        </activity>
-154        <activity
-154-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:66:9-69:57
-155            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
-155-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:67:13-114
-156            android:exported="false"
-156-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:68:13-37
-157            android:theme="@style/StripeDefaultTheme" />
-157-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:69:13-54
-158        <activity
-158-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:70:9-73:66
-159            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
-159-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:71:13-88
-160            android:exported="false"
-160-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:72:13-37
-161            android:theme="@style/StripeGooglePayDefaultTheme" />
-161-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:73:13-63
-162        <activity
-162-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:74:9-77:66
-163            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
-163-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:75:13-90
-164            android:exported="false"
-164-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:76:13-37
-165            android:theme="@style/StripeGooglePayDefaultTheme" />
-165-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:77:13-63
-166        <activity
-166-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:78:9-81:66
-167            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
-167-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:79:13-103
-168            android:exported="false"
-168-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:80:13-37
-169            android:theme="@style/StripeGooglePayDefaultTheme" />
-169-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:81:13-63
-170        <activity
-170-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:82:9-85:62
-171            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
-171-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:83:13-107
-172            android:exported="false"
-172-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:84:13-37
-173            android:theme="@style/PayLauncherDefaultTheme" />
-173-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:85:13-59
-174        <activity
-174-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:86:9-89:61
-175            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
-175-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:87:13-97
-176            android:exported="false"
-176-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:88:13-37
-177            android:theme="@style/StripeTransparentTheme" />
-177-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:89:13-58
-178        <activity
-178-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:10:9-13:54
-179            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
-179-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:11:13-81
-180            android:exported="false"
-180-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:12:13-37
-181            android:theme="@style/Stripe3DS2Theme" />
-181-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:13:13-51
-182
-183        <service
-183-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
-184            android:name="androidx.room.MultiInstanceInvalidationService"
-184-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
-185            android:directBootAware="true"
-185-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
-186            android:exported="false" />
-186-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
-187
-188        <provider
-188-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
-189            android:name="com.squareup.picasso.PicassoProvider"
-189-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
-190            android:authorities="com.example.ck_room.com.squareup.picasso"
-190-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
-191            android:exported="false" />
-191-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
-192
-193        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
-193-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
-193-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
-194        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
-194-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
-194-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
-195        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
-195-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
-195-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
-196        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
-196-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
-196-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
-197        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
-197-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
-197-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
-198        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
-198-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
-198-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
-199        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
-199-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
-199-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
-200        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
-200-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
-200-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
-201        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
-201-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
-201-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
-202
-203        <service
-203-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:23:9-25:40
-204            android:name="com.paypal.android.sdk.payments.PayPalService"
-204-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:24:13-73
-205            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
-205-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:25:13-37
-206        <uses-library
-206-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
-207            android:name="org.apache.http.legacy"
-207-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
-208            android:required="false" />
-208-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
-209
-210        <activity
-210-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-211            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-211-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-212            android:exported="false"
-212-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-213            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-213-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-214
-215        <meta-data
-215-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-216            android:name="com.google.android.gms.version"
-216-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-217            android:value="@integer/google_play_services_version" />
-217-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-218
-219        <provider
-219-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-220            android:name="androidx.startup.InitializationProvider"
-220-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-221            android:authorities="com.example.ck_room.androidx-startup"
-221-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-222            android:exported="false" >
-222-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-223            <meta-data
-223-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-224                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-224-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-225                android:value="androidx.startup" />
-225-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-226            <meta-data
-226-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-227                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-227-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-228                android:value="androidx.startup" />
-228-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-229            <meta-data
-229-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-230                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-231                android:value="androidx.startup" />
-231-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-232        </provider>
-233
-234        <uses-library
-234-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-235            android:name="androidx.window.extensions"
-235-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-236            android:required="false" />
-236-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-237        <uses-library
-237-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-238            android:name="androidx.window.sidecar"
-238-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-239            android:required="false" />
-239-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-240
-241        <receiver
-241-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-242            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-242-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-243            android:directBootAware="false"
-243-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-244            android:enabled="true"
-244-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-245            android:exported="true"
-245-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-246            android:permission="android.permission.DUMP" >
-246-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-247            <intent-filter>
-247-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-248                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-248-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-248-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-249            </intent-filter>
-250            <intent-filter>
-250-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-251                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-252            </intent-filter>
-253            <intent-filter>
-253-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-254                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-255            </intent-filter>
-256            <intent-filter>
-256-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-257                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-258            </intent-filter>
-259        </receiver>
-260
-261        <activity
-261-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
-262            android:name="io.card.payment.CardIOActivity"
-262-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:21:13-58
-263            android:configChanges="keyboardHidden|orientation" />
-263-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:22:13-63
-264        <activity android:name="io.card.payment.DataEntryActivity" />
-264-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:9-70
-264-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:19-67
-265
-266        <meta-data
-266-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
-267            android:name="aia-compat-api-min-version"
-267-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:11:13-54
-268            android:value="1" />
-268-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:12:13-30
-269    </application>
-270
-271</manifest>
+85        <activity android:name="com.example.ck_room.User_share" />
+85-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:46:9-48
+85-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:46:19-45
+86        <activity android:name="com.example.ck_room.User_see_menu" />
+86-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-51
+86-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-48
+87        <activity android:name="com.example.ck_room.Admin_manage_profile" />
+87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-58
+87-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-55
+88        <activity android:name="com.example.ck_room.User_edit_profile" />
+88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-55
+88-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-52
+89        <activity android:name="com.example.ck_room.User_buy_ticket" />
+89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-53
+89-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:19-50
+90        <activity android:name="com.example.ck_room.Admin_manageTrain_page" />
+90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-60
+90-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-57
+91        <activity android:name="com.example.ck_room.Admin_edit_Train" />
+91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-54
+91-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-51
+92        <activity android:name="com.example.ck_room.User_view_train" />
+92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-53
+92-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:19-50
+93        <activity android:name="com.example.ck_room.Admin_block_user" />
+93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:9-54
+93-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:19-51
+94        <activity android:name="com.example.ck_room.Admin_edit_station" />
+94-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:9-55
+94-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:19-53
+95        <activity android:name="com.example.ck_room.User_choose_seat" />
+95-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:9-54
+95-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:19-51
+96        <activity android:name="com.example.ck_room.Paypal" />
+96-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:9-44
+96-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:19-41
+97        <activity android:name="com.example.ck_room.test" />
+97-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:59:9-42
+97-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:59:19-39
+98        <activity android:name="com.example.ck_room.Admin_manage_station" />
+98-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:61:9-58
+98-->C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:61:19-55
+99        <activity
+99-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:10:9-13:69
+100            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+100-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:11:13-80
+101            android:exported="false"
+101-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:12:13-37
+102            android:theme="@style/StripePaymentSheetDefaultTheme" />
+102-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:13:13-66
+103        <activity
+103-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:14:9-17:69
+104            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+104-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:15:13-82
+105            android:exported="false"
+105-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:16:13-37
+106            android:theme="@style/StripePaymentSheetDefaultTheme" />
+106-->[com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:17:13-66
+107        <activity
+107-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:17:9-20:57
+108            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+108-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:18:13-76
+109            android:exported="false"
+109-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:19:13-37
+110            android:theme="@style/StripeDefaultTheme" />
+110-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:20:13-54
+111        <activity
+111-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:21:9-24:57
+112            android:name="com.stripe.android.view.PaymentMethodsActivity"
+112-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:22:13-74
+113            android:exported="false"
+113-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:23:13-37
+114            android:theme="@style/StripeDefaultTheme" />
+114-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:24:13-54
+115        <activity
+115-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:25:9-28:57
+116            android:name="com.stripe.android.view.PaymentFlowActivity"
+116-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:26:13-71
+117            android:exported="false"
+117-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:27:13-37
+118            android:theme="@style/StripeDefaultTheme" />
+118-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:28:13-54
+119        <activity
+119-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:29:9-33:58
+120            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+120-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:30:13-78
+121            android:exported="false"
+121-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:31:13-37
+122            android:theme="@style/StripeDefaultTheme"
+122-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:32:13-54
+123            android:windowSoftInputMode="adjustResize" />
+123-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:33:13-55
+124        <activity
+124-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:34:9-37:61
+125            android:name="com.stripe.android.view.PaymentRelayActivity"
+125-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:35:13-72
+126            android:exported="false"
+126-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:36:13-37
+127            android:theme="@style/StripeTransparentTheme" />
+127-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:37:13-58
+128        <!--
+129        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+130        launched the browser Activity will also handle the return URL deep link.
+131        -->
+132        <activity
+132-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:43:9-47:61
+133            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+133-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:44:13-85
+134            android:exported="false"
+134-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:45:13-37
+135            android:launchMode="singleTask"
+135-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:46:13-44
+136            android:theme="@style/StripeTransparentTheme" />
+136-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:47:13-58
+137        <activity
+137-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:48:9-65:20
+138            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+138-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:49:13-88
+139            android:exported="true"
+139-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:50:13-36
+140            android:launchMode="singleTask"
+140-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:51:13-44
+141            android:theme="@style/StripeTransparentTheme" >
+141-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:52:13-58
+142            <intent-filter>
+142-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:53:13-64:29
+143                <action android:name="android.intent.action.VIEW" />
+143-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:54:17-69
+143-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:54:25-66
+144
+145                <category android:name="android.intent.category.DEFAULT" />
+145-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:56:17-76
+145-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:56:27-73
+146                <category android:name="android.intent.category.BROWSABLE" />
+146-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:57:17-78
+146-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:57:27-75
+147
+148                <!-- Must match `DefaultReturnUrl#value`. -->
+149                <data
+149-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:60:17-63:50
+150                    android:host="payment_return_url"
+150-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:61:21-54
+151                    android:path="/com.example.ck_room"
+151-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:62:21-53
+152                    android:scheme="stripesdk" />
+152-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:63:21-47
+153            </intent-filter>
+154        </activity>
+155        <activity
+155-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:66:9-69:57
+156            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+156-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:67:13-114
+157            android:exported="false"
+157-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:68:13-37
+158            android:theme="@style/StripeDefaultTheme" />
+158-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:69:13-54
+159        <activity
+159-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:70:9-73:66
+160            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+160-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:71:13-88
+161            android:exported="false"
+161-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:72:13-37
+162            android:theme="@style/StripeGooglePayDefaultTheme" />
+162-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:73:13-63
+163        <activity
+163-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:74:9-77:66
+164            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+164-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:75:13-90
+165            android:exported="false"
+165-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:76:13-37
+166            android:theme="@style/StripeGooglePayDefaultTheme" />
+166-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:77:13-63
+167        <activity
+167-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:78:9-81:66
+168            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+168-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:79:13-103
+169            android:exported="false"
+169-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:80:13-37
+170            android:theme="@style/StripeGooglePayDefaultTheme" />
+170-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:81:13-63
+171        <activity
+171-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:82:9-85:62
+172            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+172-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:83:13-107
+173            android:exported="false"
+173-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:84:13-37
+174            android:theme="@style/PayLauncherDefaultTheme" />
+174-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:85:13-59
+175        <activity
+175-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:86:9-89:61
+176            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+176-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:87:13-97
+177            android:exported="false"
+177-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:88:13-37
+178            android:theme="@style/StripeTransparentTheme" />
+178-->[com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:89:13-58
+179        <activity
+179-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:10:9-13:54
+180            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+180-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:11:13-81
+181            android:exported="false"
+181-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:12:13-37
+182            android:theme="@style/Stripe3DS2Theme" />
+182-->[com.stripe:stripe-3ds2-android:6.1.5] C:\Users\phamm\.gradle\caches\transforms-3\34023aaaaa65454d3439d7d3fd9edbef\transformed\stripe-3ds2-android-6.1.5\AndroidManifest.xml:13:13-51
+183
+184        <service
+184-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+185            android:name="androidx.room.MultiInstanceInvalidationService"
+185-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+186            android:directBootAware="true"
+186-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+187            android:exported="false" />
+187-->[androidx.room:room-runtime:2.3.0] C:\Users\phamm\.gradle\caches\transforms-3\869eda6d4ba97edef276d4933d6526dd\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+188
+189        <provider
+189-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+190            android:name="com.squareup.picasso.PicassoProvider"
+190-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+191            android:authorities="com.example.ck_room.com.squareup.picasso"
+191-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+192            android:exported="false" />
+192-->[com.squareup.picasso:picasso:2.71828] C:\Users\phamm\.gradle\caches\transforms-3\bcec3e16bbd12e152cf9288597c0ff30\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+193
+194        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+194-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
+194-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
+195        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+195-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
+195-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
+196        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+196-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
+196-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
+197        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+197-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
+197-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
+198        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+198-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
+198-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
+199        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+199-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
+199-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
+200        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+200-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
+200-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
+201        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+201-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
+201-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
+202        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+202-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
+202-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
+203
+204        <service
+204-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:23:9-25:40
+205            android:name="com.paypal.android.sdk.payments.PayPalService"
+205-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:24:13-73
+206            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
+206-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\phamm\.gradle\caches\transforms-3\fe718c715b90c54fce0c1879c9b32d22\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:25:13-37
+207        <uses-library
+207-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+208            android:name="org.apache.http.legacy"
+208-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+209            android:required="false" />
+209-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\phamm\.gradle\caches\transforms-3\af1dfff395efa4f266418944882dd302\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+210
+211        <activity
+211-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+212            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+212-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+213            android:exported="false"
+213-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+214            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+214-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\phamm\.gradle\caches\transforms-3\a833730eae5fc50d0d340e0c5bd9d9c2\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+215
+216        <meta-data
+216-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+217            android:name="com.google.android.gms.version"
+217-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+218            android:value="@integer/google_play_services_version" />
+218-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\phamm\.gradle\caches\transforms-3\1842a6af3967a16436b33dc15732cc5f\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+219
+220        <provider
+220-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+221            android:name="androidx.startup.InitializationProvider"
+221-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+222            android:authorities="com.example.ck_room.androidx-startup"
+222-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+223            android:exported="false" >
+223-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+224            <meta-data
+224-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+225                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+225-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+226                android:value="androidx.startup" />
+226-->[androidx.emoji2:emoji2:1.2.0] C:\Users\phamm\.gradle\caches\transforms-3\54c1f518b798a12bc29af00de1db2efe\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+227            <meta-data
+227-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+228                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+228-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+229                android:value="androidx.startup" />
+229-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\phamm\.gradle\caches\transforms-3\d9b9036f837a00d10b6e77d7d8b1b3d1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+230            <meta-data
+230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+231                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+231-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+232                android:value="androidx.startup" />
+232-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+233        </provider>
+234
+235        <uses-library
+235-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+236            android:name="androidx.window.extensions"
+236-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+237            android:required="false" />
+237-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+238        <uses-library
+238-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+239            android:name="androidx.window.sidecar"
+239-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+240            android:required="false" />
+240-->[androidx.window:window:1.0.0] C:\Users\phamm\.gradle\caches\transforms-3\423e95e0b0ab71d8028ce080ff6f3023\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+241
+242        <receiver
+242-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+243            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+244            android:directBootAware="false"
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+245            android:enabled="true"
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+246            android:exported="true"
+246-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+247            android:permission="android.permission.DUMP" >
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+248            <intent-filter>
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+249                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+250            </intent-filter>
+251            <intent-filter>
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+252                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+253            </intent-filter>
+254            <intent-filter>
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+255                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+256            </intent-filter>
+257            <intent-filter>
+257-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+258                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+258-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+258-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\phamm\.gradle\caches\transforms-3\ee29f5480c8eda90945ab73e090a2870\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+259            </intent-filter>
+260        </receiver>
+261
+262        <activity
+262-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
+263            android:name="io.card.payment.CardIOActivity"
+263-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:21:13-58
+264            android:configChanges="keyboardHidden|orientation" />
+264-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:22:13-63
+265        <activity android:name="io.card.payment.DataEntryActivity" />
+265-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:9-70
+265-->[io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:19-67
+266
+267        <meta-data
+267-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+268            android:name="aia-compat-api-min-version"
+268-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:11:13-54
+269            android:value="1" />
+269-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:12:13-30
+270    </application>
+271
+272</manifest>

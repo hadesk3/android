@@ -5,48 +5,85 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ck_room.DataConfig.DatabaseManager;
+import com.example.ck_room.DataConfig.MyDatabase;
+import com.example.ck_room.Entity.Station;
+import com.example.ck_room.Entity.Ticket;
+import com.example.ck_room.Entity.User;
+
+import java.util.List;
+
 public class Admin_page extends AppCompatActivity {
     private static final int REQUEST_CODE = 1;
- /*   Button butAddTrain,getButAddTrainStatus, butAddRoute,butAddStation, butProfile,butManageTrain;
-    Button back;*/
+    /*   Button butAddTrain,getButAddTrainStatus, butAddRoute,butAddStation, butProfile,butManageTrain;
+       Button back;*/
     Button back;
-    ImageButton butManageTrain, btStation,btManageUser;
+    MyDatabase myDatabase;
+
+    TextView total_user, total_station, total_ticket, total_money;
+    ImageButton butManageTrain, btStation, btManageUser;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      setContentView(R.layout.admin_page);
-      butManageTrain = findViewById(R.id.btTrain);
+        setContentView(R.layout.admin_page);
+        myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+
+        butManageTrain = findViewById(R.id.btTrain);
         btStation = findViewById(R.id.btStation);
         btManageUser = findViewById(R.id.btUser);
+        total_money = findViewById(R.id.txtTicket3);
+        total_user = findViewById(R.id.txtUser);
+        total_station = findViewById(R.id.txtUser3);
+        total_ticket = findViewById(R.id.txtTicket);
 
-      butManageTrain.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              Intent intent = new Intent(Admin_page.this, Admin_manageTrain_page.class);
-              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_TRAIN);
-          }
-      });
-      btStation.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              Intent intent = new Intent(Admin_page.this,Admin_manage_station.class);
-              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_STATION);
-          }
+        double totalPrice = 0;
+        List<User> lUser = myDatabase.userDao().getAllUser();
+        List<Ticket> lTicket = myDatabase.ticketDao().getAllTickets();
+        List<Station> lStation = myDatabase.stationDao().getAllStations();
+        for (int i = 0; i < lTicket.size(); i++) {
+            totalPrice += lTicket.get(i).getPrice();
+        }
 
-      });
 
-      btManageUser.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              Intent intent = new Intent(Admin_page.this,Admin_manage_profile.class);
-              startActivityForResult(intent,MainActivity.REQUEST_CODE_ADMIN_MANAGE_USER);
+        total_ticket.setText(lTicket.size() + "");
+        total_station.setText(lStation.size() + "");
+        total_money.setText(totalPrice + "");
+        total_user.setText(lUser.size() + "");
 
-          }
-      });
+
+        butManageTrain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Admin_page.this, Admin_manageTrain_page.class);
+                startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_MANAGE_TRAIN);
+            }
+        });
+        btStation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Admin_page.this, Admin_manage_station.class);
+                startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_MANAGE_STATION);
+            }
+
+        });
+
+        btManageUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Admin_page.this, Admin_manage_profile.class);
+                startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_MANAGE_USER);
+
+            }
+        });
+
+
+
        /*
         butAddTrain = findViewById(R.id.add_train);
         getButAddTrainStatus = findViewById(R.id.add_train_status);
@@ -92,5 +129,25 @@ public class Admin_page extends AppCompatActivity {
 */
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+        double totalPrice = 0;
+        List<User> lUser = myDatabase.userDao().getAllUser();
+        List<Ticket> lTicket = myDatabase.ticketDao().getAllTickets();
+        List<Station> lStation = myDatabase.stationDao().getAllStations();
+        for (int i = 0; i < lTicket.size(); i++) {
+            totalPrice += lTicket.get(i).getPrice();
+        }
+
+
+        total_ticket.setText(lTicket.size() + "");
+        total_station.setText(lStation.size() + "");
+        total_money.setText(totalPrice + "");
+        total_user.setText(lUser.size() + "");
     }
 }

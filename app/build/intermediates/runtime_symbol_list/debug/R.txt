@@ -3743,6 +3743,7 @@ int id btUser 0x7f0900af
 int id btVNPAY 0x7f0900b0
 int id btView 0x7f0903be
 int id btVisa 0x7f0900b1
+int id butSend 0x7f0903de
 int id button 0x7f0900b2
 int id button2 0x7f0900b3
 int id button3 0x7f0900b4
@@ -3987,6 +3988,7 @@ int id grouping 0x7f09019d
 int id groups 0x7f09019e
 int id header 0x7f09019f
 int id header_title 0x7f0901a0
+int id help 0x7f0903e1
 int id hide_in_inspector_tag 0x7f0901a1
 int id hideable 0x7f0901a2
 int id holo_dark 0x7f0901a3
@@ -4180,6 +4182,7 @@ int id payment_methods_recycler 0x7f09025c
 int id payment_system_image 0x7f09025d
 int id peekHeight 0x7f09025e
 int id percent 0x7f09025f
+int id phone 0x7f0903df
 int id pin 0x7f090260
 int id position 0x7f090261
 int id postLayout 0x7f090262
@@ -4836,6 +4839,7 @@ int layout user_manage_ticket 0x7f0c00cb
 int layout user_page 0x7f0c00bf
 int layout user_search_page 0x7f0c00c1
 int layout user_select_payment 0x7f0c00c2
+int layout user_share 0x7f0c00cd
 int layout user_ticket 0x7f0c00cc
 int layout user_train_item_view 0x7f0c00c3
 int layout user_view_train 0x7f0c00c4

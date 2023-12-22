@@ -171,6 +171,16 @@ public class User_Search extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK)
+        {
+            setResult(RESULT_OK);
+            finish();
+        }
+    }
     public String getUsername() {
         return this.username;
     }

@@ -21,9 +21,9 @@ public class Call extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         makePhoneCall();
+        setResult(RESULT_CANCELED);
+        finish();
     }
 
     private void makePhoneCall() {
@@ -32,7 +32,7 @@ public class Call extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_CALL, callUri);
 
         if (ContextCompat.checkSelfPermission(Call.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            startActivity(intent);
+            startActivityForResult(intent,12345);
         } else {
             ActivityCompat.requestPermissions(Call.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PHONE_PERMISSION);
         }
@@ -44,6 +44,8 @@ public class Call extends AppCompatActivity {
         if (requestCode == REQUEST_CALL_PHONE_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 makePhoneCall();
+                setResult(RESULT_CANCELED);
+                finish();
             } else {
                 Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
             }

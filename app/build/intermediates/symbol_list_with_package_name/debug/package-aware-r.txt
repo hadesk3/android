@@ -3744,6 +3744,7 @@ id btUser
 id btVNPAY
 id btView
 id btVisa
+id butSend
 id button
 id button2
 id button3
@@ -3988,6 +3989,7 @@ id grouping
 id groups
 id header
 id header_title
+id help
 id hide_in_inspector_tag
 id hideable
 id holo_dark
@@ -4181,6 +4183,7 @@ id payment_methods_recycler
 id payment_system_image
 id peekHeight
 id percent
+id phone
 id pin
 id position
 id postLayout
@@ -4837,6 +4840,7 @@ layout user_manage_ticket
 layout user_page
 layout user_search_page
 layout user_select_payment
+layout user_share
 layout user_ticket
 layout user_train_item_view
 layout user_view_train

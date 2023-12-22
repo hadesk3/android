@@ -24,7 +24,7 @@ import java.util.List;
 
 public class User_history extends AppCompatActivity {
     TextView day;
-    Button search;
+    Button search, back;
     MyDatabase myDatabase;
     private CustomAdapter_user_see_history adapter3;
     private RecyclerView recyclerView;
@@ -34,6 +34,15 @@ public class User_history extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_manage_ticket);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+
+        back = findViewById(R.id.btBack);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
 
         day = findViewById(R.id.edtDate);
         search = findViewById(R.id.btSearch);

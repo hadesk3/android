@@ -13,6 +13,7 @@ import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -360,6 +361,92 @@ public final class UserDao_Impl implements UserDao {
         _result.setCoin(_tmpCoin);
       } else {
         _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @Override
+  public List<User> getAllUser() {
+    final String _sql = "SELECT * FROM user";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfUserName = CursorUtil.getColumnIndexOrThrow(_cursor, "EmailID");
+      final int _cursorIndexOfFirstName = CursorUtil.getColumnIndexOrThrow(_cursor, "firstName");
+      final int _cursorIndexOfLastName = CursorUtil.getColumnIndexOrThrow(_cursor, "lastName");
+      final int _cursorIndexOfPass = CursorUtil.getColumnIndexOrThrow(_cursor, "pass");
+      final int _cursorIndexOfPhone = CursorUtil.getColumnIndexOrThrow(_cursor, "phone");
+      final int _cursorIndexOfDob = CursorUtil.getColumnIndexOrThrow(_cursor, "dob");
+      final int _cursorIndexOfGender = CursorUtil.getColumnIndexOrThrow(_cursor, "gender");
+      final int _cursorIndexOfBlock = CursorUtil.getColumnIndexOrThrow(_cursor, "block");
+      final int _cursorIndexOfCoin = CursorUtil.getColumnIndexOrThrow(_cursor, "coin");
+      final List<User> _result = new ArrayList<User>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final User _item;
+        _item = new User();
+        final String _tmpUserName;
+        if (_cursor.isNull(_cursorIndexOfUserName)) {
+          _tmpUserName = null;
+        } else {
+          _tmpUserName = _cursor.getString(_cursorIndexOfUserName);
+        }
+        _item.setUserName(_tmpUserName);
+        final String _tmpFirstName;
+        if (_cursor.isNull(_cursorIndexOfFirstName)) {
+          _tmpFirstName = null;
+        } else {
+          _tmpFirstName = _cursor.getString(_cursorIndexOfFirstName);
+        }
+        _item.setFirstName(_tmpFirstName);
+        final String _tmpLastName;
+        if (_cursor.isNull(_cursorIndexOfLastName)) {
+          _tmpLastName = null;
+        } else {
+          _tmpLastName = _cursor.getString(_cursorIndexOfLastName);
+        }
+        _item.setLastName(_tmpLastName);
+        final String _tmpPass;
+        if (_cursor.isNull(_cursorIndexOfPass)) {
+          _tmpPass = null;
+        } else {
+          _tmpPass = _cursor.getString(_cursorIndexOfPass);
+        }
+        _item.setPass(_tmpPass);
+        final String _tmpPhone;
+        if (_cursor.isNull(_cursorIndexOfPhone)) {
+          _tmpPhone = null;
+        } else {
+          _tmpPhone = _cursor.getString(_cursorIndexOfPhone);
+        }
+        _item.setPhone(_tmpPhone);
+        final String _tmpDob;
+        if (_cursor.isNull(_cursorIndexOfDob)) {
+          _tmpDob = null;
+        } else {
+          _tmpDob = _cursor.getString(_cursorIndexOfDob);
+        }
+        _item.setDob(_tmpDob);
+        final String _tmpGender;
+        if (_cursor.isNull(_cursorIndexOfGender)) {
+          _tmpGender = null;
+        } else {
+          _tmpGender = _cursor.getString(_cursorIndexOfGender);
+        }
+        _item.setGender(_tmpGender);
+        final boolean _tmpBlock;
+        final int _tmp;
+        _tmp = _cursor.getInt(_cursorIndexOfBlock);
+        _tmpBlock = _tmp != 0;
+        _item.setBlock(_tmpBlock);
+        final double _tmpCoin;
+        _tmpCoin = _cursor.getDouble(_cursorIndexOfCoin);
+        _item.setCoin(_tmpCoin);
+        _result.add(_item);
       }
       return _result;
     } finally {

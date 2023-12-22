@@ -20,6 +20,8 @@ public class Ticket {
     private int train_id;
     private String date;
     private String seat;
+    private  double price;
+    private String statusPay;
 
     // Constructor
     public Ticket()
@@ -106,5 +108,21 @@ public class Ticket {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getStatusPay() {
+        return statusPay;
+    }
+
+    public void setStatusPay(String statusPay) {
+        this.statusPay = statusPay;
     }
 }

@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE_USER_SEE_MENU = 19 ;
 
+    public static final int REQUEST_CODE_USER_SHARE = 20 ;
 
     EditText username, pass;
     Button login;

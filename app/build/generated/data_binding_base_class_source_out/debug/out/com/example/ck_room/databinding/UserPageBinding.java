@@ -4,6 +4,7 @@ package com.example.ck_room.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -63,6 +64,9 @@ public final class UserPageBinding implements ViewBinding {
   public final TextView des2;
 
   @NonNull
+  public final Button help;
+
+  @NonNull
   public final ImageView imgBuss1;
 
   @NonNull
@@ -103,10 +107,10 @@ public final class UserPageBinding implements ViewBinding {
       @NonNull ImageButton btHistory, @NonNull ImageButton btPassword, @NonNull ImageButton btUser,
       @NonNull CardView cardView1, @NonNull CardView cardView2, @NonNull TextView class1,
       @NonNull TextView class2, @NonNull TextView des1, @NonNull TextView des2,
-      @NonNull ImageView imgBuss1, @NonNull ImageView imgBuss2, @NonNull TextView new1,
-      @NonNull TextView new2, @NonNull ImageView rate1, @NonNull ImageView rate2,
-      @NonNull TextView rateNum, @NonNull TextView rateNum1, @NonNull TextView txtMenu,
-      @NonNull View view1, @NonNull View view6, @NonNull View view8) {
+      @NonNull Button help, @NonNull ImageView imgBuss1, @NonNull ImageView imgBuss2,
+      @NonNull TextView new1, @NonNull TextView new2, @NonNull ImageView rate1,
+      @NonNull ImageView rate2, @NonNull TextView rateNum, @NonNull TextView rateNum1,
+      @NonNull TextView txtMenu, @NonNull View view1, @NonNull View view6, @NonNull View view8) {
     this.rootView = rootView;
     this.Tittle = Tittle;
     this.body = body;
@@ -121,6 +125,7 @@ public final class UserPageBinding implements ViewBinding {
     this.class2 = class2;
     this.des1 = des1;
     this.des2 = des2;
+    this.help = help;
     this.imgBuss1 = imgBuss1;
     this.imgBuss2 = imgBuss2;
     this.new1 = new1;
@@ -240,6 +245,12 @@ public final class UserPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.help;
+      Button help = ViewBindings.findChildViewById(rootView, id);
+      if (help == null) {
+        break missingId;
+      }
+
       id = R.id.imgBuss1;
       ImageView imgBuss1 = ViewBindings.findChildViewById(rootView, id);
       if (imgBuss1 == null) {
@@ -313,8 +324,9 @@ public final class UserPageBinding implements ViewBinding {
       }
 
       return new UserPageBinding((ConstraintLayout) rootView, Tittle, body, btBooking, btGr,
-          btHistory, btPassword, btUser, cardView1, cardView2, class1, class2, des1, des2, imgBuss1,
-          imgBuss2, new1, new2, rate1, rate2, rateNum, rateNum1, txtMenu, view1, view6, view8);
+          btHistory, btPassword, btUser, cardView1, cardView2, class1, class2, des1, des2, help,
+          imgBuss1, imgBuss2, new1, new2, rate1, rate2, rateNum, rateNum1, txtMenu, view1, view6,
+          view8);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

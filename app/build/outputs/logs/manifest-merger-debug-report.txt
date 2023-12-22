@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
 MERGED from [com.stripe:stripe-android:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\2d37f192404948d3fd2af44a66c0f70b\transformed\stripe-android-20.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:2:1-20:12
 MERGED from [com.stripe:payments-ui-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\8039798d9354f2b9c25eda50246dfa23\transformed\payments-ui-core-20.0.0\AndroidManifest.xml:2:1-9:12
@@ -104,22 +104,22 @@ MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\phamm\.gradle\ca
 MERGED from [io.card:android-sdk:5.5.1] C:\Users\phamm\.gradle\caches\transforms-3\86d678445800c67ac07f65bd7e92916b\transformed\android-sdk-5.5.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.instantapps:instantapps:1.1.0] C:\Users\phamm\.gradle\caches\transforms-3\27958b4e9774a39d409e392e53d33100\transformed\instantapps-1.1.0\AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] C:\Users\phamm\.gradle\caches\transforms-3\1f599621fd01cbd3b0875f8799098639\transformed\espresso-idling-resource-3.4.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
 	package
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-65:12
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:1-66:12
 		INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:2:11-69
@@ -162,7 +162,7 @@ ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidM
 	android:name
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:11:19-60
 application
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:13:5-63:19
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:13:5-64:19
 MERGED from [com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:9:5-18:19
 MERGED from [com.stripe:paymentsheet:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\a19cef11cdeff2e36a0fea2c3e5a9978\transformed\paymentsheet-20.0.0\AndroidManifest.xml:9:5-18:19
 MERGED from [com.stripe:payments-core:20.0.0] C:\Users\phamm\.gradle\caches\transforms-3\7616f158ad706a9017c8fc15bc8f853c\transformed\payments-core-20.0.0\AndroidManifest.xml:16:5-90:19
@@ -291,58 +291,62 @@ activity#com.example.ck_room.User_change_pass
 ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:9-54
 	android:name
 		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:45:19-51
+activity#com.example.ck_room.User_share
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:46:9-48
+	android:name
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:46:19-45
 activity#com.example.ck_room.User_see_menu
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:47:9-51
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-51
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:47:19-48
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-48
 activity#com.example.ck_room.Admin_manage_profile
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:9-58
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-58
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:48:19-55
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-55
 activity#com.example.ck_room.User_edit_profile
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:9-55
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-55
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:49:19-52
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-52
 activity#com.example.ck_room.User_buy_ticket
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:9-53
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-53
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:50:19-50
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:19-50
 activity#com.example.ck_room.Admin_manageTrain_page
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:9-60
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-60
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:51:19-57
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-57
 activity#com.example.ck_room.Admin_edit_Train
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:9-54
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-54
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:52:19-51
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-51
 activity#com.example.ck_room.User_view_train
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:9-53
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-53
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:53:19-50
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:19-50
 activity#com.example.ck_room.Admin_block_user
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:9-54
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:9-54
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:54:19-51
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:19-51
 activity#com.example.ck_room.Admin_edit_station
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:9-55
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:9-55
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:55:19-53
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:19-53
 activity#com.example.ck_room.User_choose_seat
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:9-54
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:9-54
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:56:19-51
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:19-51
 activity#com.example.ck_room.Paypal
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:9-44
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:9-44
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:57:19-41
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:19-41
 activity#com.example.ck_room.test
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:9-42
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:59:9-42
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:58:19-39
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:59:19-39
 activity#com.example.ck_room.Admin_manage_station
-ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:60:9-58
+ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:61:9-58
 	android:name
-		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:60:19-55
+		ADDED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml:61:19-55
 uses-sdk
 INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\phamm\AndroidStudioProjects\CK_room-ha\app\src\main\AndroidManifest.xml

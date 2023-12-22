@@ -32,7 +32,7 @@ public final class TicketDao_Impl implements TicketDao {
     this.__insertionAdapterOfTicket = new EntityInsertionAdapter<Ticket>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Ticket` (`Ticket_No`,`Passenger_Name`,`source`,`destination`,`classType`,`train_id`,`date`,`seat`) VALUES (?,?,?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Ticket` (`Ticket_No`,`Passenger_Name`,`source`,`destination`,`classType`,`train_id`,`date`,`seat`,`price`,`statusPay`) VALUES (?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -72,6 +72,12 @@ public final class TicketDao_Impl implements TicketDao {
           stmt.bindNull(8);
         } else {
           stmt.bindString(8, value.getSeat());
+        }
+        stmt.bindDouble(9, value.getPrice());
+        if (value.getStatusPay() == null) {
+          stmt.bindNull(10);
+        } else {
+          stmt.bindString(10, value.getStatusPay());
         }
       }
     };
@@ -93,7 +99,7 @@ public final class TicketDao_Impl implements TicketDao {
     this.__updateAdapterOfTicket = new EntityDeletionOrUpdateAdapter<Ticket>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Ticket` SET `Ticket_No` = ?,`Passenger_Name` = ?,`source` = ?,`destination` = ?,`classType` = ?,`train_id` = ?,`date` = ?,`seat` = ? WHERE `Ticket_No` = ?";
+        return "UPDATE OR ABORT `Ticket` SET `Ticket_No` = ?,`Passenger_Name` = ?,`source` = ?,`destination` = ?,`classType` = ?,`train_id` = ?,`date` = ?,`seat` = ?,`price` = ?,`statusPay` = ? WHERE `Ticket_No` = ?";
       }
 
       @Override
@@ -134,10 +140,16 @@ public final class TicketDao_Impl implements TicketDao {
         } else {
           stmt.bindString(8, value.getSeat());
         }
-        if (value.getTicket_No() == null) {
-          stmt.bindNull(9);
+        stmt.bindDouble(9, value.getPrice());
+        if (value.getStatusPay() == null) {
+          stmt.bindNull(10);
         } else {
-          stmt.bindString(9, value.getTicket_No());
+          stmt.bindString(10, value.getStatusPay());
+        }
+        if (value.getTicket_No() == null) {
+          stmt.bindNull(11);
+        } else {
+          stmt.bindString(11, value.getTicket_No());
         }
       }
     };
@@ -194,6 +206,8 @@ public final class TicketDao_Impl implements TicketDao {
       final int _cursorIndexOfTrainId = CursorUtil.getColumnIndexOrThrow(_cursor, "train_id");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfSeat = CursorUtil.getColumnIndexOrThrow(_cursor, "seat");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfStatusPay = CursorUtil.getColumnIndexOrThrow(_cursor, "statusPay");
       final List<Ticket> _result = new ArrayList<Ticket>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Ticket _item;
@@ -250,6 +264,16 @@ public final class TicketDao_Impl implements TicketDao {
           _tmpSeat = _cursor.getString(_cursorIndexOfSeat);
         }
         _item.setSeat(_tmpSeat);
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        _item.setPrice(_tmpPrice);
+        final String _tmpStatusPay;
+        if (_cursor.isNull(_cursorIndexOfStatusPay)) {
+          _tmpStatusPay = null;
+        } else {
+          _tmpStatusPay = _cursor.getString(_cursorIndexOfStatusPay);
+        }
+        _item.setStatusPay(_tmpStatusPay);
         _result.add(_item);
       }
       return _result;
@@ -280,6 +304,8 @@ public final class TicketDao_Impl implements TicketDao {
       final int _cursorIndexOfTrainId = CursorUtil.getColumnIndexOrThrow(_cursor, "train_id");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfSeat = CursorUtil.getColumnIndexOrThrow(_cursor, "seat");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfStatusPay = CursorUtil.getColumnIndexOrThrow(_cursor, "statusPay");
       final Ticket _result;
       if(_cursor.moveToFirst()) {
         _result = new Ticket();
@@ -335,6 +361,16 @@ public final class TicketDao_Impl implements TicketDao {
           _tmpSeat = _cursor.getString(_cursorIndexOfSeat);
         }
         _result.setSeat(_tmpSeat);
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        _result.setPrice(_tmpPrice);
+        final String _tmpStatusPay;
+        if (_cursor.isNull(_cursorIndexOfStatusPay)) {
+          _tmpStatusPay = null;
+        } else {
+          _tmpStatusPay = _cursor.getString(_cursorIndexOfStatusPay);
+        }
+        _result.setStatusPay(_tmpStatusPay);
       } else {
         _result = null;
       }
@@ -366,6 +402,8 @@ public final class TicketDao_Impl implements TicketDao {
       final int _cursorIndexOfTrainId = CursorUtil.getColumnIndexOrThrow(_cursor, "train_id");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfSeat = CursorUtil.getColumnIndexOrThrow(_cursor, "seat");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfStatusPay = CursorUtil.getColumnIndexOrThrow(_cursor, "statusPay");
       final List<Ticket> _result = new ArrayList<Ticket>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Ticket _item;
@@ -422,6 +460,16 @@ public final class TicketDao_Impl implements TicketDao {
           _tmpSeat = _cursor.getString(_cursorIndexOfSeat);
         }
         _item.setSeat(_tmpSeat);
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        _item.setPrice(_tmpPrice);
+        final String _tmpStatusPay;
+        if (_cursor.isNull(_cursorIndexOfStatusPay)) {
+          _tmpStatusPay = null;
+        } else {
+          _tmpStatusPay = _cursor.getString(_cursorIndexOfStatusPay);
+        }
+        _item.setStatusPay(_tmpStatusPay);
         _result.add(_item);
       }
       return _result;
@@ -448,6 +496,8 @@ public final class TicketDao_Impl implements TicketDao {
       final int _cursorIndexOfTrainId = CursorUtil.getColumnIndexOrThrow(_cursor, "train_id");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfSeat = CursorUtil.getColumnIndexOrThrow(_cursor, "seat");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfStatusPay = CursorUtil.getColumnIndexOrThrow(_cursor, "statusPay");
       final Ticket _result;
       if(_cursor.moveToFirst()) {
         _result = new Ticket();
@@ -503,6 +553,16 @@ public final class TicketDao_Impl implements TicketDao {
           _tmpSeat = _cursor.getString(_cursorIndexOfSeat);
         }
         _result.setSeat(_tmpSeat);
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        _result.setPrice(_tmpPrice);
+        final String _tmpStatusPay;
+        if (_cursor.isNull(_cursorIndexOfStatusPay)) {
+          _tmpStatusPay = null;
+        } else {
+          _tmpStatusPay = _cursor.getString(_cursorIndexOfStatusPay);
+        }
+        _result.setStatusPay(_tmpStatusPay);
       } else {
         _result = null;
       }
@@ -541,6 +601,8 @@ public final class TicketDao_Impl implements TicketDao {
       final int _cursorIndexOfTrainId = CursorUtil.getColumnIndexOrThrow(_cursor, "train_id");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfSeat = CursorUtil.getColumnIndexOrThrow(_cursor, "seat");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfStatusPay = CursorUtil.getColumnIndexOrThrow(_cursor, "statusPay");
       final List<Ticket> _result = new ArrayList<Ticket>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Ticket _item;
@@ -597,6 +659,16 @@ public final class TicketDao_Impl implements TicketDao {
           _tmpSeat = _cursor.getString(_cursorIndexOfSeat);
         }
         _item.setSeat(_tmpSeat);
+        final double _tmpPrice;
+        _tmpPrice = _cursor.getDouble(_cursorIndexOfPrice);
+        _item.setPrice(_tmpPrice);
+        final String _tmpStatusPay;
+        if (_cursor.isNull(_cursorIndexOfStatusPay)) {
+          _tmpStatusPay = null;
+        } else {
+          _tmpStatusPay = _cursor.getString(_cursorIndexOfStatusPay);
+        }
+        _item.setStatusPay(_tmpStatusPay);
         _result.add(_item);
       }
       return _result;

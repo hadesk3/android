@@ -72,9 +72,8 @@ public class Paypal extends AppCompatActivity {
                         Log.i(TAG, "onActivityResult: " + confirmation.toJSONObject().toString(4));
 
                         // Handle successful payment here
-                        Intent payIntent = new Intent(this, User_page.class);
-                        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
-                        startActivity(payIntent);
+                        setResult(RESULT_OK);
+                        finish();
                     } catch (JSONException e) {
                         Log.e(TAG, "onActivityResult: Error: " + e.getMessage());
                     }

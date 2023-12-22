@@ -125,6 +125,7 @@ id btUser
 id btVNPAY
 id btView
 id btVisa
+id butSend
 id button
 id button2
 id button3
@@ -179,6 +180,7 @@ id form3
 id form4
 id form5
 id forme
+id help
 id imageView
 id imageView2
 id imageView3
@@ -211,6 +213,7 @@ id nav_host_fragment_content_main
 id new1
 id new2
 id ok
+id phone
 id radBus
 id radEco
 id radFirst
@@ -405,6 +408,7 @@ layout user_manage_ticket
 layout user_page
 layout user_search_page
 layout user_select_payment
+layout user_share
 layout user_ticket
 layout user_train_item_view
 layout user_view_train

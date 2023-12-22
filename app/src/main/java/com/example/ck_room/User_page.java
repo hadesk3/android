@@ -27,12 +27,10 @@ public class User_page extends AppCompatActivity {
     int REQUEST_CODE = 4;
     ImageButton edit,check,buy,history,changePass;
     TextView menu;
+    Button help;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         setContentView(R.layout.user_page);
         edit = findViewById(R.id.btUser);
         check = findViewById(R.id.btHistory);
@@ -40,10 +38,18 @@ public class User_page extends AppCompatActivity {
         changePass = findViewById(R.id.btPassword);
         menu = findViewById(R.id.txtMenu);
         history = findViewById(R.id.btHistory);
+        help = findViewById(R.id.help);
+
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
 
-
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(User_page.this, Call.class);
+                startActivityForResult(intent, 123);
+            }
+        });
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
