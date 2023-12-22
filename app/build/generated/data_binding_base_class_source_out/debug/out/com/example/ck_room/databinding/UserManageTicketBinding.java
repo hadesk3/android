@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.ck_room.R;
@@ -38,6 +39,9 @@ public final class UserManageTicketBinding implements ViewBinding {
   public final TextView edtDate;
 
   @NonNull
+  public final RecyclerView recyclerView;
+
+  @NonNull
   public final TextView textView5;
 
   @NonNull
@@ -57,14 +61,16 @@ public final class UserManageTicketBinding implements ViewBinding {
 
   private UserManageTicketBinding(@NonNull ConstraintLayout rootView, @NonNull CardView bt,
       @NonNull Button btBack, @NonNull Button btSearch, @NonNull LinearLayout dateGr,
-      @NonNull TextView edtDate, @NonNull TextView textView5, @NonNull TextView title3,
-      @NonNull TextView txtDate, @NonNull View view17, @NonNull View view18, @NonNull View view5) {
+      @NonNull TextView edtDate, @NonNull RecyclerView recyclerView, @NonNull TextView textView5,
+      @NonNull TextView title3, @NonNull TextView txtDate, @NonNull View view17,
+      @NonNull View view18, @NonNull View view5) {
     this.rootView = rootView;
     this.bt = bt;
     this.btBack = btBack;
     this.btSearch = btSearch;
     this.dateGr = dateGr;
     this.edtDate = edtDate;
+    this.recyclerView = recyclerView;
     this.textView5 = textView5;
     this.title3 = title3;
     this.txtDate = txtDate;
@@ -130,6 +136,12 @@ public final class UserManageTicketBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
       id = R.id.textView5;
       TextView textView5 = ViewBindings.findChildViewById(rootView, id);
       if (textView5 == null) {
@@ -167,7 +179,7 @@ public final class UserManageTicketBinding implements ViewBinding {
       }
 
       return new UserManageTicketBinding((ConstraintLayout) rootView, bt, btBack, btSearch, dateGr,
-          edtDate, textView5, title3, txtDate, view17, view18, view5);
+          edtDate, recyclerView, textView5, title3, txtDate, view17, view18, view5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

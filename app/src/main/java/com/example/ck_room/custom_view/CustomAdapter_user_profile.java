@@ -64,7 +64,6 @@ public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapt
 
     }
     private void startUserChooseSeatActivity(int id) {
-        id = id + 1;
         Intent intent = new Intent(context, Admin_block_user.class);
         intent.putExtra("username", ((Admin_manage_profile) context).getUsernameToEdit());
         ((Activity) context).startActivityForResult(intent, MainActivity.REQUEST_CODE_ADMIN_MANAGE_USER_BLOCK);

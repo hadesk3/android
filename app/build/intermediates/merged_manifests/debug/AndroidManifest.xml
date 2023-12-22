@@ -71,6 +71,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.ck_room.User_history" />
+        <activity android:name="com.example.ck_room.User_see_ticket_detail" />
         <activity android:name="com.example.ck_room.Sign_up" />
         <activity android:name="com.example.ck_room.Admin_add_Train" />
         <activity android:name="com.example.ck_room.Admin_add_station" />

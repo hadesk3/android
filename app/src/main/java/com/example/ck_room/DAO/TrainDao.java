@@ -31,4 +31,13 @@ public interface TrainDao {
             "WHERE Train.Source_stn = :sourceStn " +
             "AND Train.Destination_stn = :destinationStn " +
             "AND Day_available.day_available = :dayAvailable")
-    List<Train> findTrainsByStationsAndDay(String sourceStn, String destinationStn, String dayAvailable);}
+    List<Train> findTrainsByStationsAndDay(String sourceStn, String destinationStn, String dayAvailable);
+
+    @Query("SELECT * FROM Train " +
+            "JOIN Day_available ON Train.train_id = Day_available.train_id " +
+            "WHERE Train.train_id = :id " +
+            "AND Day_available.day_available = :dayAvailable")
+    List<Train> getTrainByIdAndDay(int id, String dayAvailable);
+}
+
+

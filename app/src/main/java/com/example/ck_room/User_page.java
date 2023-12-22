@@ -40,11 +40,15 @@ public class User_page extends AppCompatActivity {
         changePass = findViewById(R.id.btPassword);
         menu = findViewById(R.id.txtMenu);
         history = findViewById(R.id.btHistory);
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+
+
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(User_page.this,User_see_menu.class);
-
+                Intent intent = new Intent(User_page.this,User_history.class);
+                intent.putExtra("username",username);
 
                 startActivityForResult(intent,MainActivity.REQUEST_CODE_EDIT_PROFILE);
 
@@ -61,8 +65,7 @@ public class User_page extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
+
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override

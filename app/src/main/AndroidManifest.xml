@@ -31,6 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".User_history" />
+        <activity android:name=".User_see_ticket_detail" />
+
         <activity android:name=".Sign_up" />
         <activity android:name=".Admin_add_Train" />
         <activity android:name=".Admin_add_station" />

@@ -3,8 +3,10 @@ package com.example.ck_room.Entity;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import java.util.Date;
+import java.util.List;
 
 @Entity(tableName = "Ticket")
 public class Ticket {
@@ -16,6 +18,9 @@ public class Ticket {
     private String destination;
     private String classType;
     private int train_id;
+    private String date;
+    @Ignore
+    private List<String> seat;
 
     // Constructor
     public Ticket()
@@ -88,5 +93,19 @@ public class Ticket {
         this.train_id = Train_No;
     }
 
+    public String getDate() {
+        return date;
+    }
 
+    public List<String> getSeat() {
+        return seat;
+    }
+
+    public void setSeat(List<String> seat) {
+        this.seat = seat;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

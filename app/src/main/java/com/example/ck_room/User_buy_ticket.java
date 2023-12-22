@@ -70,11 +70,16 @@ public class User_buy_ticket extends AppCompatActivity
         seat.setText(totalSeat);
         pay.setText(totalPrice);
         Train_class tc = myDatabase.trainClassDao().getTrainClassById(id);
-        if(type.equals("Eco"))
+
+        List<String> addSeatTicket = new ArrayList<>();
+
+
+    if(type.equals("Eco"))
         {
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
+                addSeatTicket.add("E" +list.get(i));
             }
         }
         else if (type.equals("Bus"))
@@ -82,6 +87,7 @@ public class User_buy_ticket extends AppCompatActivity
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
+                addSeatTicket.add("B" +list.get(i));
 
             }
         }
@@ -90,6 +96,7 @@ public class User_buy_ticket extends AppCompatActivity
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
+                addSeatTicket.add("F" +list.get(i));
 
             }
         }
@@ -128,7 +135,10 @@ public class User_buy_ticket extends AppCompatActivity
         ticket.setDestination(t.getDestination_stn());
         ticket.setPassenger_Name(userName);
         ticket.setTrain_id(t.getTrain_id());
+        ticket.setClassType(type);
         ticket.setTrain_No(1);
+        ticket.setDate(a.get(0).getDay_available());
+        ticket.setSeat(addSeatTicket);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
