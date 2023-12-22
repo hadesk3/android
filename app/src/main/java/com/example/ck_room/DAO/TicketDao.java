@@ -27,7 +27,7 @@ public interface TicketDao {
     List<Ticket> getAllTickets();
 
     @Query("SELECT * FROM Ticket WHERE Ticket_No = :ticketNo")
-    Ticket getTicketByTicketNo(int ticketNo);
+    Ticket getTicketByTicketNo(String ticketNo);
 
     @Query("SELECT * FROM Ticket WHERE Passenger_Name = :passengerName")
     List<Ticket> getTicketsByPassengerName(String passengerName);

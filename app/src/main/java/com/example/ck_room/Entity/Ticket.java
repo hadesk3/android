@@ -19,8 +19,7 @@ public class Ticket {
     private String classType;
     private int train_id;
     private String date;
-    @Ignore
-    private List<String> seat;
+    private String seat;
 
     // Constructor
     public Ticket()
@@ -97,11 +96,11 @@ public class Ticket {
         return date;
     }
 
-    public List<String> getSeat() {
+    public String getSeat() {
         return seat;
     }
 
-    public void setSeat(List<String> seat) {
+    public void setSeat(String seat) {
         this.seat = seat;
     }
 

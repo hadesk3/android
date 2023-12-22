@@ -71,7 +71,7 @@ public class User_buy_ticket extends AppCompatActivity
         pay.setText(totalPrice);
         Train_class tc = myDatabase.trainClassDao().getTrainClassById(id);
 
-        List<String> addSeatTicket = new ArrayList<>();
+        String addSeatTicket = "";
 
 
     if(type.equals("Eco"))
@@ -79,7 +79,7 @@ public class User_buy_ticket extends AppCompatActivity
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket.add("E" +list.get(i));
+                addSeatTicket+= "E" +list.get(i) + " ";
             }
         }
         else if (type.equals("Bus"))
@@ -87,7 +87,7 @@ public class User_buy_ticket extends AppCompatActivity
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket.add("B" +list.get(i));
+                addSeatTicket+= "B" +list.get(i) + " ";
 
             }
         }
@@ -96,7 +96,7 @@ public class User_buy_ticket extends AppCompatActivity
             for(int i = 0; i < list.size(); i++)
             {
                 tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket.add("F" +list.get(i));
+                addSeatTicket+= "F" +list.get(i) + " ";
 
             }
         }
