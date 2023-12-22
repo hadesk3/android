@@ -1,13 +1,16 @@
 package com.example.ck_room;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,6 +67,46 @@ public class User_see_ticket_detail extends AppCompatActivity {
         class_type.setText(ticket.getClassType());
         Log.d("seat========",ticket.getSeat());
         seat.setText(ticket.getSeat());
+
+        source.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String get_address = source.getText().toString();
+
+                String detail = myDatabase.stationDao().getStationByName(get_address).getAddress();
+                if (!TextUtils.isEmpty(detail)) {
+                    Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(detail));
+
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+
+                    if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(mapIntent);
+                    } else {
+                        //if dont have gg map
+                    }
+                }}
+        });
+
+
+        des.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String get_address = des.getText().toString();
+
+                String detail = myDatabase.stationDao().getStationByName(get_address).getAddress();
+                if (!TextUtils.isEmpty(detail)) {
+                    Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(detail));
+
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+
+                    if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(mapIntent);
+                    } else {
+                    }
+                }}
+        });
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
