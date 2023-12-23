@@ -95,6 +95,7 @@
         <activity android:name="com.example.ck_room.User_choose_seat" />
         <activity android:name="com.example.ck_room.Paypal" />
         <activity android:name="com.example.ck_room.test" />
+        <activity android:name="com.example.ck_room.User_share_mail" />
         <activity android:name="com.example.ck_room.Admin_manage_station" />
         <activity
             android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"

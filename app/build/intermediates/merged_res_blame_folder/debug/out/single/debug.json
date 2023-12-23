@@ -44,10 +44,6 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\drawable\\sign_in_top.xml"
     },
     {
-        "merged": "com.example.ck_room.app-merged_res-74:/layout_user_share_mail.xml.flat",
-        "source": "com.example.ck_room.app-main-76:/layout/user_share_mail.xml"
-    },
-    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\layout_ticket_item.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\ticket_item.xml"
     },
@@ -122,6 +118,10 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\layout_edit_train.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\edit_train.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-merged_res-74:/layout_user_select_payment.xml.flat",
+        "source": "com.example.ck_room.app-main-76:/layout/user_select_payment.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\drawable_baseline_share_24.xml.flat",
@@ -286,6 +286,10 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\drawable_baseline_place_24.xml.flat",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\drawable\\baseline_place_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\layout_user_share_mail.xml.flat",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_share_mail.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-merged_res-74:\\drawable_baseline_chair_24.png.flat",

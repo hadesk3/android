@@ -51,10 +51,10 @@ public class Admin_page extends AppCompatActivity {
             totalPrice += lTicket.get(i).getPrice();
         }
 
-
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         total_ticket.setText(lTicket.size() + "");
         total_station.setText(lStation.size() + "");
-        total_money.setText(totalPrice + "");
+        total_money.setText(decimalFormat.format(totalPrice));
         total_user.setText(lUser.size() + "");
 
 
@@ -146,11 +146,9 @@ public class Admin_page extends AppCompatActivity {
         }
 
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        Double format = Double.valueOf(decimalFormat.format(totalPrice));
-
         total_ticket.setText(lTicket.size() + "");
         total_station.setText(lStation.size() + "");
-        total_money.setText(format + "");
+        total_money.setText(decimalFormat.format(totalPrice));
         total_user.setText(lUser.size() + "");
     }
 }

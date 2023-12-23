@@ -32,8 +32,9 @@ public class User_buy_ticket extends AppCompatActivity
     int id_sent_to_book = 0;
     int id = 0;
     Button back;
-    TextView nameTrain, date,time, total, seat, pay, paypal;
+    TextView nameTrain, date,time, total, seat, pay, paypal, cash;
     Switch sw;
+    double coin;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -49,11 +50,16 @@ public class User_buy_ticket extends AppCompatActivity
         pay = findViewById(R.id.txtPay);
         sw = findViewById(R.id.swtCoin);
         paypal = findViewById(R.id.btPaypal);
+        cash = findViewById(R.id.btPaypal2);
+
+
         Intent intent = getIntent();
 
             ArrayList<String> list = intent.getStringArrayListExtra("list");
             String totalSeat = intent.getStringExtra("totalSeat");
-            String totalPrice = intent.getStringExtra("totalPrice");
+        Double seatPrice  = Double.parseDouble(totalSeat) / list.size();
+
+        String totalPrice = intent.getStringExtra("totalPrice");
             String userName = intent.getStringExtra("username");
             String type = intent.getStringExtra("type");
         id_sent_to_book = intent.getIntExtra("id",0);
@@ -72,74 +78,40 @@ public class User_buy_ticket extends AppCompatActivity
         pay.setText(totalPrice);
         Train_class tc = myDatabase.trainClassDao().getTrainClassById(id);
 
-        String addSeatTicket = "";
-
-
-    if(type.equals("Eco"))
-        {
-            for(int i = 0; i < list.size(); i++)
-            {
-                tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket+= "E" +list.get(i) + " ";
-            }
-        }
-        else if (type.equals("Bus"))
-        {
-            for(int i = 0; i < list.size(); i++)
-            {
-                tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket+= "B" +list.get(i) + " ";
-
-            }
-        }
-        else
-        {
-            for(int i = 0; i < list.size(); i++)
-            {
-                tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
-                addSeatTicket+= "F" +list.get(i) + " ";
-
-            }
-        }
-
+        sw.setText(myDatabase.userDao().getUserByMail(userName).getCoin() +"");
+         coin = myDatabase.userDao().getUserByMail(userName).getCoin();
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if(myDatabase.userDao().getUserByMail(userName).getCoin() > 50000)
-                    {
 
-                        double money = Double.parseDouble(pay.getText().toString()) - 10;
+                        double money = Double.parseDouble(pay.getText().toString()) - coin;
                         DecimalFormat decimalFormat = new DecimalFormat("#.##");
                         if(money < 0)
                         {
                             money = 0;
+                            coin = coin - Double.parseDouble(pay.getText().toString());
                         }
                         else
                         {
                             money = Double.parseDouble(decimalFormat.format(money));
+                            coin  = 0;
+
 
                         }
                         pay.setText(money + "");
-                    }
+                        sw.setText(coin +"");
 
                 } else {
                    pay.setText(totalPrice);
+                    coin = myDatabase.userDao().getUserByMail(userName).getCoin();
+                    sw.setText(coin+"");
+
                 }
             }
         });
 
-        Ticket ticket = new Ticket();
-        LocalTime localTime = LocalTime.now();
-        ticket.setTicket_No((localTime+""));
-        ticket.setSource(t.getSource_stn());
-        ticket.setDestination(t.getDestination_stn());
-        ticket.setPassenger_Name(userName);
-        ticket.setTrain_id(t.getTrain_id());
-        ticket.setClassType(type);
-        ticket.setTrain_No(t.getTrain_id());
-        ticket.setDate(a.get(0).getDay_available());
-        ticket.setSeat(addSeatTicket);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,33 +119,214 @@ public class User_buy_ticket extends AppCompatActivity
                 finish();
             }
         });
+        List<Day_available> finalA = a;
         paypal.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+
+
+                String addSeatTicket = "";
+
+
+                if(type.equals("Eco"))
+                {
+                    for(int i = 0; i < list.size(); i++)
+                    {
+                        tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
+                    }
+                    addSeatTicket+= "E";
+
+                }
+                else if (type.equals("Bus"))
+                {
+                    for(int i = 0; i < list.size(); i++)
+                    {
+                        tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
+
+                    }
+                    addSeatTicket+= "B";
+
+                }
+                else
+                {
+                    for(int i = 0; i < list.size(); i++)
+                    {
+                        tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
+                    }
+                    addSeatTicket+= "F";
+
+                }
+                DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+
+                for (int i = 0; i < list.size(); i++) {
+                    Ticket ticket = new Ticket();
+                    LocalTime localTime = LocalTime.now();
+                    ticket.setTicket_No((localTime+""));
+                    ticket.setSource(t.getSource_stn());
+                    ticket.setDestination(t.getDestination_stn());
+                    ticket.setPassenger_Name(userName);
+                    ticket.setTrain_id(t.getTrain_id());
+                    ticket.setClassType(type);
+                    ticket.setTrain_No(t.getTrain_id());
+                    ticket.setDate(finalA.get(0).getDay_available());
+                    ticket.setSeat(addSeatTicket + list.get(i));
+                    ticket.setStatusPay("PAYED");
+                    double format = Double.parseDouble(decimalFormat.format(seatPrice));
+                    ticket.setPrice(format);
+                    myDatabase.ticketDao().insert(ticket);
+
+
+                }
+
+
+
                 Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
                 intent.putExtra("money",pay.getText().toString());
                 User u = myDatabase.userDao().getUserByMail(userName);
-                DecimalFormat decimalFormat = new DecimalFormat("#.##");
-
-                double coin = u.getCoin();
-                coin += 100;
+                coin += 1;
                 double formatCoin = Double.parseDouble(decimalFormat.format(coin));
                 u.setCoin(formatCoin);
                 myDatabase.userDao().update(u);
-                ticket.setStatusPay("PAYED");
-                String fo = pay.getText().toString();
-                double fo1 = Double.parseDouble(fo);
-                double format = Double.parseDouble(decimalFormat.format(fo1));
-
-                ticket.setPrice(format);
                 myDatabase.trainClassDao().update(tc);
-                myDatabase.ticketDao().insert(ticket);
                 startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_PAY);
 
 
             }
         });
+
+        cash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pay.getText().toString().equals("0"))
+                {
+                    String addSeatTicket = "";
+                    if(type.equals("Eco"))
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
+                        }
+                        addSeatTicket+= "E";
+                    }
+                    else if (type.equals("Bus"))
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
+
+                        }
+                        addSeatTicket+= "B";
+                    }
+                    else
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
+                        }
+                        addSeatTicket+= "F";
+
+                    }
+                    DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                    for (int i = 0; i < list.size(); i++) {
+                        Ticket ticket = new Ticket();
+                        LocalTime localTime = LocalTime.now();
+                        ticket.setTicket_No((localTime + ""));
+                        ticket.setSource(t.getSource_stn());
+                        ticket.setDestination(t.getDestination_stn());
+                        ticket.setPassenger_Name(userName);
+                        ticket.setTrain_id(t.getTrain_id());
+                        ticket.setClassType(type);
+                        ticket.setTrain_No(t.getTrain_id());
+                        ticket.setDate(finalA.get(0).getDay_available());
+                        ticket.setSeat(addSeatTicket + list.get(i));
+                        ticket.setStatusPay("PAYED");
+                        double format = Double.parseDouble(decimalFormat.format(seatPrice));
+                        ticket.setPrice(format);
+                        myDatabase.ticketDao().insert(ticket);
+                    }
+                    User u = myDatabase.userDao().getUserByMail(userName);
+                    coin += 1;
+                    double formatCoin = Double.parseDouble(decimalFormat.format(coin));
+                    u.setCoin(formatCoin);
+                    myDatabase.userDao().update(u);
+                    myDatabase.trainClassDao().update(tc);
+                    setResult(RESULT_OK);
+                    finish();
+
+                }
+                else
+                {
+
+                    String addSeatTicket = "";
+                    if(type.equals("Eco"))
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_Economy(Train_class.setSeatStatus(tc.getTakenSeats_Economy(),Integer.parseInt(list.get(i)),true));
+                        }
+                        addSeatTicket+= "E";
+                    }
+                    else if (type.equals("Bus"))
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_Business(Train_class.setSeatStatus(tc.getTakenSeats_Business(),Integer.parseInt(list.get(i)),true));
+
+                        }
+                        addSeatTicket+= "B";
+                    }
+                    else
+                    {
+                        for(int i = 0; i < list.size(); i++)
+                        {
+                            tc.setTakenSeats_First(Train_class.setSeatStatus(tc.getTakenSeats_First(),Integer.parseInt(list.get(i)),true));
+                        }
+                        addSeatTicket+= "F";
+
+                    }
+                    DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                    for (int i = 0; i < list.size(); i++) {
+                        Ticket ticket = new Ticket();
+                        LocalTime localTime = LocalTime.now();
+                        ticket.setTicket_No((localTime + ""));
+                        ticket.setSource(t.getSource_stn());
+                        ticket.setDestination(t.getDestination_stn());
+                        ticket.setPassenger_Name(userName);
+                        ticket.setTrain_id(t.getTrain_id());
+                        ticket.setClassType(type);
+                        ticket.setTrain_No(t.getTrain_id());
+                        ticket.setDate(finalA.get(0).getDay_available());
+                        ticket.setSeat(addSeatTicket + list.get(i));
+                        ticket.setStatusPay("NOT PAYED");
+                        double format = Double.parseDouble(decimalFormat.format(seatPrice));
+                        ticket.setPrice(format);
+                        myDatabase.ticketDao().insert(ticket);
+                    }
+
+
+                    User u = myDatabase.userDao().getUserByMail(userName);
+                    Log.d("====coin:", coin+"");
+                    coin += 1;
+                    double formatCoin = Double.parseDouble(decimalFormat.format(coin));
+                    u.setCoin(formatCoin);
+                    myDatabase.userDao().update(u);
+                    myDatabase.trainClassDao().update(tc);
+                    setResult(RESULT_OK);
+                    finish();
+
+                }
+            }
+        });
+
     }
+
+
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
