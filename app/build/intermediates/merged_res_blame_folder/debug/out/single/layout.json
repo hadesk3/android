@@ -36,6 +36,10 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_change_password.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_share_mail.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_share_mail.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\add_train.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_train.xml"
     },
@@ -88,12 +92,12 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_page1.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\add_train1.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_train1.xml"
-    },
-    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\food_item.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\food_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\add_train1.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_train1.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\content_main.xml",
@@ -114,10 +118,6 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_item_view.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_item_view.xml"
-    },
-    {
-        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_page.xml",
-        "source": "com.example.ck_room.app-main-76:/layout/user_page.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\sign_up.xml",

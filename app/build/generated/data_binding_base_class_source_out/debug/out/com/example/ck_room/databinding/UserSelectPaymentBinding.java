@@ -38,6 +38,9 @@ public final class UserSelectPaymentBinding implements ViewBinding {
   public final TextView btPaypal;
 
   @NonNull
+  public final TextView btPaypal2;
+
+  @NonNull
   public final TextView btVNPAY;
 
   @NonNull
@@ -101,6 +104,9 @@ public final class UserSelectPaymentBinding implements ViewBinding {
   public final View view15;
 
   @NonNull
+  public final View view27;
+
+  @NonNull
   public final View view3;
 
   @NonNull
@@ -114,20 +120,22 @@ public final class UserSelectPaymentBinding implements ViewBinding {
 
   private UserSelectPaymentBinding(@NonNull ConstraintLayout rootView, @NonNull Button btBack2,
       @NonNull TextView btDebit, @NonNull TextView btJCB, @NonNull TextView btMomo,
-      @NonNull TextView btPaypal, @NonNull TextView btVNPAY, @NonNull TextView btVisa,
-      @NonNull View form5, @NonNull LinearLayout linearLayout4, @NonNull Switch swtCoin,
-      @NonNull TextView textView3, @NonNull TextView textView51, @NonNull TextView title2,
-      @NonNull TextView txtCoin, @NonNull TextView txtDate, @NonNull TextView txtPay,
-      @NonNull TextView txtSeat, @NonNull TextView txtTime, @NonNull TextView txtTotal,
-      @NonNull TextView txtTrip, @NonNull View view10, @NonNull View view11, @NonNull View view12,
-      @NonNull View view13, @NonNull View view14, @NonNull View view15, @NonNull View view3,
-      @NonNull View view4, @NonNull View view7, @NonNull View view9) {
+      @NonNull TextView btPaypal, @NonNull TextView btPaypal2, @NonNull TextView btVNPAY,
+      @NonNull TextView btVisa, @NonNull View form5, @NonNull LinearLayout linearLayout4,
+      @NonNull Switch swtCoin, @NonNull TextView textView3, @NonNull TextView textView51,
+      @NonNull TextView title2, @NonNull TextView txtCoin, @NonNull TextView txtDate,
+      @NonNull TextView txtPay, @NonNull TextView txtSeat, @NonNull TextView txtTime,
+      @NonNull TextView txtTotal, @NonNull TextView txtTrip, @NonNull View view10,
+      @NonNull View view11, @NonNull View view12, @NonNull View view13, @NonNull View view14,
+      @NonNull View view15, @NonNull View view27, @NonNull View view3, @NonNull View view4,
+      @NonNull View view7, @NonNull View view9) {
     this.rootView = rootView;
     this.btBack2 = btBack2;
     this.btDebit = btDebit;
     this.btJCB = btJCB;
     this.btMomo = btMomo;
     this.btPaypal = btPaypal;
+    this.btPaypal2 = btPaypal2;
     this.btVNPAY = btVNPAY;
     this.btVisa = btVisa;
     this.form5 = form5;
@@ -149,6 +157,7 @@ public final class UserSelectPaymentBinding implements ViewBinding {
     this.view13 = view13;
     this.view14 = view14;
     this.view15 = view15;
+    this.view27 = view27;
     this.view3 = view3;
     this.view4 = view4;
     this.view7 = view7;
@@ -209,6 +218,12 @@ public final class UserSelectPaymentBinding implements ViewBinding {
       id = R.id.btPaypal;
       TextView btPaypal = ViewBindings.findChildViewById(rootView, id);
       if (btPaypal == null) {
+        break missingId;
+      }
+
+      id = R.id.btPaypal2;
+      TextView btPaypal2 = ViewBindings.findChildViewById(rootView, id);
+      if (btPaypal2 == null) {
         break missingId;
       }
 
@@ -338,6 +353,12 @@ public final class UserSelectPaymentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.view27;
+      View view27 = ViewBindings.findChildViewById(rootView, id);
+      if (view27 == null) {
+        break missingId;
+      }
+
       id = R.id.view3;
       View view3 = ViewBindings.findChildViewById(rootView, id);
       if (view3 == null) {
@@ -363,9 +384,9 @@ public final class UserSelectPaymentBinding implements ViewBinding {
       }
 
       return new UserSelectPaymentBinding((ConstraintLayout) rootView, btBack2, btDebit, btJCB,
-          btMomo, btPaypal, btVNPAY, btVisa, form5, linearLayout4, swtCoin, textView3, textView51,
-          title2, txtCoin, txtDate, txtPay, txtSeat, txtTime, txtTotal, txtTrip, view10, view11,
-          view12, view13, view14, view15, view3, view4, view7, view9);
+          btMomo, btPaypal, btPaypal2, btVNPAY, btVisa, form5, linearLayout4, swtCoin, textView3,
+          textView51, title2, txtCoin, txtDate, txtPay, txtSeat, txtTime, txtTotal, txtTrip, view10,
+          view11, view12, view13, view14, view15, view27, view3, view4, view7, view9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

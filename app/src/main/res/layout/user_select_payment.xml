@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:drawableRight="@drawable/baseline_chair_24"
+        android:drawableRight="@drawable/baseline_event_seat_24"
         android:drawablePadding="2dp"
         android:elevation="4dp"
         android:text="0"
@@ -95,7 +95,7 @@
         android:drawablePadding="2dp"
         android:elevation="4dp"
         android:text="0"
-        android:textColor="#B67109"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/form5"
@@ -329,6 +329,26 @@
 
         <View
             android:id="@+id/view14"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#474545" />
+
+        <TextView
+            android:id="@+id/btPaypal2"
+            style="Bold"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/icons8_money_30"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="20dp"
+            android:text="Cash"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/view27"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#474545" />

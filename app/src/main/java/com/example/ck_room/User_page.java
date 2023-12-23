@@ -1,33 +1,18 @@
 package com.example.ck_room;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-
-import com.example.ck_room.Entity.User;
-import com.paypal.android.sdk.ch;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 public class User_page extends AppCompatActivity {
     int REQUEST_CODE = 4;
-    ImageButton edit,check,buy,history,changePass;
+    ImageButton edit,check,buy,history,changePass, contact;
     TextView menu;
-    Button help;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +23,12 @@ public class User_page extends AppCompatActivity {
         changePass = findViewById(R.id.btPassword);
         menu = findViewById(R.id.txtMenu);
         history = findViewById(R.id.btHistory);
-        help = findViewById(R.id.help);
+        contact = findViewById(R.id.btContact);
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
 
-        help.setOnClickListener(new View.OnClickListener() {
+        contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(User_page.this, Call.class);

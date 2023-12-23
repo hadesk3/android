@@ -40,6 +40,7 @@ public class Admin_edit_Train extends AppCompatActivity {
     EditText edtName,edtEcoFare,edtFirstFare,edtBusFare,
             edtEcoPass,edtBusPass,edtFirstPass;
     int id;
+    int id_train;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +69,7 @@ public class Admin_edit_Train extends AppCompatActivity {
         id = intent.getIntExtra("id",0) ;
         Log.d("====== check id 2", id+"");
 
+        id_train = id;
         Train t = myDatabase.trainDao().getTrainById(id).get(0);
         Log.d("====== nhận id", id+"");
 
@@ -197,13 +199,12 @@ public class Admin_edit_Train extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
-                Log.d("id", id+"");
-                Train t = myDatabase.trainDao().getAllTrains().get(id);
+                Log.d("id train ckeck", id+"");
+                Train t = myDatabase.trainDao().getTrainById(id_train).get(0);
                 t.setTimeStart(edtStart.getText().toString());
                 t.setTimeEnd(edtEnd.getText().toString());
                 myDatabase.trainDao().update(t);
-                Toast.makeText(Admin_edit_Train.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_edit_Train.this, "", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_OK);
                 finish();
             }

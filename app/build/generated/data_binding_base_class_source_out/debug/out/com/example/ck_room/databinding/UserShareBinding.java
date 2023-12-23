@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -29,12 +30,25 @@ public final class UserShareBinding implements ViewBinding {
   @NonNull
   public final EditText phone;
 
+  @NonNull
+  public final TextView textView42;
+
+  @NonNull
+  public final View view28;
+
+  @NonNull
+  public final View view29;
+
   private UserShareBinding(@NonNull LinearLayout rootView, @NonNull Button btBack,
-      @NonNull Button butSend, @NonNull EditText phone) {
+      @NonNull Button butSend, @NonNull EditText phone, @NonNull TextView textView42,
+      @NonNull View view28, @NonNull View view29) {
     this.rootView = rootView;
     this.btBack = btBack;
     this.butSend = butSend;
     this.phone = phone;
+    this.textView42 = textView42;
+    this.view28 = view28;
+    this.view29 = view29;
   }
 
   @Override
@@ -82,7 +96,26 @@ public final class UserShareBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserShareBinding((LinearLayout) rootView, btBack, butSend, phone);
+      id = R.id.textView42;
+      TextView textView42 = ViewBindings.findChildViewById(rootView, id);
+      if (textView42 == null) {
+        break missingId;
+      }
+
+      id = R.id.view28;
+      View view28 = ViewBindings.findChildViewById(rootView, id);
+      if (view28 == null) {
+        break missingId;
+      }
+
+      id = R.id.view29;
+      View view29 = ViewBindings.findChildViewById(rootView, id);
+      if (view29 == null) {
+        break missingId;
+      }
+
+      return new UserShareBinding((LinearLayout) rootView, btBack, butSend, phone, textView42,
+          view28, view29);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

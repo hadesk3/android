@@ -82,7 +82,7 @@
         <activity android:name="com.example.ck_room.Call" />
         <activity android:name="com.example.ck_room.SendSms" />
         <activity android:name="com.example.ck_room.User_change_pass" />
-        <activity android:name="com.example.ck_room.User_share" />
+        <activity android:name="com.example.ck_room.User_share_sms" />
         <activity android:name="com.example.ck_room.User_see_menu" />
         <activity android:name="com.example.ck_room.Admin_manage_profile" />
         <activity android:name="com.example.ck_room.User_edit_profile" />

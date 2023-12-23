@@ -4,7 +4,6 @@ package com.example.ck_room.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,6 +31,9 @@ public final class UserPageBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton btBooking;
+
+  @NonNull
+  public final ImageButton btContact;
 
   @NonNull
   public final LinearLayout btGr;
@@ -62,9 +64,6 @@ public final class UserPageBinding implements ViewBinding {
 
   @NonNull
   public final TextView des2;
-
-  @NonNull
-  public final Button help;
 
   @NonNull
   public final ImageView imgBuss1;
@@ -103,11 +102,11 @@ public final class UserPageBinding implements ViewBinding {
   public final View view8;
 
   private UserPageBinding(@NonNull ConstraintLayout rootView, @NonNull TextView Tittle,
-      @NonNull View body, @NonNull ImageButton btBooking, @NonNull LinearLayout btGr,
-      @NonNull ImageButton btHistory, @NonNull ImageButton btPassword, @NonNull ImageButton btUser,
-      @NonNull CardView cardView1, @NonNull CardView cardView2, @NonNull TextView class1,
-      @NonNull TextView class2, @NonNull TextView des1, @NonNull TextView des2,
-      @NonNull Button help, @NonNull ImageView imgBuss1, @NonNull ImageView imgBuss2,
+      @NonNull View body, @NonNull ImageButton btBooking, @NonNull ImageButton btContact,
+      @NonNull LinearLayout btGr, @NonNull ImageButton btHistory, @NonNull ImageButton btPassword,
+      @NonNull ImageButton btUser, @NonNull CardView cardView1, @NonNull CardView cardView2,
+      @NonNull TextView class1, @NonNull TextView class2, @NonNull TextView des1,
+      @NonNull TextView des2, @NonNull ImageView imgBuss1, @NonNull ImageView imgBuss2,
       @NonNull TextView new1, @NonNull TextView new2, @NonNull ImageView rate1,
       @NonNull ImageView rate2, @NonNull TextView rateNum, @NonNull TextView rateNum1,
       @NonNull TextView txtMenu, @NonNull View view1, @NonNull View view6, @NonNull View view8) {
@@ -115,6 +114,7 @@ public final class UserPageBinding implements ViewBinding {
     this.Tittle = Tittle;
     this.body = body;
     this.btBooking = btBooking;
+    this.btContact = btContact;
     this.btGr = btGr;
     this.btHistory = btHistory;
     this.btPassword = btPassword;
@@ -125,7 +125,6 @@ public final class UserPageBinding implements ViewBinding {
     this.class2 = class2;
     this.des1 = des1;
     this.des2 = des2;
-    this.help = help;
     this.imgBuss1 = imgBuss1;
     this.imgBuss2 = imgBuss2;
     this.new1 = new1;
@@ -182,6 +181,12 @@ public final class UserPageBinding implements ViewBinding {
       id = R.id.btBooking;
       ImageButton btBooking = ViewBindings.findChildViewById(rootView, id);
       if (btBooking == null) {
+        break missingId;
+      }
+
+      id = R.id.btContact;
+      ImageButton btContact = ViewBindings.findChildViewById(rootView, id);
+      if (btContact == null) {
         break missingId;
       }
 
@@ -242,12 +247,6 @@ public final class UserPageBinding implements ViewBinding {
       id = R.id.des2;
       TextView des2 = ViewBindings.findChildViewById(rootView, id);
       if (des2 == null) {
-        break missingId;
-      }
-
-      id = R.id.help;
-      Button help = ViewBindings.findChildViewById(rootView, id);
-      if (help == null) {
         break missingId;
       }
 
@@ -323,8 +322,8 @@ public final class UserPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserPageBinding((ConstraintLayout) rootView, Tittle, body, btBooking, btGr,
-          btHistory, btPassword, btUser, cardView1, cardView2, class1, class2, des1, des2, help,
+      return new UserPageBinding((ConstraintLayout) rootView, Tittle, body, btBooking, btContact,
+          btGr, btHistory, btPassword, btUser, cardView1, cardView2, class1, class2, des1, des2,
           imgBuss1, imgBuss2, new1, new2, rate1, rate2, rateNum, rateNum1, txtMenu, view1, view6,
           view8);
     }

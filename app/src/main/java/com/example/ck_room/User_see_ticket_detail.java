@@ -7,10 +7,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -111,7 +109,7 @@ public class User_see_ticket_detail extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(User_see_ticket_detail.this, User_share.class);
+                Intent intent = new Intent(User_see_ticket_detail.this, User_share_sms.class);
                 intent.putExtra("idTicket", id_ticket);
                 startActivityForResult(intent, MainActivity.REQUEST_CODE_USER_SHARE);
 

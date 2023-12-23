@@ -3269,6 +3269,7 @@ drawable baseline_lock_24
 drawable baseline_manage_accounts_24
 drawable baseline_map_24
 drawable baseline_mode_edit_outline_24
+drawable baseline_money_24
 drawable baseline_perm_contact_calendar_24
 drawable baseline_person_24
 drawable baseline_place_24
@@ -3325,6 +3326,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable contact
 drawable cream_24
 drawable custom_shape
 drawable design_fab_background
@@ -3332,7 +3334,6 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable farestroke
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -3352,10 +3353,13 @@ drawable ic_search_black_24
 drawable icons8_aircraft_seat_middle_24
 drawable icons8_coin_24
 drawable icons8_food_service_45
+drawable icons8_man_on_phone_24
+drawable icons8_money_30
 drawable icons8_person_24
 drawable icons8_person_50
 drawable icons8_revenue_50
 drawable icons8_street_food_45
+drawable icons8_ticket_24__1_
 drawable icons8_ticket_50
 drawable icons8_user_groups_50
 drawable jcb
@@ -3548,6 +3552,7 @@ drawable stripe_paymentsheet_testmode_background
 drawable stripe_paymentsheet_toolbar_back
 drawable stripe_paymentsheet_toolbar_close
 drawable stripe_simple_button_background
+drawable stroke
 drawable test_level_drawable
 drawable toa2
 drawable toa3
@@ -3724,6 +3729,7 @@ id btBook
 id btBooking
 id btCard1
 id btCard2
+id btContact
 id btCreate
 id btDebit
 id btGr
@@ -3734,6 +3740,7 @@ id btMomo
 id btNext
 id btPassword
 id btPaypal
+id btPaypal2
 id btSearch
 id btShare
 id btSignUp
@@ -3989,7 +3996,6 @@ id grouping
 id groups
 id header
 id header_title
-id help
 id hide_in_inspector_tag
 id hideable
 id holo_dark
@@ -4394,6 +4400,7 @@ id textView39
 id textView4
 id textView40
 id textView41
+id textView42
 id textView43
 id textView46
 id textView5
@@ -4515,6 +4522,9 @@ id view23
 id view24
 id view25
 id view26
+id view27
+id view28
+id view29
 id view3
 id view4
 id view5
@@ -4841,6 +4851,7 @@ layout user_page
 layout user_search_page
 layout user_select_payment
 layout user_share
+layout user_share_mail
 layout user_ticket
 layout user_train_item_view
 layout user_view_train

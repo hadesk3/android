@@ -16,6 +16,7 @@ import com.example.ck_room.Entity.Station;
 import com.example.ck_room.Entity.Ticket;
 import com.example.ck_room.Entity.User;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Admin_page extends AppCompatActivity {
@@ -144,10 +145,12 @@ public class Admin_page extends AppCompatActivity {
             totalPrice += lTicket.get(i).getPrice();
         }
 
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        Double format = Double.valueOf(decimalFormat.format(totalPrice));
 
         total_ticket.setText(lTicket.size() + "");
         total_station.setText(lStation.size() + "");
-        total_money.setText(totalPrice + "");
+        total_money.setText(format + "");
         total_user.setText(lUser.size() + "");
     }
 }

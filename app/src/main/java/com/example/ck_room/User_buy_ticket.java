@@ -19,6 +19,7 @@ import com.example.ck_room.Entity.Day_available;
 import com.example.ck_room.Entity.Ticket;
 import com.example.ck_room.Entity.Train;
 import com.example.ck_room.Entity.Train_class;
+import com.example.ck_room.Entity.User;
 
 import java.text.DecimalFormat;
 import java.time.LocalTime;
@@ -151,9 +152,20 @@ public class User_buy_ticket extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent = new Intent(User_buy_ticket.this, Paypal.class);
                 intent.putExtra("money",pay.getText().toString());
+                User u = myDatabase.userDao().getUserByMail(userName);
+                DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
+                double coin = u.getCoin();
+                coin += 100;
+                double formatCoin = Double.parseDouble(decimalFormat.format(coin));
+                u.setCoin(formatCoin);
+                myDatabase.userDao().update(u);
                 ticket.setStatusPay("PAYED");
-                ticket.setPrice(Double.parseDouble(pay.getText().toString()));
+                String fo = pay.getText().toString();
+                double fo1 = Double.parseDouble(fo);
+                double format = Double.parseDouble(decimalFormat.format(fo1));
+
+                ticket.setPrice(format);
                 myDatabase.trainClassDao().update(tc);
                 myDatabase.ticketDao().insert(ticket);
                 startActivityForResult(intent,MainActivity.REQUEST_CODE_USER_CHOOSE_PAY);
