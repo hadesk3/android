@@ -21,6 +21,7 @@ import com.example.ck_room.DataConfig.MyDatabase;
 import com.example.ck_room.Entity.Station;
 import com.example.ck_room.Entity.Train;
 import com.example.ck_room.custom_view.CustomAdapter;
+import com.example.ck_room.custom_view.CustomAdapter_station;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -176,6 +177,41 @@ public class Admin_manageTrain_page extends AppCompatActivity {
             }
         });
 
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+
+            itemList = new ArrayList<>();
+            recyclerView = findViewById(R.id.recyclerViewmanage);
+            recyclerView.setLayoutManager(new LinearLayoutManager(Admin_manageTrain_page.this));
+            List<Train> list = myDatabase.trainDao().findTrainsByStationsAndDay(select1,select2,edtDate.getText().toString());
+
+
+            List<String> itemListName = new ArrayList<>();
+            List<String> itemListPlace= new ArrayList<>();
+            List<String> itemListTime = new ArrayList<>();
+            List<String> itemListSource = new ArrayList<>();
+            List<String> itemListDes = new ArrayList<>();
+            List<String> itemListDay = new ArrayList<>();
+            for(int i = 0; i < list.size();i++)
+            {
+                itemListName.add(list.get(i).getTrain_name());
+                itemListPlace.add(list.get(i).getSource_stn()+"-"+list.get(i).getDestination_stn());
+                itemListTime.add(list.get(i).getTimeStart()+"-" + list.get(i).getTimeEnd());
+                itemListSource.add(list.get(i).getSource_stn());
+                itemListDes.add(list.get(i).getDestination_stn());
+                itemListDay.add(edtDate.getText().toString());
+
+            }
+
+            adapter3 = new CustomAdapter(itemListName, itemListPlace,itemListTime, Admin_manageTrain_page.this,itemListSource,itemListDes,itemListDay);
+            recyclerView.setAdapter(adapter3);
+
+        }
 
     }
 }
