@@ -16,7 +16,6 @@ public class Food {
     {
 
     }
-
     public int getId() {
         return id;
     }

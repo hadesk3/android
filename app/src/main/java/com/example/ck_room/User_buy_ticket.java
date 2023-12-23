@@ -57,10 +57,11 @@ public class User_buy_ticket extends AppCompatActivity
 
             ArrayList<String> list = intent.getStringArrayListExtra("list");
             String totalSeat = intent.getStringExtra("totalSeat");
-        Double seatPrice  = Double.parseDouble(totalSeat) / list.size();
 
         String totalPrice = intent.getStringExtra("totalPrice");
-            String userName = intent.getStringExtra("username");
+        Double seatPrice  = Double.parseDouble(totalPrice) / list.size();
+
+        String userName = intent.getStringExtra("username");
             String type = intent.getStringExtra("type");
         id_sent_to_book = intent.getIntExtra("id",0);
 

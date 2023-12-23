@@ -1,6 +1,5 @@
 package com.example.ck_room.custom_view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -8,15 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ck_room.Admin_block_user;
-import com.example.ck_room.Admin_manage_profile;
-import com.example.ck_room.MainActivity;
 import com.example.ck_room.R;
 import com.example.ck_room.User_see_ticket_detail;
 
@@ -27,21 +22,25 @@ public class CustomAdapter_user_see_history extends RecyclerView.Adapter<CustomA
     private List<String> itemType;
     private List<String> itemPrice;
     private List<String> ticketid;
+    private List<String> ticketStatus;
+
     private Context context;
 
 
-    public CustomAdapter_user_see_history(List<String> itemList,List<String> itemType,List<String> itemPrice,List<String> ticketid, Context context) {
+    public CustomAdapter_user_see_history(List<String> itemList,List<String> itemType,List<String> itemPrice,List<String> ticketid,List<String> ticketStatus, Context context) {
         this.itemList = itemList;
         this.itemPrice = itemPrice;
         this.itemType = itemType;
         this.ticketid = ticketid;
+        this.ticketStatus = ticketStatus;
+
         this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder3 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ticket_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_ticket_item, parent, false);
         return new ViewHolder3(view);
     }
 
@@ -51,10 +50,12 @@ public class CustomAdapter_user_see_history extends RecyclerView.Adapter<CustomA
         String type = itemType.get(position);
         String price = itemPrice.get(position);
         String id = ticketid.get(position);
-
+        String sta = ticketStatus.get(position);
         holder.text1.setText(name);
         holder.text2.setText(type);
         holder.text3.setText(price);
+        holder.text4.setText(sta);
+        Log.d("================================",sta);
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,12 +84,15 @@ public class CustomAdapter_user_see_history extends RecyclerView.Adapter<CustomA
         TextView text1;
         TextView text2;
         TextView text3;
+        TextView text4;
+
         Button button;
         public ViewHolder3(View itemView) {
             super(itemView);
             text1 = itemView.findViewById(R.id.txtTrip);
             text2 = itemView.findViewById(R.id.txtDate);
             text3 = itemView.findViewById(R.id.txtTime);
+            text4 = itemView.findViewById(R.id.textView17);
             button = itemView.findViewById(R.id.btView);
         }
     }

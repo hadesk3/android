@@ -73,6 +73,7 @@
         </activity>
         <activity android:name="com.example.ck_room.User_history" />
         <activity android:name="com.example.ck_room.User_see_ticket_detail" />
+        <activity android:name="com.example.ck_room.User_choose_seat" />
         <activity android:name="com.example.ck_room.Sign_up" />
         <activity android:name="com.example.ck_room.Admin_add_Train" />
         <activity android:name="com.example.ck_room.Admin_add_station" />
@@ -92,9 +93,7 @@
         <activity android:name="com.example.ck_room.User_view_train" />
         <activity android:name="com.example.ck_room.Admin_block_user" />
         <activity android:name="com.example.ck_room.Admin_edit_station" />
-        <activity android:name="com.example.ck_room.User_choose_seat" />
         <activity android:name="com.example.ck_room.Paypal" />
-        <activity android:name="com.example.ck_room.test" />
         <activity android:name="com.example.ck_room.User_share_mail" />
         <activity android:name="com.example.ck_room.Admin_manage_station" />
         <activity

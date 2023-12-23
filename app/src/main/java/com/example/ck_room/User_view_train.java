@@ -81,14 +81,21 @@ public class User_view_train extends AppCompatActivity {
         a =myDatabase.dateAvailableDao().getDayAvailableByTrainId(id);
         edtDate.setText(a.get(0).getDay_available());
         Train_class t_c = new Train_class();
+
+
         t_c = myDatabase.trainClassDao().getTrainClassById(id);
 
         //  edtDate.setText(a.get(0).getDay_available());
         edtStart.setText(t.getTimeStart());
         edtEnd.setText(t.getTimeEnd());
+
+        Log.d("check class", t_c.getEconomy_Fare() +"" +t_c.getBusiness_Fare() +"" );
         edtEcoFare.setText(t_c.getEconomy_Fare() +"");
         edtBusFare.setText(t_c.getBusiness_Fare() +"");
         edtFirstFare.setText(t_c.getFirst_Fare() +"");
+
+
+
         edtEcoPass.setText(t_c.getEconomy_Passenger() +"");
         edtBusPass.setText(t_c.getBusiness_Passenger() +"");
         edtFirstPass.setText(t_c.getFirst_Passenger() +"");

@@ -72,6 +72,9 @@ public final class UserTicketBinding implements ViewBinding {
   public final TextView edtStart;
 
   @NonNull
+  public final TextView edtStatus;
+
+  @NonNull
   public final ImageView imageView4;
 
   @NonNull
@@ -143,13 +146,14 @@ public final class UserTicketBinding implements ViewBinding {
       @NonNull TextView edtArrive, @NonNull TextView edtClass, @NonNull TextView edtCode,
       @NonNull TextView edtDate, @NonNull TextView edtEnd, @NonNull TextView edtFrom,
       @NonNull TextView edtName, @NonNull TextView edtSeat, @NonNull TextView edtStart,
-      @NonNull ImageView imageView4, @NonNull ImageView imgCode, @NonNull LinearLayout nameGr,
-      @NonNull LinearLayout seat, @NonNull TextView textView20, @NonNull LinearLayout timeGr,
-      @NonNull TextView tittle, @NonNull TextView txtArrive, @NonNull TextView txtClass,
-      @NonNull TextView txtCode, @NonNull TextView txtDate, @NonNull TextView txtFrom,
-      @NonNull TextView txtName, @NonNull TextView txtSeat, @NonNull TextView txtTime,
-      @NonNull TextView txtTo, @NonNull View view20, @NonNull View view21, @NonNull View view22,
-      @NonNull View view23, @NonNull View view24, @NonNull View view25) {
+      @NonNull TextView edtStatus, @NonNull ImageView imageView4, @NonNull ImageView imgCode,
+      @NonNull LinearLayout nameGr, @NonNull LinearLayout seat, @NonNull TextView textView20,
+      @NonNull LinearLayout timeGr, @NonNull TextView tittle, @NonNull TextView txtArrive,
+      @NonNull TextView txtClass, @NonNull TextView txtCode, @NonNull TextView txtDate,
+      @NonNull TextView txtFrom, @NonNull TextView txtName, @NonNull TextView txtSeat,
+      @NonNull TextView txtTime, @NonNull TextView txtTo, @NonNull View view20,
+      @NonNull View view21, @NonNull View view22, @NonNull View view23, @NonNull View view24,
+      @NonNull View view25) {
     this.rootView = rootView;
     this.addGr = addGr;
     this.arrGr = arrGr;
@@ -167,6 +171,7 @@ public final class UserTicketBinding implements ViewBinding {
     this.edtName = edtName;
     this.edtSeat = edtSeat;
     this.edtStart = edtStart;
+    this.edtStatus = edtStatus;
     this.imageView4 = imageView4;
     this.imgCode = imgCode;
     this.nameGr = nameGr;
@@ -314,6 +319,12 @@ public final class UserTicketBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edtStatus;
+      TextView edtStatus = ViewBindings.findChildViewById(rootView, id);
+      if (edtStatus == null) {
+        break missingId;
+      }
+
       id = R.id.imageView4;
       ImageView imageView4 = ViewBindings.findChildViewById(rootView, id);
       if (imageView4 == null) {
@@ -448,9 +459,9 @@ public final class UserTicketBinding implements ViewBinding {
 
       return new UserTicketBinding((ConstraintLayout) rootView, addGr, arrGr, btBack3, btShare,
           cardView5, classGr, dateGr, edtArrive, edtClass, edtCode, edtDate, edtEnd, edtFrom,
-          edtName, edtSeat, edtStart, imageView4, imgCode, nameGr, seat, textView20, timeGr, tittle,
-          txtArrive, txtClass, txtCode, txtDate, txtFrom, txtName, txtSeat, txtTime, txtTo, view20,
-          view21, view22, view23, view24, view25);
+          edtName, edtSeat, edtStart, edtStatus, imageView4, imgCode, nameGr, seat, textView20,
+          timeGr, tittle, txtArrive, txtClass, txtCode, txtDate, txtFrom, txtName, txtSeat, txtTime,
+          txtTo, view20, view21, view22, view23, view24, view25);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

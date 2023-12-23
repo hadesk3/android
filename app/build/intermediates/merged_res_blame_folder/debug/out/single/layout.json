@@ -1,27 +1,55 @@
 [
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_manage_station.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_manage_station.xml"
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_ticket.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_ticket.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_edit_train.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_edit_train.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\just_view_train.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\just_view_train.xml"
     },
     {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_manage_station.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_manage_station.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_station_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_station_item.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_page.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_page.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\edit_station.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\edit_station.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_train_item_view.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_train_item_view.xml"
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_view_train.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_view_train.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\activity_main.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_train_item_view.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_train_item_view.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_ticket.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_ticket.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_search.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_search.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_train_item_view.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_train_item_view.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\schedule.xml",
@@ -32,32 +60,40 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\seat_item.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_change_password.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_change_password.xml"
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_manage_ticket.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_manage_ticket.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\add_train.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_train.xml"
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_change_password.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_change_password.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_select_payment.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_select_payment.xml"
     },
     {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\add_train.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_train.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\test.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\test.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_seat_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_seat_item.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\list_search_train_view.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\list_search_train_view.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\ticket_item.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\ticket_item.xml"
-    },
-    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\train_item.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\train_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\ticket_item.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\ticket_item.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\station_item.xml",
@@ -72,6 +108,14 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_buy_ticket.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_user_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_user_item.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_manage_station.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_manage_station.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\activity_manage_train_page.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\activity_manage_train_page.xml"
     },
@@ -80,16 +124,20 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\manage_train_page.xml"
     },
     {
-        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_select_payment.xml",
-        "source": "com.example.ck_room.app-main-76:/layout/user_select_payment.xml"
+        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_item_view.xml",
+        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_item_view.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_page1.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_page1.xml"
     },
     {
-        "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_item_view.xml",
-        "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_item_view.xml"
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_manage_train.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_manage_train.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/food_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/food_item.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\food_item.xml",
@@ -120,6 +168,14 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_item_view.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_ticket_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_ticket_item.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_add_station.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_add_station.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\sign_up.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\sign_up.xml"
     },
@@ -132,6 +188,14 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\add_station.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/activity_main.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_manage_user.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_manage_user.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_page.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_page.xml"
     },
@@ -142,6 +206,10 @@
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\user_share.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_share.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_add_train.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_add_train.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\activity_user_search_page.xml",
@@ -172,6 +240,10 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\menu.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_edit_station.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_edit_station.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_manage_user.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_manage_user.xml"
     },
@@ -180,12 +252,20 @@
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\user_choose_seat.xml"
     },
     {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/admin_train_item.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/admin_train_item.xml"
+    },
+    {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_page.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\admin_page.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\item_view.xml",
         "source": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-main-76:\\layout\\item_view.xml"
+    },
+    {
+        "merged": "com.example.ck_room.app-mergeDebugResources-73:/layout/user_choose_seat.xml",
+        "source": "com.example.ck_room.app-main-76:/layout/user_choose_seat.xml"
     },
     {
         "merged": "C:\\Users\\phamm\\.gradle\\daemon\\8.0\\com.example.ck_room.app-mergeDebugResources-73:\\layout\\admin_view_user.xml",

@@ -6,34 +6,21 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user")
-
 public class User {
     @PrimaryKey
     @ColumnInfo(name = "EmailID")
     @NonNull
     private String userName;
-
-    @ColumnInfo (name = "firstName")
     private String firstName;
-
-    @ColumnInfo (name = "lastName")
     private String lastName;
-    @ColumnInfo(name = "pass")
     private String pass;
-
-    @ColumnInfo(name = "phone")
     private String phone;
-
-    @ColumnInfo(name = "dob")
     private String dob;
-
-    @ColumnInfo(name = "gender")
     private String gender;
     private boolean block;
     private double coin;
     public User()
     {
-
     }
     public User(String userName,String pass, String phone,String dob, String gender, String firstName, String lastName) {
         this.lastName = lastName;

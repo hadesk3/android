@@ -2,13 +2,11 @@ package com.example.ck_room.custom_view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,7 +51,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_item_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_train_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -102,7 +100,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             name = itemView.findViewById(R.id.txtName);
             place = itemView.findViewById(R.id.txtPlace);
             time = itemView.findViewById(R.id.txtTime);
-            itemButton = itemView.findViewById(R.id.txtPrice);
+            itemButton = itemView.findViewById(R.id.btEdit);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.ck_room;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,7 +21,7 @@ import com.example.ck_room.Entity.Train;
 
 public class User_see_ticket_detail extends AppCompatActivity {
     MyDatabase myDatabase;
-    TextView code,seat,nameTrain,start,end,source,des,date,class_type;
+    TextView code,seat,nameTrain,start,end,source,des,date,class_type, edtStatus;
     Button back;
     ImageView share;
     @Override
@@ -28,6 +29,7 @@ public class User_see_ticket_detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_ticket);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
+        edtStatus = findViewById(R.id.edtStatus);
         nameTrain = findViewById(R.id.edtName);
         code = findViewById(R.id.edtCode);
         start = findViewById(R.id.edtStart);
@@ -65,7 +67,17 @@ public class User_see_ticket_detail extends AppCompatActivity {
         class_type.setText(ticket.getClassType());
         Log.d("seat========",ticket.getSeat());
         seat.setText(ticket.getSeat());
+        if(ticket.getStatusPay().equals("PAYED"))
+        {
+            edtStatus.setText("PAYED");
+            int color = Color.parseColor("#00FF00");
 
+            edtStatus.setBackgroundColor(color);
+        }
+        else
+        {
+            edtStatus.setText("UNPAID");
+        }
         source.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

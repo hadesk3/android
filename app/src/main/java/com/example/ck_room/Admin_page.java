@@ -27,7 +27,7 @@ public class Admin_page extends AppCompatActivity {
     MyDatabase myDatabase;
 
     TextView total_user, total_station, total_ticket, total_money;
-    ImageButton butManageTrain, btStation, btManageUser;
+    ImageButton butManageTrain, btStation, btManageUser, btLogout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,7 +57,15 @@ public class Admin_page extends AppCompatActivity {
         total_money.setText(decimalFormat.format(totalPrice));
         total_user.setText(lUser.size() + "");
 
-
+        btLogout = findViewById(R.id.btLogout);
+        btLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(MainActivity.RESULT_LOGOUT);
+                startActivity(new Intent(Admin_page.this, MainActivity.class));
+                finish();
+            }
+        });
         butManageTrain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,4 +159,5 @@ public class Admin_page extends AppCompatActivity {
         total_money.setText(decimalFormat.format(totalPrice));
         total_user.setText(lUser.size() + "");
     }
+
 }

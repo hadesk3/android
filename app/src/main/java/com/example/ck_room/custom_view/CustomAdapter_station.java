@@ -37,7 +37,7 @@ public class CustomAdapter_station extends RecyclerView.Adapter<CustomAdapter_st
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.station_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_station_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -77,7 +77,7 @@ public class CustomAdapter_station extends RecyclerView.Adapter<CustomAdapter_st
             super(itemView);
             name = itemView.findViewById(R.id.txtName);
             address = itemView.findViewById(R.id.txtPlace);
-            itemButton = itemView.findViewById(R.id.txtPrice);
+            itemButton = itemView.findViewById(R.id.btEdit);
         }
     }
 }

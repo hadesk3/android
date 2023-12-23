@@ -49,7 +49,7 @@ public class User_Search extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_search_page);
+        setContentView(R.layout.user_search);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
         back = findViewById(R.id.btBack);
 

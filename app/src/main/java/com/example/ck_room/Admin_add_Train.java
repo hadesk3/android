@@ -26,7 +26,6 @@ import com.example.ck_room.Entity.Day_available;
 import com.example.ck_room.Entity.Station;
 import com.example.ck_room.Entity.Train;
 import com.example.ck_room.Entity.Train_class;
-import com.example.ck_room.Entity.Train_status;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,7 +52,7 @@ public class Admin_add_Train extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_train1);
+        setContentView(R.layout.admin_add_train);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
         back = findViewById(R.id.btBack);
 
@@ -266,19 +265,13 @@ public class Admin_add_Train extends AppCompatActivity {
 
                     Day_available dayAvailable = new Day_available((int)id, edtDate.getText().toString());
                     myDatabase.dateAvailableDao().insert(dayAvailable);
-                    Train_class trainClass = new Train_class((int) id,
-                            Double.parseDouble(edtBusFare.getText().toString()),
-                            Integer.parseInt(edtBusPass.getText().toString()),
-                            Double.parseDouble(edtFirstFare.getText().toString()),
-                            Integer.parseInt(edtFirstPass.getText().toString()),
-                            Double.parseDouble(edtEcoFare.getText().toString()),
-                            Integer.parseInt(edtEcoPass.getText().toString()));
+                    Train_class trainClass = new Train_class((int) id,Double.parseDouble(edtEcoFare.getText().toString()),Integer.parseInt(edtEcoPass.getText().toString()),
+                            Double.parseDouble(edtBusFare.getText().toString()),Integer.parseInt(edtBusPass.getText().toString()),
+                            Double.parseDouble(edtFirstFare.getText().toString()),Integer.parseInt(edtFirstPass.getText().toString()) );
+
+
                     myDatabase.trainClassDao().insert(trainClass);
-                    Train_status trainStatus = new Train_status((int)id, edtDate.getText().toString(),0,0,
-                            Integer.parseInt(edtEcoPass.getText().toString()) +
-                                    Integer.parseInt(edtBusPass.getText().toString())+
-                                    Integer.parseInt(edtFirstPass.getText().toString()));
-                    myDatabase.trainStatusDao().insert(trainStatus);
+
                     Toast.makeText(Admin_add_Train.this, "Success", Toast.LENGTH_SHORT).show();
                     setResult(RESULT_OK);
                     finish();

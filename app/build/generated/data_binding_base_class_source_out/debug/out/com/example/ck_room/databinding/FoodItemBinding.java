@@ -27,23 +27,23 @@ public final class FoodItemBinding implements ViewBinding {
   public final LinearLayout layout;
 
   @NonNull
+  public final TextView txtBook;
+
+  @NonNull
   public final TextView txtName;
 
   @NonNull
   public final TextView txtPlace;
 
-  @NonNull
-  public final TextView txtPrice;
-
   private FoodItemBinding(@NonNull LinearLayout rootView, @NonNull ImageView imgAvatar,
-      @NonNull LinearLayout layout, @NonNull TextView txtName, @NonNull TextView txtPlace,
-      @NonNull TextView txtPrice) {
+      @NonNull LinearLayout layout, @NonNull TextView txtBook, @NonNull TextView txtName,
+      @NonNull TextView txtPlace) {
     this.rootView = rootView;
     this.imgAvatar = imgAvatar;
     this.layout = layout;
+    this.txtBook = txtBook;
     this.txtName = txtName;
     this.txtPlace = txtPlace;
-    this.txtPrice = txtPrice;
   }
 
   @Override
@@ -81,6 +81,12 @@ public final class FoodItemBinding implements ViewBinding {
 
       LinearLayout layout = (LinearLayout) rootView;
 
+      id = R.id.txtBook;
+      TextView txtBook = ViewBindings.findChildViewById(rootView, id);
+      if (txtBook == null) {
+        break missingId;
+      }
+
       id = R.id.txtName;
       TextView txtName = ViewBindings.findChildViewById(rootView, id);
       if (txtName == null) {
@@ -93,14 +99,8 @@ public final class FoodItemBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtPrice;
-      TextView txtPrice = ViewBindings.findChildViewById(rootView, id);
-      if (txtPrice == null) {
-        break missingId;
-      }
-
-      return new FoodItemBinding((LinearLayout) rootView, imgAvatar, layout, txtName, txtPlace,
-          txtPrice);
+      return new FoodItemBinding((LinearLayout) rootView, imgAvatar, layout, txtBook, txtName,
+          txtPlace);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

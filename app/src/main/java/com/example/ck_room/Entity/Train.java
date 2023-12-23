@@ -6,15 +6,13 @@ import androidx.room.PrimaryKey;
 import androidx.room.ForeignKey;
 
 
-@Entity(tableName = "Train",
-        foreignKeys = {
+@Entity(tableName = "Train", foreignKeys = {
                 @ForeignKey(entity = Station.class,
                         parentColumns = "station_id",
                         childColumns = "Source_ID"),
                 @ForeignKey(entity = Station.class,
                         parentColumns = "station_id",
-                        childColumns = "Destination_ID")
-        })
+                        childColumns = "Destination_ID")})
 public class Train {
     @PrimaryKey(autoGenerate = true)
     private int train_id;
@@ -24,16 +22,9 @@ public class Train {
     private int Source_ID;
     private int Destination_ID;
     private String timeStart;
-
     private String timeEnd;
-
-
-
-    // Constructor
-
     public Train()
     {
-
     }
     public Train(String train_name, String source_stn, String destination_stn, int source_ID, int destination_ID, String timeStart, String timeEnd) {
         Train_name = train_name;

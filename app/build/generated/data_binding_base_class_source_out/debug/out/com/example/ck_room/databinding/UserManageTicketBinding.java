@@ -24,9 +24,6 @@ public final class UserManageTicketBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final CardView bt;
-
-  @NonNull
   public final Button btBack;
 
   @NonNull
@@ -37,6 +34,9 @@ public final class UserManageTicketBinding implements ViewBinding {
 
   @NonNull
   public final TextView edtDate;
+
+  @NonNull
+  public final CardView lnLogout;
 
   @NonNull
   public final RecyclerView recyclerView;
@@ -59,17 +59,17 @@ public final class UserManageTicketBinding implements ViewBinding {
   @NonNull
   public final View view5;
 
-  private UserManageTicketBinding(@NonNull ConstraintLayout rootView, @NonNull CardView bt,
-      @NonNull Button btBack, @NonNull Button btSearch, @NonNull LinearLayout dateGr,
-      @NonNull TextView edtDate, @NonNull RecyclerView recyclerView, @NonNull TextView textView5,
+  private UserManageTicketBinding(@NonNull ConstraintLayout rootView, @NonNull Button btBack,
+      @NonNull Button btSearch, @NonNull LinearLayout dateGr, @NonNull TextView edtDate,
+      @NonNull CardView lnLogout, @NonNull RecyclerView recyclerView, @NonNull TextView textView5,
       @NonNull TextView title3, @NonNull TextView txtDate, @NonNull View view17,
       @NonNull View view18, @NonNull View view5) {
     this.rootView = rootView;
-    this.bt = bt;
     this.btBack = btBack;
     this.btSearch = btSearch;
     this.dateGr = dateGr;
     this.edtDate = edtDate;
+    this.lnLogout = lnLogout;
     this.recyclerView = recyclerView;
     this.textView5 = textView5;
     this.title3 = title3;
@@ -106,12 +106,6 @@ public final class UserManageTicketBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bt;
-      CardView bt = ViewBindings.findChildViewById(rootView, id);
-      if (bt == null) {
-        break missingId;
-      }
-
       id = R.id.btBack;
       Button btBack = ViewBindings.findChildViewById(rootView, id);
       if (btBack == null) {
@@ -133,6 +127,12 @@ public final class UserManageTicketBinding implements ViewBinding {
       id = R.id.edtDate;
       TextView edtDate = ViewBindings.findChildViewById(rootView, id);
       if (edtDate == null) {
+        break missingId;
+      }
+
+      id = R.id.lnLogout;
+      CardView lnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (lnLogout == null) {
         break missingId;
       }
 
@@ -178,8 +178,8 @@ public final class UserManageTicketBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserManageTicketBinding((ConstraintLayout) rootView, bt, btBack, btSearch, dateGr,
-          edtDate, recyclerView, textView5, title3, txtDate, view17, view18, view5);
+      return new UserManageTicketBinding((ConstraintLayout) rootView, btBack, btSearch, dateGr,
+          edtDate, lnLogout, recyclerView, textView5, title3, txtDate, view17, view18, view5);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

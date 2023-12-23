@@ -41,7 +41,7 @@ public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapt
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_item_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_user_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -86,7 +86,7 @@ public class CustomAdapter_user_profile extends RecyclerView.Adapter<CustomAdapt
             name = itemView.findViewById(R.id.txtName);
             dob = itemView.findViewById(R.id.txtPlace);
             gender = itemView.findViewById(R.id.txtTime);
-            itemButton = itemView.findViewById(R.id.txtPrice);
+            itemButton = itemView.findViewById(R.id.btEdit);
 
         }
     }

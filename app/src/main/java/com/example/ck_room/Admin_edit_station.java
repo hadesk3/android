@@ -25,7 +25,7 @@ public class Admin_edit_station extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_station);
+        setContentView(R.layout.admin_edit_station);
         name = findViewById(R.id.edtName);
         address = findViewById(R.id.edtAddress);
         update = findViewById(R.id.btCreate);

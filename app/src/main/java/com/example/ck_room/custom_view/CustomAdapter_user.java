@@ -51,7 +51,7 @@ public class CustomAdapter_user extends RecyclerView.Adapter<CustomAdapter_user.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.train_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_train_item_view, parent, false);
         return new ViewHolder(view);
     }
 
@@ -103,7 +103,7 @@ public class CustomAdapter_user extends RecyclerView.Adapter<CustomAdapter_user.
             name = itemView.findViewById(R.id.txtName);
             place = itemView.findViewById(R.id.txtPlace);
             time = itemView.findViewById(R.id.txtTime);
-            itemButton = itemView.findViewById(R.id.txtPrice);
+            itemButton = itemView.findViewById(R.id.btBook);
         }
     }
 }

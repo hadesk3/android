@@ -47,7 +47,7 @@ public class Admin_manageTrain_page extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_train_page);
+        setContentView(R.layout.admin_manage_train);
 
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
         back = findViewById(R.id.btBack);

@@ -7,31 +7,24 @@ import androidx.room.PrimaryKey;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(tableName = "Train_class", foreignKeys = {
-        @ForeignKey(entity = Train.class,
-                parentColumns = "train_id",
-                childColumns = "train_id", onDelete = ForeignKey.CASCADE)})
+@Entity(tableName = "Train_class", foreignKeys = {@ForeignKey(entity = Train.class,
+        parentColumns = "train_id", childColumns = "train_id", onDelete = ForeignKey.CASCADE)})
 public class Train_class {
         @PrimaryKey(autoGenerate = true)
         private int id;
-    private int train_id;
-    private double Economy_Fare;
-    private int Economy_Passenger;
-    private double Business_Fare;
-    private int Business_Passenger;
-    private double First_Fare;
-    private int First_Passenger;
-    private String takenSeats_Economy;
-    private String takenSeats_Business;
-    private String takenSeats_First;
-
-
-
-    // Constructor
-    public Train_class()
-    {
-
-    }
+        private int train_id;
+        private double Economy_Fare;
+        private int Economy_Passenger;
+        private double Business_Fare;
+        private int Business_Passenger;
+        private double First_Fare;
+        private int First_Passenger;
+        private String takenSeats_Economy;
+        private String takenSeats_Business;
+        private String takenSeats_First;
+        public Train_class()
+        {
+        }
 
     public int getTrain_id() {
         return train_id;

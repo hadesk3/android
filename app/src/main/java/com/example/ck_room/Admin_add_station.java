@@ -22,7 +22,7 @@ public class Admin_add_station extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_station);
+        setContentView(R.layout.admin_add_station);
         edit_name = findViewById(R.id.edtName);
         detail = findViewById(R.id.edtAddress);
         but_update = findViewById(R.id.btCreate);

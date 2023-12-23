@@ -34,6 +34,7 @@
         </activity>
         <activity android:name=".User_history" />
         <activity android:name=".User_see_ticket_detail" />
+        <activity android:name=".User_choose_seat" />
 
         <activity android:name=".Sign_up" />
         <activity android:name=".Admin_add_Train" />
@@ -55,9 +56,7 @@
         <activity android:name=".User_view_train" />
         <activity android:name=".Admin_block_user" />
         <activity android:name=".Admin_edit_station"/>
-        <activity android:name=".User_choose_seat" />
         <activity android:name=".Paypal" />
-        <activity android:name=".test" />
         <activity android:name=".User_share_mail" />
 
         <activity android:name=".Admin_manage_station" />

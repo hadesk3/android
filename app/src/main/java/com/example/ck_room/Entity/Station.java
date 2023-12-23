@@ -10,19 +10,14 @@ public class Station {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "station_id")
     private int stationId;
-
-    @ColumnInfo(name = "name")
     private String name;
     private String address;
     public Station( String name, String address) {
         this.name = name;
         this.address = address;
-    }
-    public Station()
+    }public Station()
     {
-
     }
-
     public int getStationId() {
         return stationId;
     }

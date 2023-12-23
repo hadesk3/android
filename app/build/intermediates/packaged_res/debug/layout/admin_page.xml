@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <View
-        android:id="@+id/user4"
+        android:id="@+id/revenue"
         android:layout_width="170dp"
         android:layout_height="130dp"
         android:layout_marginTop="30dp"
@@ -19,12 +19,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/user3"
+        app:layout_constraintStart_toEndOf="@+id/station"
         app:layout_constraintTop_toBottomOf="@+id/ticket"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/user3"
+        android:id="@+id/station"
         android:layout_width="170dp"
         android:layout_height="130dp"
         android:layout_marginStart="20dp"
@@ -48,9 +48,9 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/user4"
-        app:layout_constraintEnd_toEndOf="@+id/user4"
-        app:layout_constraintStart_toStartOf="@+id/user4"
+        app:layout_constraintBottom_toBottomOf="@+id/revenue"
+        app:layout_constraintEnd_toEndOf="@+id/revenue"
+        app:layout_constraintStart_toStartOf="@+id/revenue"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -60,10 +60,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/user4"
-        app:layout_constraintEnd_toEndOf="@+id/user4"
-        app:layout_constraintStart_toStartOf="@+id/user4"
-        app:layout_constraintTop_toTopOf="@+id/user4"
+        app:layout_constraintBottom_toBottomOf="@+id/revenue"
+        app:layout_constraintEnd_toEndOf="@+id/revenue"
+        app:layout_constraintStart_toStartOf="@+id/revenue"
+        app:layout_constraintTop_toTopOf="@+id/revenue"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/icons8_revenue_50" />
 
@@ -75,9 +75,9 @@
         android:elevation="4dp"
         android:text="Total Number Of Stations"
         android:textColor="#130E0E"
-        app:layout_constraintBottom_toBottomOf="@+id/user3"
-        app:layout_constraintEnd_toEndOf="@+id/user3"
-        app:layout_constraintStart_toStartOf="@+id/user3"
+        app:layout_constraintBottom_toBottomOf="@+id/station"
+        app:layout_constraintEnd_toEndOf="@+id/station"
+        app:layout_constraintStart_toStartOf="@+id/station"
         app:layout_constraintTop_toBottomOf="@+id/txtUser3" />
 
     <TextView
@@ -88,9 +88,9 @@
         android:elevation="4dp"
         android:text="Total Revenue"
         android:textColor="#130E0E"
-        app:layout_constraintBottom_toBottomOf="@+id/user4"
-        app:layout_constraintEnd_toEndOf="@+id/user4"
-        app:layout_constraintStart_toStartOf="@+id/user4"
+        app:layout_constraintBottom_toBottomOf="@+id/revenue"
+        app:layout_constraintEnd_toEndOf="@+id/revenue"
+        app:layout_constraintStart_toStartOf="@+id/revenue"
         app:layout_constraintTop_toBottomOf="@+id/txtTicket3" />
 
     <TextView
@@ -103,9 +103,9 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/user3"
-        app:layout_constraintEnd_toEndOf="@+id/user3"
-        app:layout_constraintStart_toStartOf="@+id/user3"
+        app:layout_constraintBottom_toBottomOf="@+id/station"
+        app:layout_constraintEnd_toEndOf="@+id/station"
+        app:layout_constraintStart_toStartOf="@+id/station"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -115,10 +115,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/user3"
-        app:layout_constraintEnd_toEndOf="@+id/user3"
-        app:layout_constraintStart_toStartOf="@+id/user3"
-        app:layout_constraintTop_toTopOf="@+id/user3"
+        app:layout_constraintBottom_toBottomOf="@+id/station"
+        app:layout_constraintEnd_toEndOf="@+id/station"
+        app:layout_constraintStart_toStartOf="@+id/station"
+        app:layout_constraintTop_toTopOf="@+id/station"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/baseline_place_241" />
 
@@ -175,7 +175,7 @@
         app:layout_constraintStart_toStartOf="@+id/ticket"
         app:layout_constraintTop_toTopOf="@+id/ticket"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/icons8_ticket_50" />
+        app:srcCompat="@drawable/icons8_ticket_50" />
 
     <TextView
         android:id="@+id/txtUser"
@@ -246,10 +246,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user3"
+        app:layout_constraintTop_toBottomOf="@+id/station"
         app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
+            android:id="@+id/lnStation"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -281,6 +282,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnUser"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -312,6 +314,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnTrain"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -340,6 +343,31 @@
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnLogout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btLogout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/baseline_logout_24" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="#000000" />
         </LinearLayout>
 
     </LinearLayout>

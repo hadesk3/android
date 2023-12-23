@@ -74,7 +74,7 @@ public class CustomAdapter_user_see_menu extends RecyclerView.Adapter<CustomAdap
             super(itemView);
             text1 = itemView.findViewById(R.id.txtName);
             text2 = itemView.findViewById(R.id.txtPlace);
-            text3 = itemView.findViewById(R.id.txtPrice);
+            text3 = itemView.findViewById(R.id.txtBook);
             image = itemView.findViewById(R.id.imgAvatar);
         }
     }

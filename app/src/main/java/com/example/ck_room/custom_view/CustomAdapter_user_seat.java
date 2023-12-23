@@ -47,7 +47,7 @@ public class CustomAdapter_user_seat extends RecyclerView.Adapter<CustomAdapter_
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.seat_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_seat_item, parent, false);
         return new ViewHolder(view);
     }
 

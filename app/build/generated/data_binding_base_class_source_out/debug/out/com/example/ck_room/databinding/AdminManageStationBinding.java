@@ -24,9 +24,6 @@ public final class AdminManageStationBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final CardView bt;
-
-  @NonNull
   public final Button btBack;
 
   @NonNull
@@ -39,6 +36,9 @@ public final class AdminManageStationBinding implements ViewBinding {
   public final ImageView imageView4;
 
   @NonNull
+  public final CardView lnLogout;
+
+  @NonNull
   public final RecyclerView recyclerViewmanage;
 
   @NonNull
@@ -47,16 +47,16 @@ public final class AdminManageStationBinding implements ViewBinding {
   @NonNull
   public final View view;
 
-  private AdminManageStationBinding(@NonNull ConstraintLayout rootView, @NonNull CardView bt,
-      @NonNull Button btBack, @NonNull Button btCreate, @NonNull CardView cardView5,
-      @NonNull ImageView imageView4, @NonNull RecyclerView recyclerViewmanage,
-      @NonNull TextView title, @NonNull View view) {
+  private AdminManageStationBinding(@NonNull ConstraintLayout rootView, @NonNull Button btBack,
+      @NonNull Button btCreate, @NonNull CardView cardView5, @NonNull ImageView imageView4,
+      @NonNull CardView lnLogout, @NonNull RecyclerView recyclerViewmanage, @NonNull TextView title,
+      @NonNull View view) {
     this.rootView = rootView;
-    this.bt = bt;
     this.btBack = btBack;
     this.btCreate = btCreate;
     this.cardView5 = cardView5;
     this.imageView4 = imageView4;
+    this.lnLogout = lnLogout;
     this.recyclerViewmanage = recyclerViewmanage;
     this.title = title;
     this.view = view;
@@ -89,12 +89,6 @@ public final class AdminManageStationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bt;
-      CardView bt = ViewBindings.findChildViewById(rootView, id);
-      if (bt == null) {
-        break missingId;
-      }
-
       id = R.id.btBack;
       Button btBack = ViewBindings.findChildViewById(rootView, id);
       if (btBack == null) {
@@ -119,6 +113,12 @@ public final class AdminManageStationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lnLogout;
+      CardView lnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (lnLogout == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerViewmanage;
       RecyclerView recyclerViewmanage = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewmanage == null) {
@@ -137,8 +137,8 @@ public final class AdminManageStationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AdminManageStationBinding((ConstraintLayout) rootView, bt, btBack, btCreate,
-          cardView5, imageView4, recyclerViewmanage, title, view);
+      return new AdminManageStationBinding((ConstraintLayout) rootView, btBack, btCreate, cardView5,
+          imageView4, lnLogout, recyclerViewmanage, title, view);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

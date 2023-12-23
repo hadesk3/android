@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,9 @@ import java.lang.String;
 public final class AdminPageBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageButton btLogout;
 
   @NonNull
   public final ImageButton btStation;
@@ -46,6 +50,24 @@ public final class AdminPageBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
+  public final LinearLayout lnLogout;
+
+  @NonNull
+  public final LinearLayout lnStation;
+
+  @NonNull
+  public final LinearLayout lnTrain;
+
+  @NonNull
+  public final LinearLayout lnUser;
+
+  @NonNull
+  public final View revenue;
+
+  @NonNull
+  public final View station;
+
+  @NonNull
   public final TextView textView12;
 
   @NonNull
@@ -53,6 +75,9 @@ public final class AdminPageBinding implements ViewBinding {
 
   @NonNull
   public final TextView textView14;
+
+  @NonNull
+  public final TextView textView18;
 
   @NonNull
   public final TextView textView19;
@@ -84,22 +109,19 @@ public final class AdminPageBinding implements ViewBinding {
   @NonNull
   public final View user;
 
-  @NonNull
-  public final View user3;
-
-  @NonNull
-  public final View user4;
-
-  private AdminPageBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btStation,
-      @NonNull ImageButton btTrain, @NonNull ImageButton btUser, @NonNull ImageView imageView3,
-      @NonNull ImageView imageView4, @NonNull ImageView imageView7, @NonNull ImageView imageView8,
-      @NonNull ConstraintLayout linearLayout, @NonNull TextView textView12,
-      @NonNull TextView textView13, @NonNull TextView textView14, @NonNull TextView textView19,
+  private AdminPageBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btLogout,
+      @NonNull ImageButton btStation, @NonNull ImageButton btTrain, @NonNull ImageButton btUser,
+      @NonNull ImageView imageView3, @NonNull ImageView imageView4, @NonNull ImageView imageView7,
+      @NonNull ImageView imageView8, @NonNull ConstraintLayout linearLayout,
+      @NonNull LinearLayout lnLogout, @NonNull LinearLayout lnStation,
+      @NonNull LinearLayout lnTrain, @NonNull LinearLayout lnUser, @NonNull View revenue,
+      @NonNull View station, @NonNull TextView textView12, @NonNull TextView textView13,
+      @NonNull TextView textView14, @NonNull TextView textView18, @NonNull TextView textView19,
       @NonNull TextView textView4, @NonNull TextView textView8, @NonNull TextView textView9,
       @NonNull View ticket, @NonNull TextView txtTicket, @NonNull TextView txtTicket3,
-      @NonNull TextView txtUser, @NonNull TextView txtUser3, @NonNull View user,
-      @NonNull View user3, @NonNull View user4) {
+      @NonNull TextView txtUser, @NonNull TextView txtUser3, @NonNull View user) {
     this.rootView = rootView;
+    this.btLogout = btLogout;
     this.btStation = btStation;
     this.btTrain = btTrain;
     this.btUser = btUser;
@@ -108,9 +130,16 @@ public final class AdminPageBinding implements ViewBinding {
     this.imageView7 = imageView7;
     this.imageView8 = imageView8;
     this.linearLayout = linearLayout;
+    this.lnLogout = lnLogout;
+    this.lnStation = lnStation;
+    this.lnTrain = lnTrain;
+    this.lnUser = lnUser;
+    this.revenue = revenue;
+    this.station = station;
     this.textView12 = textView12;
     this.textView13 = textView13;
     this.textView14 = textView14;
+    this.textView18 = textView18;
     this.textView19 = textView19;
     this.textView4 = textView4;
     this.textView8 = textView8;
@@ -121,8 +150,6 @@ public final class AdminPageBinding implements ViewBinding {
     this.txtUser = txtUser;
     this.txtUser3 = txtUser3;
     this.user = user;
-    this.user3 = user3;
-    this.user4 = user4;
   }
 
   @Override
@@ -152,6 +179,12 @@ public final class AdminPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btLogout;
+      ImageButton btLogout = ViewBindings.findChildViewById(rootView, id);
+      if (btLogout == null) {
+        break missingId;
+      }
+
       id = R.id.btStation;
       ImageButton btStation = ViewBindings.findChildViewById(rootView, id);
       if (btStation == null) {
@@ -196,6 +229,42 @@ public final class AdminPageBinding implements ViewBinding {
 
       ConstraintLayout linearLayout = (ConstraintLayout) rootView;
 
+      id = R.id.lnLogout;
+      LinearLayout lnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (lnLogout == null) {
+        break missingId;
+      }
+
+      id = R.id.lnStation;
+      LinearLayout lnStation = ViewBindings.findChildViewById(rootView, id);
+      if (lnStation == null) {
+        break missingId;
+      }
+
+      id = R.id.lnTrain;
+      LinearLayout lnTrain = ViewBindings.findChildViewById(rootView, id);
+      if (lnTrain == null) {
+        break missingId;
+      }
+
+      id = R.id.lnUser;
+      LinearLayout lnUser = ViewBindings.findChildViewById(rootView, id);
+      if (lnUser == null) {
+        break missingId;
+      }
+
+      id = R.id.revenue;
+      View revenue = ViewBindings.findChildViewById(rootView, id);
+      if (revenue == null) {
+        break missingId;
+      }
+
+      id = R.id.station;
+      View station = ViewBindings.findChildViewById(rootView, id);
+      if (station == null) {
+        break missingId;
+      }
+
       id = R.id.textView12;
       TextView textView12 = ViewBindings.findChildViewById(rootView, id);
       if (textView12 == null) {
@@ -211,6 +280,12 @@ public final class AdminPageBinding implements ViewBinding {
       id = R.id.textView14;
       TextView textView14 = ViewBindings.findChildViewById(rootView, id);
       if (textView14 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView18;
+      TextView textView18 = ViewBindings.findChildViewById(rootView, id);
+      if (textView18 == null) {
         break missingId;
       }
 
@@ -274,22 +349,11 @@ public final class AdminPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.user3;
-      View user3 = ViewBindings.findChildViewById(rootView, id);
-      if (user3 == null) {
-        break missingId;
-      }
-
-      id = R.id.user4;
-      View user4 = ViewBindings.findChildViewById(rootView, id);
-      if (user4 == null) {
-        break missingId;
-      }
-
-      return new AdminPageBinding((ConstraintLayout) rootView, btStation, btTrain, btUser,
-          imageView3, imageView4, imageView7, imageView8, linearLayout, textView12, textView13,
-          textView14, textView19, textView4, textView8, textView9, ticket, txtTicket, txtTicket3,
-          txtUser, txtUser3, user, user3, user4);
+      return new AdminPageBinding((ConstraintLayout) rootView, btLogout, btStation, btTrain, btUser,
+          imageView3, imageView4, imageView7, imageView8, linearLayout, lnLogout, lnStation,
+          lnTrain, lnUser, revenue, station, textView12, textView13, textView14, textView18,
+          textView19, textView4, textView8, textView9, ticket, txtTicket, txtTicket3, txtUser,
+          txtUser3, user);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

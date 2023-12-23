@@ -44,7 +44,7 @@ public class Admin_edit_Train extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_train);
+        setContentView(R.layout.admin_edit_train);
         myDatabase = DatabaseManager.getDatabase(getApplicationContext());
 
         edtDate = findViewById(R.id.edtDate);

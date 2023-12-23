@@ -29,9 +29,6 @@ public final class AdminManageUserBinding implements ViewBinding {
   public final LinearLayout addGr;
 
   @NonNull
-  public final CardView bt;
-
-  @NonNull
   public final Button btBack;
 
   @NonNull
@@ -53,6 +50,9 @@ public final class AdminManageUserBinding implements ViewBinding {
   public final ImageView imageView4;
 
   @NonNull
+  public final CardView lnLogout;
+
+  @NonNull
   public final RecyclerView recyclerViewmanage;
 
   @NonNull
@@ -65,13 +65,13 @@ public final class AdminManageUserBinding implements ViewBinding {
   public final View view;
 
   private AdminManageUserBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout addGr,
-      @NonNull CardView bt, @NonNull Button btBack, @NonNull Button btSearch,
-      @NonNull CardView cardView5, @NonNull EditText edtEmail, @NonNull View form,
-      @NonNull View form2, @NonNull ImageView imageView4, @NonNull RecyclerView recyclerViewmanage,
-      @NonNull TextView title, @NonNull TextView txtMail, @NonNull View view) {
+      @NonNull Button btBack, @NonNull Button btSearch, @NonNull CardView cardView5,
+      @NonNull EditText edtEmail, @NonNull View form, @NonNull View form2,
+      @NonNull ImageView imageView4, @NonNull CardView lnLogout,
+      @NonNull RecyclerView recyclerViewmanage, @NonNull TextView title, @NonNull TextView txtMail,
+      @NonNull View view) {
     this.rootView = rootView;
     this.addGr = addGr;
-    this.bt = bt;
     this.btBack = btBack;
     this.btSearch = btSearch;
     this.cardView5 = cardView5;
@@ -79,6 +79,7 @@ public final class AdminManageUserBinding implements ViewBinding {
     this.form = form;
     this.form2 = form2;
     this.imageView4 = imageView4;
+    this.lnLogout = lnLogout;
     this.recyclerViewmanage = recyclerViewmanage;
     this.title = title;
     this.txtMail = txtMail;
@@ -115,12 +116,6 @@ public final class AdminManageUserBinding implements ViewBinding {
       id = R.id.addGr;
       LinearLayout addGr = ViewBindings.findChildViewById(rootView, id);
       if (addGr == null) {
-        break missingId;
-      }
-
-      id = R.id.bt;
-      CardView bt = ViewBindings.findChildViewById(rootView, id);
-      if (bt == null) {
         break missingId;
       }
 
@@ -166,6 +161,12 @@ public final class AdminManageUserBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lnLogout;
+      CardView lnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (lnLogout == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerViewmanage;
       RecyclerView recyclerViewmanage = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewmanage == null) {
@@ -190,8 +191,9 @@ public final class AdminManageUserBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AdminManageUserBinding((ConstraintLayout) rootView, addGr, bt, btBack, btSearch,
-          cardView5, edtEmail, form, form2, imageView4, recyclerViewmanage, title, txtMail, view);
+      return new AdminManageUserBinding((ConstraintLayout) rootView, addGr, btBack, btSearch,
+          cardView5, edtEmail, form, form2, imageView4, lnLogout, recyclerViewmanage, title,
+          txtMail, view);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

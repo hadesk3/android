@@ -152,7 +152,7 @@
         app:layout_constraintEnd_toEndOf="@+id/form2"
         app:layout_constraintStart_toStartOf="@+id/form2"
         app:layout_constraintTop_toTopOf="@+id/form2"
-        tools:listitem="@layout/seat_item" />
+        tools:listitem="@layout/user_seat_item" />
 
     <TextView
         android:id="@+id/textView7"

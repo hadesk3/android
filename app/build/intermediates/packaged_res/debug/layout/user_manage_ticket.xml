@@ -7,7 +7,7 @@
     tools:context=".User_Manage_Ticket">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/bt"
+        android:id="@+id/lnLogout"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt"
+        app:layout_constraintTop_toBottomOf="@+id/lnLogout"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -145,7 +145,7 @@
         app:layout_constraintStart_toStartOf="@+id/view17"
         app:layout_constraintTop_toTopOf="@+id/view17"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/ticket_item" />
+        tools:listitem="@layout/user_ticket_item" />
 
     <TextView
         android:id="@+id/textView5"

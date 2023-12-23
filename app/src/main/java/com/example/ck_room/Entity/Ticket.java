@@ -22,11 +22,8 @@ public class Ticket {
     private String seat;
     private  double price;
     private String statusPay;
-
-    // Constructor
     public Ticket()
     {
-
     }
     public Ticket(String ticket_No, String passenger_Name, String source, String destination, String classType, int train_id) {
         Ticket_No = ticket_No;

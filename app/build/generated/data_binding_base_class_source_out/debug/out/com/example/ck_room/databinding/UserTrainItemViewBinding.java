@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +19,10 @@ import java.lang.String;
 
 public final class UserTrainItemViewBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final ImageButton btBook;
 
   @NonNull
   public final ImageView imgAvatar;
@@ -31,25 +34,22 @@ public final class UserTrainItemViewBinding implements ViewBinding {
   public final TextView txtPlace;
 
   @NonNull
-  public final ImageButton txtPrice;
-
-  @NonNull
   public final TextView txtTime;
 
-  private UserTrainItemViewBinding(@NonNull RelativeLayout rootView, @NonNull ImageView imgAvatar,
-      @NonNull TextView txtName, @NonNull TextView txtPlace, @NonNull ImageButton txtPrice,
+  private UserTrainItemViewBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btBook,
+      @NonNull ImageView imgAvatar, @NonNull TextView txtName, @NonNull TextView txtPlace,
       @NonNull TextView txtTime) {
     this.rootView = rootView;
+    this.btBook = btBook;
     this.imgAvatar = imgAvatar;
     this.txtName = txtName;
     this.txtPlace = txtPlace;
-    this.txtPrice = txtPrice;
     this.txtTime = txtTime;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -74,6 +74,12 @@ public final class UserTrainItemViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btBook;
+      ImageButton btBook = ViewBindings.findChildViewById(rootView, id);
+      if (btBook == null) {
+        break missingId;
+      }
+
       id = R.id.imgAvatar;
       ImageView imgAvatar = ViewBindings.findChildViewById(rootView, id);
       if (imgAvatar == null) {
@@ -92,20 +98,14 @@ public final class UserTrainItemViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.txtPrice;
-      ImageButton txtPrice = ViewBindings.findChildViewById(rootView, id);
-      if (txtPrice == null) {
-        break missingId;
-      }
-
       id = R.id.txtTime;
       TextView txtTime = ViewBindings.findChildViewById(rootView, id);
       if (txtTime == null) {
         break missingId;
       }
 
-      return new UserTrainItemViewBinding((RelativeLayout) rootView, imgAvatar, txtName, txtPlace,
-          txtPrice, txtTime);
+      return new UserTrainItemViewBinding((LinearLayout) rootView, btBook, imgAvatar, txtName,
+          txtPlace, txtTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
